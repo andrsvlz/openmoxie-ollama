@@ -85,11 +85,16 @@ Windows Powershell has not been tested
 
 * Follow Remaining Instructions In Order
 
-### 1️⃣ Install Docker
+### 1️⃣ Install Docker Desktop or CLI
+Download Docker
+https://docs.docker.com/desktop/setup/install/linux/ubuntu/
+
 ```bash
+#cd to downloads folder
 sudo apt-get install ./docker-desktop-amd64.deb
 ```
-If that doesn’t work, install the CLI manually:
+
+If that doesn’t work, Just install the CLI manually:
 ```bash
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
