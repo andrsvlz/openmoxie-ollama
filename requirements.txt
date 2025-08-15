@@ -1,0 +1,27 @@
+paho-mqtt
+jwt
+requests
+protobuf
+numpy
+soundfile
+openai
+django
+django-debug-toolbar
+django-jquery
+django-bootstrap5
+qrcode
+Pillow
+unidecode
+deepmerge
+
+#Ollama Support
+ollama>=0.3.0
+
+# XAI Support
+xai-sdk
+python-multipart
+
+# Local offline STT microservice (FastAPI + Uvicorn + Faster-Whisper)
+fastapi
+uvicorn[standard]
+faster-whisper
