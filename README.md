@@ -172,7 +172,7 @@ sudo docker compose up -d mqtt stt
   models can be selected in admin
 ---
 
-### 5️⃣ Start the OpenMoxie Server
+### 5️⃣ Start the OpenMoxie Server and do the usual Wifi and or Migration QR code
 ```bash
 python3 site/manage.py runserver --noreload
 ```
