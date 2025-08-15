@@ -114,16 +114,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 ---
 
-### 2️⃣ Install Ollama
+### 2️⃣ Install Ollama and run a model
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
-Download and test a model (CPU-friendly model example used in sample content):
-
+Download and test a model (2GB CPU-friendly model example used in sample content):
+more models(gemma, deepseek, gpt-oss, etc...) can be found at https://ollama.com/search keep the size reasonable for your computers power
 ```bash
 ollama run llama3.2:3b
-ollama stop llama3.2:3b
-ollama list
+#test the model response and then you can exit by typing "/bye"
+
+# you can stop the model it will relaunch if activated
+ollama stop llama3.2:3b # stop model by name
+ollama list # show all available models
 ```
 
 ---
