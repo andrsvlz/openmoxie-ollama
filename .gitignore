@@ -1,4 +1,6 @@
 /.venv
 /00gitignore.txt
-/local
-/site
+/site/services/stt/models
+/local/work/mosquitto.log
+/site/work/db.sqlite3
+__pycache__/

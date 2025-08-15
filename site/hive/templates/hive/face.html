@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
+<div class="p-3">
+<h2>Customize Moxie's Face</h2>
+<div class="half text-bg-danger p-3">
+    <strong>Caution!</strong> Aside from Eyes and Face_Colors, other custom assets have had little testing,
+    use more system resources, and may cause Moxie to be unstable.
+    <ul>
+      <li>Use at your own risk.</li>
+      <li>If you experience issues, undo any changes and check the Reset Child ID checkbox below.</li>
+      <li>Instability may take many forms, such as causing background services inside Moxie that process audio to stop running.</li>
+      <li>Not all combinations have been tested and not all of these may work.</li>
+    </ul>
+</div>
+<div class="moxie-window">
+  <form id="moxie_face" action="{% url 'hive:face_edit' object.pk %}" method="post">
+  {% csrf_token %}
+  <table class="table">
+    <tr><th>Name</th><td>{{object.name}}</td></tr>
+    <tr><th>Device ID</th><td>{{object.device_id}}</td></tr>
+    {% for layer in assets %}
+      <tr><th>{{layer.layer}}</th><td>
+        <select name="asset_{{layer.layer}}">
+        <option value="--">Default</option>
+        {% for item in layer.labels %}
+        <option value="{{item.label}}" {% if item.label in face_options %}selected{% endif %}>
+          {{ item.name }}
+        </option>
+        {% endfor %}
+        </select>
+      </td></tr>      
+    {% endfor %}
+    <tr><th>Emergency Recovery</th><td>
+      <input type="checkbox" name="child_recover" id="child_recover">
+      <label for="child_recover">Reset Child ID</label>
+    </td></tr>
+  </table>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+{% endblock %}

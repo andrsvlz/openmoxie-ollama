@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
+<div class="text-bg-secondary p-3">
+<h1>Welcome to OpenMoxie!</h1>
+<p>
+    The OpenMoxie service allows this computer to act as a replacement for Moxie's cloud infrastructure.
+</p>
+<div class="half text-bg-danger p-3">
+  <p>
+    <strong>Please read carefully!</strong> This implementation has minimal security and should always be operated on a LAN behind a firewall that protects
+  ports <strong>8883</strong> and <strong>8001</strong> from the Internet.  API keys and service accounts are stored
+  unencrypted in the host file system.
+  </p>
+  <ul>
+    <li>Once you add API keys, devices connecting to port <strong>8001</strong> will
+  be able to perform chat inferences to OpenAI that will incur charges.</li>
+    <li>Devices connected on port <strong>8883</strong> will be able to perform chat inferences and use Speech-to-Text services that will incur charges.</li>
+    <li>If you connect a Google Service Account Key, the key itself will be shared with devices connecting on port <strong>8883</strong>.</li>
+  </ul>
+</div>
+<p></p>
+<h3>Getting Your Own OpenAI API Key</h3>
+<p>
+  There are a few requirements to setup before you can use this with your Moxie.  The primary requirement
+  is your own personal API key from OpenAI to use for Moxie Chat and the default Speech-to-Text processing.
+  These services are not free and you will be responsible for managing your OpenAI account to ensure
+  it has sufficient credits, however Whisper is very inexpensive and the default conversational model
+  (3.5 turbo) is a very economical model.
+</p>
+<p>
+    You will need to visit <a class="link-light" target="_blank" href="https://platform.openai.com/settings/organization/billing/overview">OpenAI Billing</a> page, 
+    create an account, add your credit card, and purchase some credits.  We recommend
+    starting with a small amount such as $10 and keeping an eye on your usage until you understand the costs, though they are typically modest.
+</p>
+<p>
+    Next, visit the <a class="link-light" target="_blank" href="https://platform.openai.com/settings/organization/api-keys">OpenAI API Keys</a> to create a unique
+    API key (secret key) for use with OpenMoxie.  Give it a nice name like "Moxie Services" and save the API key to paste into the form below.
+</p>
+<h3>Using Google Speech Instead</h3>
+<p>
+  OpenMoxie is configured to use OpenAI Whisper for Speech-to-Text by default for simplicity and lower cost, but Google Speech is more
+  responsive and generally works better with Moxie's internal speech processing.  Google also offers free credits when you sign-up.
+  If you would rather use Google for Speech-to-Text services
+  you can include a service account key with permissions to use Google Speech in the form below.  This key will be provided to Moxie and used if you
+  set <kbd>"stt": "0"</kbd> in the robot settings.  Visit <a class="link-light" target="_blank" href="https://cloud.google.com/">Google Cloud Platform</a> for details
+  on Google's offering.
+</p>
+<hr>
+<h1>Configuration</h1>
+<form id="hive_edit" action="{% url 'hive:hive_configure' %}" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <!-- XAI key field -->
+      <label for="xaikey" class="form-label fw-bold fs-5">XAi (Grok) API Key</label>
+      <input type="text" class="form-control" name="xaikey" id="xaikey" aria-describedby="apiHelp" placeholder="{% if object.xai_api_key %}[Key exists and will be kept unless overridden.]{% else %}Paste XAi API key.{% endif %}">
+      <div id="apiHelp" class="form-text text-light">This be be stored in your local database and used locally for xAI and Speech services.</div>
+  </div>
+    <div class="mb-3">
+      <label for="apikey" class="form-label fw-bold fs-5">OpenAI API Key</label>
+      <input type="text" class="form-control" name="apikey" id="apikey" aria-describedby="apiHelp" placeholder="{% if object.openai_api_key %}[Key exists and will be kept unless overridden.]{% else %}Paste OpenAI API key.{% endif %}">
+      <div id="apiHelp" class="form-text text-light">This be be stored in your local database and used locally for openAI and Speech services.</div>
+    </div>
+    <div class="mb-3">
+      <label for="googleapikey" class="form-label fw-bold fs-5">(OPTIONAL) Google Service Account Key</label>
+      <input type="text" class="form-control" name="googleapikey" id="googleapikey" aria-describedby="googleapiHelp" placeholder="{% if object.google_api_key %}[Key exists and will be kept unless overridden.]{% else %}Paste Google Service Account key.{% endif %}">
+      <div id="googleapiHelp" class="form-text text-light">
+        This be be stored in your local database and provided to connecting Moxie.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="hostname" class="form-label fw-bold fs-5">Hostname</label>
+      <div class="half text-bg-warning p-3" style="margin-bottom: 5px;">
+        <strong>Important! </strong>Hostname is the address Moxie will use to talk to your PC.  It is best to use your computer name, 
+        but if your router does not provide LAN DNS services, you may need to use your LAN IP address here.
+      </div>
+      <input type="text" class="form-control" name="hostname" id="hostname" aria-describedby="hostnameHelp" placeholder="Enter computer name" value="{{object.external_host}}">
+      <div id="hostnameHelp" class="form-text text-light">The local network name of this computer, either your computer name or LAN network address.</div>
+    </div>
+
+
+    <h1>Speech-to-Text</h1>
+    <div class="row mb-3">
+      <div class="col">
+        <label class="form-label fw-bold">Backend</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="stt_backend" id="stt_backend_local" value="local"
+                {% if object.stt_backend == "local" %}checked{% endif %}>
+          <label class="form-check-label" for="stt_backend_local">Local (faster-whisper)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="stt_backend" id="stt_backend_openai" value="openai"
+                {% if object.stt_backend != "local" %}checked{% endif %}>
+          <label class="form-check-label" for="stt_backend_openai">OpenAI Whisper (remote)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="stt_url" class="form-label fw-bold">Local STT URL (Keep Default)</label>
+      <input type="text" class="form-control" name="stt_url" id="stt_url"
+            placeholder="http://127.0.0.1:8001/stt"
+            value="{{ object.stt_url|default:'http://127.0.0.1:8001/stt' }}">
+      <div class="form-text text-light">Only used when “Local” is selected.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="stt_lang" class="form-label fw-bold">Default STT Language </label>
+      <input type="text" class="form-control" name="stt_lang" id="stt_lang"
+            placeholder="en" value="{{ object.stt_lang|default:'en' }}">
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="stt_device" class="form-label fw-bold">Device *experimental</label>
+        <select class="form-select" id="stt_device" name="stt_device">
+          <option value="auto" {% if object.stt_device == "auto" %}selected{% endif %}>Auto</option>
+          <option value="cpu"  {% if object.stt_device == "cpu"  %}selected{% endif %}>CPU</option>
+          <option value="cuda" {% if object.stt_device == "cuda" %}selected{% endif %}>CUDA (GPU)</option>
+        </select>
+        <div class="form-text text-light">Auto prefers GPU if available; otherwise CPU.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="stt_compute" class="form-label fw-bold">Compute Type</label>
+        <select class="form-select" id="stt_compute" name="stt_compute">
+          <option value="int8"          {% if object.stt_compute == "int8" %}selected{% endif %}>int8 (CPU best)</option>
+          <option value="int8_float16"  {% if object.stt_compute == "int8_float16" %}selected{% endif %}>int8/FP16 (mixed)</option>
+          <option value="float16"       {% if object.stt_compute == "float16" %}selected{% endif %}>float16 (GPU best)</option>
+          <option value="float32"       {% if object.stt_compute == "float32" %}selected{% endif %}>float32</option>
+        </select>
+        <div class="form-text text-light">GPU: prefer float16. CPU: prefer int8.</div>
+      </div>
+    </div>
+
+
+
+<div class="mb-3">
+  <label for="stt_model" class="form-label fw-bold">Local STT Model</label>
+
+  {% if stt_models and stt_models|length %}
+    <select class="form-select" id="stt_model" name="stt_model">
+      {% for m in stt_models %}
+        <option value="{{ m.path }}" {% if object.stt_model == m.path %}selected{% endif %}>
+          {{ m.name }} <!--— {{ m.path }}-->
+        </option>
+      {% endfor %}
+    </select>
+    <div class="form-text text-light">
+      Auto Detected by the STT service. Add Models to the /site/services/stt/models/ directory.
+    </div>
+  {% else %}
+    <input type="text" class="form-control" id="stt_model" name="stt_model"
+           placeholder="/models/faster-whisper-small.en"
+           value="{{ object.stt_model|default:'' }}">
+    <div class="form-text text-light">
+      Enter the model directory visible to the STT service.
+    </div>
+  {% endif %}
+</div>
+
+
+
+
+
+
+
+    {% if needs_admin %}
+    <h3>Database Administrator</h3>
+    <p>Setup the local database administrator password.  This is the superuser password for your local SQLite database and is used when accessing the Admin page for this project.</p>
+    <div class="half text-bg-warning p-3" style="margin-bottom: 5px;">
+      <strong>Important! </strong>You will need this password to access the Admin section later!
+    </div>
+    <div class="row mb-3">
+      <label for="adminUser" class="col-sm-2 col-form-label">Admin User</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="adminUser" name="adminUser" value="admin">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="adminPassword" class="col-sm-2 col-form-label">Admin Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="adminPassword" name="adminPassword">
+      </div>
+    </div>
+    {% endif %}
+<!--
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="allowall" id="allowall" aria-describedby="allowHelp">
+      <label class="form-check-label" for="allowall">Allow Services to Any Moxie</label>
+      <div id="hostnameHelp" class="form-text text-light">Check this to allow use by any Moxie on your network, otherwise each will need to be authorized explicity.</div>
+    </div>
+ -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<script>
+$(document).ready(function() {
+  $('#hive_edit').submit(function(event) {
+    var validated = true;
+    var err_msg = "Setup Cannot Complete:";
+
+    var hostname = $('#hostname').val().trim();
+    var googleApiKey = $('#googleapikey').val().trim();
+    {% if needs_admin %}
+    var adminUser = $('#adminUser').val().trim();
+    var adminPassword = $('#adminPassword').val().trim();
+    if (adminUser === '') {
+      err_msg += '\n-Admin User cannot be empty';
+      validated = false;
+    }
+    if (adminPassword === '') {
+      err_msg += '\n-Admin Password cannot be empty';
+      validated = false;
+    }
+    {% endif %}
+    if (hostname === '') {
+      err_msg += '\n-Hostname cannot be empty';
+      validated = false;
+    }
+    if (googleApiKey !== '' && !isValidJSON(googleApiKey)) {
+      err_msg += '\n-Google API Key must be a valid JSON string';
+      validated = false;
+    }
+
+    if (!validated) {
+      alert(err_msg);
+      event.preventDefault();
+    }
+  });
+});
+
+function isValidJSON(jsonString) {
+  try {
+    JSON.parse(jsonString);
+  } catch (e) {
+    return false;
+  }
+  return true;
+}
+</script>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
+{% if alert %}
+    <div class="alert alert-primary">{{ alert }}</div>
+{% endif %}
+<div class="p-3">
+<h2>Devices</h2>
+<a title="Code to show Moxie to move to this service" class="btn btn-primary btn-sm" role="button" href="{% url 'hive:endpoint_qr' %}">Migration QR Code</a>
+<a title="Create QR with WiFI credentials to get Moxie on a new network" class="btn btn-primary btn-sm" role="button" href="{% url 'hive:wifi_edit' %}">Wifi QR Code</a>
+<a title="Configure System" class="btn btn-secondary btn-sm" href="{% url 'hive:setup' %}">Setup</a>
+<a title="Administer Database" class="btn btn-secondary btn-sm" href="{% url 'admin:index' %}">Admin</a>
+<table class="table table-striped">
+  <tr><th class="w-25">Status</th><th>Moxie Devices</th><th>Schedule</th><th>Actions</th></tr>
+  {% for device in recent_devices %}
+  <tr><td>
+    {% if device.device_id in live %}
+    <span class="badge text-bg-success">Online</span> {{device.last_connect|timesince}}
+    {% else %}
+    <span class="badge text-bg-secondary">Offline</span> {{device.last_disconnect|timesince}}
+    {% endif %}
+  </td><td><a href="{% url 'hive:moxie' device.pk %}">{{device}}</a>
+    {% if not device.is_paired %}
+    <span class="badge text-bg-danger">Unpaired</span>
+    {% endif %}
+  </td><td>{{device.schedule}}</td>
+  <td>
+    {% if device.robot_config.wake_button_enabled and device.device_id in live %}
+    <a class="btn btn-success btn-sm" href="{% url 'hive:moxie_wake' device.pk %}">Wake</a>
+    {% endif %}
+    <a title="Modify completed missions or reset content progress" class="btn btn-secondary btn-sm" href="{% url 'hive:moxie_missions' device.pk %}">Missions</a>
+    <a title="Customize Moxie's Face" class="btn btn-secondary btn-sm" href="{% url 'hive:face' device.pk %}">Edit Face</a>
+    <a title="Puppeteer Moxie" class="btn btn-secondary btn-sm" href="{% url 'hive:puppet' device.pk %}">Puppet</a>
+    <a title="View Moxie persistent data." class="btn btn-secondary btn-sm" href="{% url 'hive:moxie_data' device.pk %}">Data</a>
+  </td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
+<h2>Content Database</h2>
+<table class="table table-striped">
+  <tr><th>Refresh</th><td>
+    <a title="Reload any database entries modified in the Admin view" class="btn btn-primary btn-sm" role="button" href="{% url 'hive:reload_database' %}">Refresh from DB Now</a>
+  </td></tr>
+  <tr><th>Export</th><td>
+    <a title="Export some or all of your Moxie content" class="btn btn-primary btn-sm" role="button" href="{% url 'hive:export_content' %}">Export Content</a>
+  </td></tr>
+  <tr><th>Import</th><td>
+    <form method="post" enctype="multipart/form-data" action="{% url 'hive:import_review' %}" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <input title="Select Content JSON file to Upload" type="file" id="json_file" name="json_file" accept=".json" class="form-control-file">
+        <button title="Upload content to review for adding to your own Moxie content" type="submit" class="btn btn-primary btn-sm">Upload for Review</button>
+      </div>
+    </form>
+  </td></tr>
+</table>
+<br>
+<h2>Schedules</h2>
+<table class="table table-striped">
+  <tr><th>Name</th></tr>
+  {% for s in schedules %}
+  <tr><td>{{s.name}}</td></tr>
+  {% endfor %}
+</table>
+<br>
+<h2>Conversations</h2>
+<table class="table table-striped">
+  <tr><th>Name</th><th>Module ID</th><th>Content ID</th><th></th></tr>
+  {% for s in conversations %}
+  <tr><td>{{s}}</td><td>{{s.module_id}}</td><td>{{s.content_id}}</td><td><a href="{% url 'hive:interact' s.pk %}">Interact</a></td></tr>
+  {% endfor %}
+</table>
+</div>
+{% endblock %}
