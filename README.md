@@ -12,6 +12,7 @@ If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe g
 
 ## 📦 Based on the amazing work by [jbeghtol/openmoxie](https://github.com/jbeghtol/openmoxie)
 
+<a href="https://github.com/sponsors/vapors"> # Sponsor my work! and future development </a>
 ---
 ---
 
