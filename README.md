@@ -145,7 +145,7 @@ docker compose up -d mqtt stt
 - You can check health and model of stt:
   ```bash
   curl -s http://127.0.0.1:8001/health
-  # {"ok": true, "model": "...", "device": "cpu|cuda", "compute": "int8|float16"}
+  # should output {"ok": true, "model": "...", "device": "cpu|cuda", "compute": "int8|float16"}
   ```
   models can be selected in admin
 ---
@@ -154,8 +154,10 @@ docker compose up -d mqtt stt
 ```bash
 python3 site/manage.py runserver --noreload
 ```
-
+### Main admin
 Open [http://localhost:8000/](http://localhost:8000/)  
+
+### API Setup
 Setup page: [http://localhost:8000/hive/setup](http://localhost:8000/hive/setup)  
 
 Enter **XAi** and **OpenAI** API keys.
@@ -172,7 +174,7 @@ Enter **XAi** and **OpenAI** API keys.
 1. Click **"Choose file"**
 2. Select:
    ```
-   ~/moxieserver/samples/moxie_server_content.json
+   ~/openmoxie-ollama/samples/ollama_local_sample.json
    ```
 3. Click **"Upload for review"**
 4. Select schedules and conversations → **Import**
