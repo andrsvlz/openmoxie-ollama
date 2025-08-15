@@ -27,7 +27,7 @@ Some of you may be concerned this is going to be complicated—don’t worry. Fo
 
 ---
 
-# 🚀 Quick Overview (Not So Quick Start)
+# 🚀 Quick Overview 
 
 ## Components
 
