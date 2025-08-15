@@ -6,7 +6,7 @@
 
 Welcome!  
 
-If you're looking for a solution to run your **Embodied Moxie Robot** in case their cloud infrastructure shuts down, you're in the right place!  
+If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe give it a different personality or run some unfiltered LLM models, Your in the right place!
 
 ---
 
@@ -18,7 +18,7 @@ If you're looking for a solution to run your **Embodied Moxie Robot** in case th
 ## ⚠ Disclaimer
 
 > **USE AT YOUR OWN RISK**  
-> I take no responsibility for the output of these prompts or models.  
+> I take no responsibility for the output of these prompts or models. Or any resulting mental / physical health issues that arise from using them. 
 > **Not for children** — may contain offensive language.
 
 ---
