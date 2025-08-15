@@ -64,6 +64,12 @@ This project includes:
 ## 🖥 Initial Setup
 
 1. Clone this repo to your home directory
+
+```bash
+cd ~
+git clone https://github.com/vapors/openmoxie-ollama.git
+
+```
 2. download models for local stt (speech recognition)
 
 ```bash
