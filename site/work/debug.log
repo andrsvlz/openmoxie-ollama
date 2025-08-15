@@ -3695,3 +3695,91 @@
 2025-08-14 22:37:11,985 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
 2025-08-14 22:38:11,986 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
 2025-08-14 22:39:11,986 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-14 23:50:07,235 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-14 23:50:07,235 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-14 23:50:07,285 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-14 23:50:07,285 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-14 23:50:07,285 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-14 23:50:07,286 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-14 23:50:07,288 INFO [moxie_server] connecting to: localhost
+2025-08-14 23:50:07,337 INFO [moxie_server] Connected with result code 0
+2025-08-14 23:50:13,134 INFO [basehttp] "GET /hive/setup HTTP/1.1" 200 10348
+2025-08-14 23:50:23,312 INFO [basehttp] "GET /hive/dashboard HTTP/1.1" 200 5060
+2025-08-14 23:50:25,566 INFO [basehttp] "GET /admin/ HTTP/1.1" 200 13037
+2025-08-14 23:50:28,169 INFO [basehttp] "GET /admin/hive/singlepromptchat/ HTTP/1.1" 200 14950
+2025-08-14 23:50:28,200 INFO [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2025-08-14 23:51:07,299 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 1}
+2025-08-14 23:52:07,300 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 1}
+2025-08-14 23:53:07,300 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 1}
+2025-08-14 23:53:51,555 INFO [moxie_server] Moxie CONNECTED d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23 from 192.168.4.227:36880
+2025-08-14 23:53:51,555 INFO [robot_data] Device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23 is LOADING.
+2025-08-14 23:53:51,557 INFO [robot_data] Existing model for this device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-14 23:53:52,565 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': 0.6, 'screen_brightness': 1.0, 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'scott', 'input_speed': 0.0, 'face_options': ['MX_020_Face_Colors_Purple']}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-14 23:53:52,565 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-08-14 23:53:52,570 DEBUG [moxie_server] Rx STATE topic for device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-14 23:53:55,830 DEBUG [moxie_server] Rx STATE topic for device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-14 23:54:07,300 INFO [moxie_server] Client Metrics: {'total': 2, 'inactive': 0, 'disconnected': 0, 'active': 2, 'connected': 2, 'expired': 0, 'maximum': 2}
+2025-08-14 23:54:12,198 INFO [robot_data] Releasing device data for d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-14 23:54:12,207 INFO [moxie_server] Moxie DISCONNECTED d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-14 23:55:07,301 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-14 23:56:07,301 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-14 23:57:07,302 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-14 23:58:07,302 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-14 23:59:07,303 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:00:07,303 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:01:07,304 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:02:07,304 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:03:07,304 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:04:07,305 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:05:07,305 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:06:07,306 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:07:07,306 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:08:07,306 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:09:07,307 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:10:07,307 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:11:07,308 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:11:19,245 INFO [moxie_server] Moxie CONNECTED d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23 from 192.168.4.227:36906
+2025-08-15 00:11:19,245 INFO [robot_data] Device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23 is LOADING.
+2025-08-15 00:11:19,247 INFO [robot_data] Existing model for this device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:11:20,110 DEBUG [moxie_server] Rx STATE topic for device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:11:20,255 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': 0.6, 'screen_brightness': 1.0, 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'scott', 'input_speed': 0.0, 'face_options': ['MX_020_Face_Colors_Purple']}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:11:20,255 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-08-15 00:11:21,137 DEBUG [moxie_server] Rx STATE topic for device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:11:38,952 INFO [robot_data] Releasing device data for d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:11:38,961 INFO [moxie_server] Moxie DISCONNECTED d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:12:07,308 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:13:07,309 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:14:07,309 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:15:07,310 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:16:07,310 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:17:07,310 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:18:07,311 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:19:07,311 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:20:07,312 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:21:07,312 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:22:07,312 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:23:07,313 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:24:07,313 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:25:07,314 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:26:07,314 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:26:41,935 INFO [moxie_server] Moxie CONNECTED d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23 from 192.168.4.227:36926
+2025-08-15 00:26:41,936 INFO [robot_data] Device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23 is LOADING.
+2025-08-15 00:26:41,937 INFO [robot_data] Existing model for this device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:26:42,635 DEBUG [moxie_server] Rx STATE topic for device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:26:42,945 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': 0.6, 'screen_brightness': 1.0, 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'scott', 'input_speed': 0.0, 'face_options': ['MX_020_Face_Colors_Purple']}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:26:42,945 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-08-15 00:26:46,433 DEBUG [moxie_server] Rx STATE topic for device d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:27:02,501 INFO [robot_data] Releasing device data for d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:27:02,509 INFO [moxie_server] Moxie DISCONNECTED d_bc22aa6c-e489-44f7-82f7-9c48c66e8a23
+2025-08-15 00:27:07,315 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:28:07,315 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-15 00:29:07,316 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
