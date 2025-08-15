@@ -8,11 +8,18 @@ Welcome!
 
 If you're looking for a solution to run your **Embodied Moxie Robot** in case their cloud infrastructure shuts down, you're in the right place!  
 
-Some of you may be concerned this is going to be complicated—don’t worry. For those who just want to install and run something, we’ll cover that first.
-
 ---
 
 ## 📦 Based on the amazing work by [jbeghtol/openmoxie](https://github.com/jbeghtol/openmoxie)
+
+---
+---
+
+## ⚠ Disclaimer
+
+> **USE AT YOUR OWN RISK**  
+> I take no responsibility for the output of these prompts or models.  
+> **Not for children** — may contain offensive language.
 
 ---
 
