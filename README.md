@@ -159,7 +159,7 @@ python3 site/manage.py init_data
 
 ### 4️⃣ Start MQTT Broker and STT service for Speech Transcription
 ```bash
-docker compose up -d mqtt stt
+sudo docker compose up -d mqtt stt
 ```
 *(Re-launches on reboot — check with `sudo docker ps`)*
 
