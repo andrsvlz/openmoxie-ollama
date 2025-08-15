@@ -19,7 +19,8 @@ If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe g
 
 > **USE AT YOUR OWN RISK**  
 > I take no responsibility for the output of these prompts or models. Or any resulting mental / physical health issues that arise from using them. 
-> **Not for children** — may contain offensive language.
+
+>⚠️ **Not for children** ⚠️— may contain offensive language.
 
 ---
 
