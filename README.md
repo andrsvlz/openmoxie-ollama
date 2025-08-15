@@ -195,35 +195,16 @@ Enter **XAi** and **OpenAI** API keys.
 
 ---
 
-## 🔄 Switching AI Provider or Model
+## 🔄 Switch to a different AI Provider or Model by changing schedules
 
 1. Click your Moxie device name under **Devices**.
 2. Select a schedule from the dropdown (e.g., `only_chat_xai_grok`).
 
 ---
 
-## 📅 Change Moxie Schedule
-
-In Admin → Moxie schedules → Edit:
-http://localhost:8000/admin/hive/moxieschedule/
-
-Schedules:
-- `only_chat_xai_grok`
-- `only_chat_ollama_local`
-
-Example schedule JSON:
-```json
-{
-  "provided_schedule": [
-    { "module_id": "OPENMOXIE_CHAT", "content_id": "grok" }
-  ],
-  "chat_request": { "module_id": "OPENMOXIE_CHAT", "content_id": "grok" }
-}
-```
-
 ---
 
-## 📝 Editing Single Prompt Chats
+## 📝 Changing Moxies Attitude - Editing Single Prompt Chats
 
 In Admin → Single prompt chats → Edit:
 http://localhost:8000/admin/hive/singlepromptchat/
@@ -253,6 +234,28 @@ python3 site/manage.py runserver --noreload
 Changing face color may also trigger updates.
 
 ---
+
+
+## 📅 Edit Moxie Schedule
+
+In Admin → Moxie schedules → Edit:
+http://localhost:8000/admin/hive/moxieschedule/
+
+Schedules:
+- `only_chat_xai_grok`
+- `only_chat_ollama_local`
+
+Example schedule JSON:
+```json
+{
+  "provided_schedule": [
+    { "module_id": "OPENMOXIE_CHAT", "content_id": "grok" }
+  ],
+  "chat_request": { "module_id": "OPENMOXIE_CHAT", "content_id": "grok" }
+}
+```
+
+
 
 ## ⚠ Disclaimer
 
