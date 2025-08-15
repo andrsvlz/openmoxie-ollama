@@ -231,3 +231,15 @@ Changing face color may also trigger updates.
 ---
 
 ## 🎉 Enjoy OpenMoxie!
+
+# fetch models (small.en + base.en)
+scripts/get_models.sh faster-whisper-small.en faster-whisper-base.en
+# then:
+docker compose up -d stt mqtt
+
+
+
+
+chmod +x scripts/get_models.sh
+# Example: fetch the two you’ve been using
+scripts/get_models.sh faster-whisper-small.en faster-whisper-base.en
