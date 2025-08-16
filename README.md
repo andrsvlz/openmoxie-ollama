@@ -62,7 +62,29 @@ This project includes:
 
 ---
 
-## 🖥 Initial Setup
+## 🪟 Initial Setup WINDOWS (Docker Desktop or pure Python)
+
+### Option A — Docker Desktop (recommended)
+1. Install **Docker Desktop for Windows** and enable **WSL2 backend**.
+2. Open **PowerShell** and clone:
+   ```powershell
+   git clone https://github.com/vapors/openmoxie-ollama
+   cd openmoxie-ollama
+   ```
+3. (Optional) Download models locally so STT is fully offline:
+   ```powershell
+   # Download Models For STT
+   scripts\get_models.ps1 -Models faster-whisper-small.en,faster-whisper-base.en
+   ```
+4. Start services:
+   ```powershell
+   docker compose up -d stt mqtt ollama web
+   
+   # pull an Ollama model into the container 'ollama pull llama3.2:3b' you can change this for different models
+   docker compose exec ollama ollama pull llama3.2:3b
+   ```
+----
+## 🖥 Initial Setup UBUNTU
 
 1. Clone this repo to your home directory
 
