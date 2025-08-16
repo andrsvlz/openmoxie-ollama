@@ -3783,3 +3783,36 @@
 2025-08-15 00:27:07,315 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
 2025-08-15 00:28:07,315 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
 2025-08-15 00:29:07,316 INFO [moxie_server] Client Metrics: {'total': 1, 'inactive': 0, 'disconnected': 0, 'active': 1, 'connected': 1, 'expired': 0, 'maximum': 2}
+2025-08-16 14:00:41,630 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-16 14:00:41,631 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-16 14:00:41,690 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-16 14:00:41,691 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-16 14:00:41,692 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-16 14:00:41,692 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-16 14:00:41,692 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-16 14:00:41,692 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-16 14:00:41,694 INFO [moxie_server] connecting to: localhost
+2025-08-16 14:01:55,825 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-16 14:01:55,826 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-16 14:01:55,878 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-16 14:01:55,878 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-16 14:01:55,878 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-16 14:01:55,878 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-16 14:01:55,878 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-16 14:01:55,879 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-16 14:01:55,882 INFO [moxie_server] connecting to: localhost
+2025-08-16 14:01:55,931 INFO [moxie_server] Connected with result code 0
