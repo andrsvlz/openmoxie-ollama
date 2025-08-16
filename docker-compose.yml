@@ -1,4 +1,4 @@
-version: "3.9"
+#version: "3.9"
 services:
   web:
     build:
@@ -56,8 +56,8 @@ services:
 
   ollama:
     image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
+    #ports:
+      #- "11434:11434"
     volumes:
       - ollama:/root/.ollama
     restart: unless-stopped

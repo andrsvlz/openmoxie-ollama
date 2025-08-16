@@ -64,6 +64,10 @@ This project includes:
 
 ## 🪟 Initial Setup WINDOWS (Docker Desktop or pure Python)
 
+
+
+
+
 ### Option A — Docker Desktop (recommended)
 1. Install **Docker Desktop for Windows** and enable **WSL2 backend**.
 2. Open **PowerShell** and clone:
@@ -84,6 +88,11 @@ This project includes:
    docker compose exec ollama ollama pull llama3.2:3b
    ```
 ----
+
+If you already have ollama installed drop the container.
+
+docker compose up -d stt mqtt web
+
 ## 🖥 Initial Setup UBUNTU
 
 1. Clone this repo to your home directory
