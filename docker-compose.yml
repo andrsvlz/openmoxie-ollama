@@ -1,63 +1,66 @@
-
+version: "3.9"
 services:
-
-  mqtt:
+  web:
     build:
-      context: ./
-      dockerfile: ./mqtt.Dockerfile
-      platforms:
-          - linux/amd64
-          - linux/arm64
-    image: openmoxie/openmoxie-mqtt:${OPENMOXIE_VERSION:-latest}
+      context: .
+      dockerfile: web.Dockerfile
+    env_file: .env
+    environment:
+      DJANGO_SETTINGS_MODULE: openmoxie.settings
+      STT_URL: http://stt:8001/stt
+      OLLAMA_HOST: http://ollama:11434
+      LLM_PROVIDER: ollama
+      OLLAMA_MODEL: llama3.2:3b
+      STT_BACKEND: local
+      STT_LANG: en
     ports:
-      - "8883:8883"
+      - "8000:8000"
     volumes:
-      - ./local/work:/mosquitto/log
-
-  server:
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
-      platforms:
-          - linux/amd64
-          - linux/arm64
-    image: openmoxie/openmoxie-server:${OPENMOXIE_VERSION:-latest}
-    ports:
-      - "8001:8000"
-    volumes:
-      - ./local/work:/app/site/work
+      - ./site/work:/app/site/work
+      - ./site/static:/app/site/static
     depends_on:
       - mqtt
-      
+      - stt
+      - ollama
+    restart: unless-stopped
+
   stt:
     build:
       context: .
       dockerfile: stt.Dockerfile
     ports:
       - "8001:8001"
-    # Mount your local models so it’s fully offline
     volumes:
       - ./site/services/stt/models:/models:ro
     environment:
-      # Pick one of the model dirs you already have:
-      #   /models/faster-whisper-small.en  or  /models/faster-whisper-base.en
       STT_MODEL: /models/faster-whisper-small.en
-      STT_DEVICE: "auto"          # "auto" | "cpu" | "cuda"
-      STT_COMPUTE: "int8"         # CPU best: int8 ; GPU best: float16
-      STT_VAD: "1"                # silence filtering
+      STT_DEVICE: "auto"
+      STT_COMPUTE: "int8"
+      STT_VAD: "1"
     restart: unless-stopped
-
-    # === Enable GPU (optional) ===
-    # Uncomment ONE of the following blocks depending on your Docker/Compose setup.
-
-    # Newer Compose / Docker (works on most setups):
+    # GPU (optional):
     # gpus: all
 
-    # Or the lower-level device_requests syntax:
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
+  mqtt:
+    build:
+      context: .
+      dockerfile: mqtt.Dockerfile
+    ports:
+      - "8883:8883"
+    volumes:
+      - ./keys:/keys:ro
+      - ./local/work:/work
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+    # GPU (optional):
+    # gpus: all
+
+volumes:
+  ollama:
