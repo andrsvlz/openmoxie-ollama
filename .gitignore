@@ -4,3 +4,4 @@
 /local/work/mosquitto.log
 /site/work/db.sqlite3
 __pycache__/
+/docker-compose copy.yml
