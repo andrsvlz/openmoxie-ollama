@@ -77,7 +77,7 @@ This project includes:
     winget install -e --id Docker.DockerDesktop
     wsl --install -d Ubuntu
   ```
-  ### Reboot if prompted, then open a new PowerShell
+    *Reboot if prompted, then open a new PowerShell
 
 
 2. Clone & start
