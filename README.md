@@ -64,7 +64,7 @@ This project includes:
 
    ```
    
-6. Then Download llama model (for example llama3.2:3b) you can load as many as you like and change on the fly
+6. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
   
     ```powershell
     # pull an Ollama model into the container 
