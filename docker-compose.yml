@@ -1,23 +1,38 @@
 #version: "3.9"
 services:
+
   data-init:
     build:
       context: .
-      dockerfile: web.Dockerfile         # reuse the web image so Django is available
-    env_file: .env
+      dockerfile: web.Dockerfile
+    user: "0:0"
+    entrypoint:
+      - /bin/sh
+      - -lc
+      - |
+        set -eu
+        cd /app/site
+        echo "[data-init] migrate..."
+        python manage.py migrate --noinput
+        if python manage.py help | grep -q init_data; then
+          echo "[data-init] init_data..."
+          python manage.py init_data || true
+        else
+          echo "[data-init] no init_data command, skipping"
+        fi
+        echo "[data-init] collectstatic..."
+        python manage.py collectstatic --noinput || true
+        echo "[data-init] done."
     environment:
-      DJANGO_SETTINGS_MODULE: openmoxie.settings
-    command: >
-      bash -lc "
-        cd /app/site &&
-        python manage.py migrate --noinput &&
-        python manage.py init_data || echo 'init_data skipped (possibly already seeded)'
-      "
+      DJANGO_SETTINGS_MODULE: "openmoxie.settings"
+      DEBUG: "False"
     volumes:
-      - ./site/work:/app/site/work       # same DB/logs volume as web
-      - ./site/static:/app/site/static   # optional, harmless
+      - ./:/app
+      - web-work:/app/site/work
+      - web-static:/app/site/static
+    # IMPORTANT: no depends_on here
     restart: "no"
-    
+
   model-init:
     image: curlimages/curl:8.10.1
     user: "0:0"
