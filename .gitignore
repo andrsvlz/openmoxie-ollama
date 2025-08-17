@@ -5,3 +5,4 @@
 /site/work/db.sqlite3
 __pycache__/
 /docker-compose copy.yml
+/site/work/debug.log
