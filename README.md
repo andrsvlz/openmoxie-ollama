@@ -86,17 +86,17 @@ Install Docker Desktop (WSL2 engine)
 
 Download from Docker or run (if you have winget):
 
-    ```powershell
+  ```powershell
     winget install -e --id Docker.DockerDesktop
-    ```
+  ```
 
 Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
 
 (If needed) Install a WSL distro
 
-    ```powershell
+  ```powershell
     wsl --install -d Ubuntu
-    ```
+  ```
 
 # Reboot if prompted, then open a new PowerShell
 
@@ -104,29 +104,22 @@ Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
 Clone & start
 
 
-    ```powershell
+  ```powershell
     git clone https://github.com/vapors/openmoxie-ollama
     cd openmoxie-ollama
-    ```
-
-
-
+  ```
 
 # First run: seeds Faster-Whisper models + default data, then starts services
 
-    ```powershell
+  ```powershell
     docker compose up -d model-init data-init stt mqtt ollama web
-
-    ```
+  ```
     
 Pull an Ollama model inside the container
 
-    ```powershell
+  ```powershell
     docker compose exec ollama ollama pull llama3.2:3b
-
-    ```
-
-
+  ```
 
 Open the app
 
