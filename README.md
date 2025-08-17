@@ -25,17 +25,6 @@ If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe g
 
 ---
 
-## 🛠 What You Need
-
-0. A Moxie robot with the firmware update — or flash it yourself.
-1. A computer (Ubuntu/Linux/possibly Windows) on the same wireless network.
-2. An **OpenAI** account and **XAi** credits to pay for Speech-to-Text and Chat.
-3. **Ollama** and **Docker** installed.  
-   - Docker Desktop: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)  
-   - *(No paid license needed for personal use)*
-
----
-
 # 🚀 Quick Overview 
 
 ## Components
@@ -43,57 +32,63 @@ If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe g
 This project includes:
 
 - **Django app** for basic web services and database (SQLite3).
-- **pymqtt**-based service code to handle device communication.
-- **MQTT-based Speech-to-Text (STT)** provider using OpenAI Whisper.
 - **MQTT-based remote chat** service with single prompt inferences from OpenAI.
-
-# PLUS
-
 - **Ollama for Local chat** ollama running llama3.2:3b - with the ability to update models.
 - **Faster-Whisper Local (STT)** docker or venv for fully offline transcription (listening).
 - **Support for XAi Grok chat** XAI api support as an alternative to OpenAi.
 
+
+## 🛠 What You Need
+
+0. A Moxie robot with the firmware update — or flash it yourself.
+1. A computer (Ubuntu/Linux/possibly Windows) on the same wireless network.
+
 ---
 
-## 💬 Using XAi Grok & Local Ollama
-
-1. Get an **XAi API key** and deposit funds: [https://x.ai/api](https://x.ai/api)
-2. Get an **OpenAI API key**: [https://openai.com/index/openai-api/](https://openai.com/index/openai-api/)
-
----
-
-## 🪟 Initial Setup WINDOWS (Docker Desktop or pure Python)
+## 🪟 Easy Setup Linux / MAC / WINDOWS (Docker)
 
 
-
-
-
-### Option A — Docker Desktop (recommended)
 1. Install **Docker Desktop for Windows** and enable **WSL2 backend**.
-2. Open **PowerShell** and clone:
+   
+3. Clone the repository
+
    ```powershell
    git clone https://github.com/vapors/openmoxie-ollama
    cd openmoxie-ollama
    ```
-3. (Optional) Download models locally so STT is fully offline:
+   
+4. Download models locally so STT can work offline
+
    ```powershell
    # Download Models For STT
    scripts\get_models.ps1 -Models faster-whisper-small.en,faster-whisper-base.en
    ```
-4. Start services:
+   
+5. Start services
+
    ```powershell
    docker compose up -d stt mqtt ollama web
-   
-   # pull an Ollama model into the container 'ollama pull llama3.2:3b' you can change this for different models
-   docker compose exec ollama ollama pull llama3.2:3b
+
    ```
+   
+6. Then Download llama model (for example llama3.2:3b) you can load as many as you like and change on the fly
+  
+  ```powershell
+  # pull an Ollama model into the container 
+  docker compose exec ollama ollama pull llama3.2:3b #Change models if you like
+  ```
+
+## 💬 Using XAi Grok & OpenAi
+
+1. Get an **XAi API key** and deposit funds: [https://x.ai/api](https://x.ai/api)
+2. Get an **OpenAI API key**: [https://openai.com/index/openai-api/](https://openai.com/index/openai-api/)
+
+----
+----
 ----
 
-If you already have ollama installed drop the container.
 
-docker compose up -d stt mqtt web
-
-## 🖥 Initial Setup UBUNTU
+## 🖥 More Complex Setup UBUNTU (.venv)
 
 1. Clone this repo to your home directory
 
@@ -112,8 +107,6 @@ chmod +x scripts/get_models_linux.sh
 
 ```
 Model files should download to **~/openmoxie-ollama/site/services/stt/models** 
-
-Windows Powershell has not been tested
 
 * Follow Remaining Instructions In Order
 
