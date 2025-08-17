@@ -74,7 +74,7 @@ This project includes:
 5. Open the app
    
     Go to http://localhost:8000
-    Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
+    
 
 ---
 
@@ -108,8 +108,7 @@ This project includes:
 4. Open the app
    
    Go to http://localhost:8000
-   Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
-
+  
 
 
 ---
