@@ -61,7 +61,17 @@ This project includes:
 
    ```powershell
    # Download Models For STT
-   scripts\get_models.ps1 -Models faster-whisper-small.en,faster-whisper-base.en 
+   #mac / linux
+   ./scripts/get_models_linux.sh -Models faster-whisper-small.en,faster-whisper-base.en
+
+   #Windows cmd line
+   powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\get_models.ps1" -Models 'faster-whisper-small.en','faster-whisper-base.en'
+
+   #or from powershell
+   .\scripts\get_models.ps1 -Models 'faster-whisper-small.en','faster-whisper-base.en'
+
+   
+
    # models live in the /site/services/stt/models/ folder
    ```
    
