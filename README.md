@@ -48,7 +48,7 @@ This project includes:
 ## 🪟 Easy Setup Linux / MAC / WINDOWS (Docker)
 
 
-1. Install **Docker Desktop for Windows** and enable **WSL2 backend**.
+1. Install **Docker** and enable **WSL2 backend** if asked.
    
 3. Clone the repository
 
