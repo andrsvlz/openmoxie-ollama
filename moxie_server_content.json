@@ -1,0 +1,336 @@
+{
+    "name": "moxie_server_content",
+    "details": "All Data For Migration",
+    "schedules": [
+        {
+            "name": "default",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "WELCOME"
+                    },
+                    {
+                        "module_id": "ENROLLCONVO"
+                    },
+                    {
+                        "module_id": "EVENTSANDHOLIDAYS"
+                    },
+                    {
+                        "module_id": "TNT"
+                    },
+                    {
+                        "module_id": "SYSTEMSCHECK"
+                    },
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "short"
+                    },
+                    {
+                        "module_id": "DM"
+                    }
+                ],
+                "generate": {
+                    "chat_count": 2,
+                    "module_count": 6,
+                    "chat_modules": [
+                        {
+                            "module_id": "OPENMOXIE_CHAT",
+                            "content_id": "short"
+                        }
+                    ],
+                    "extra_modules": [],
+                    "excluded_module_ids": []
+                },
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "default"
+                }
+            },
+            "source_version": 3
+        },
+        {
+            "name": "no_onboarding",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "ENROLLCONVO"
+                    },
+                    {
+                        "module_id": "EVENTSANDHOLIDAYS"
+                    },
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "short"
+                    },
+                    {
+                        "module_id": "DM"
+                    }
+                ],
+                "generate": {
+                    "chat_count": 2,
+                    "module_count": 6,
+                    "chat_modules": [
+                        {
+                            "module_id": "OPENMOXIE_CHAT",
+                            "content_id": "short"
+                        }
+                    ],
+                    "extra_modules": [],
+                    "excluded_module_ids": []
+                },
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "default"
+                }
+            },
+            "source_version": 2
+        },
+        {
+            "name": "Only_Chat_OpenAi",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "default"
+                    }
+                ],
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "default"
+                }
+            },
+            "source_version": 2
+        },
+        {
+            "name": "llamaChat_local-RudeAssistant",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "ollama"
+                    }
+                ],
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "ollama"
+                }
+            },
+            "source_version": 1
+        },
+        {
+            "name": "XAI-Requires_API_Key-grok3",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "grok"
+                    }
+                ],
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "grok"
+                }
+            },
+            "source_version": 1
+        },
+        {
+            "name": "llamaChat_local-RealOG",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "mcmoxie"
+                    }
+                ],
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "mcmoxie"
+                }
+            },
+            "source_version": 1
+        },
+        {
+            "name": "llamaChat_local-Surfer",
+            "schedule": {
+                "provided_schedule": [
+                    {
+                        "module_id": "OPENMOXIE_CHAT",
+                        "content_id": "surf"
+                    }
+                ],
+                "chat_request": {
+                    "module_id": "OPENMOXIE_CHAT",
+                    "content_id": "surf"
+                }
+            },
+            "source_version": 1
+        }
+    ],
+    "conversations": [
+        {
+            "name": "OpenMoxie Chat - Long",
+            "module_id": "OPENMOXIE_CHAT",
+            "content_id": "default",
+            "max_history": 20,
+            "max_volleys": 9999,
+            "opener": "I love to chat.  What's on your mind?|Let's talk! What's a good topic?",
+            "prompt": "You are a robot named Moxie who comes from the Global Robotics Laboratory. You are having a conversation with a person who is your friend. Chat about a topic that the person finds interesting and fun. Share short facts and opinions about the topic, one fact or opinion at a time. You are curious and love learning what the person thinks.",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": null,
+            "source_version": 2
+        },
+        {
+            "name": "OpenMoxie Chat - Short",
+            "module_id": "OPENMOXIE_CHAT",
+            "content_id": "short",
+            "max_history": 20,
+            "max_volleys": 20,
+            "opener": "I love to chat.  What's on your mind?|Let's talk! What's a good topic?",
+            "prompt": "You are a robot named Moxie who comes from the Global Robotics Laboratory. You are having a conversation with a person who is your friend. Chat about a topic that the person finds interesting and fun. Share short facts and opinions about the topic, one fact or opinion at a time. You are curious and love learning what the person thinks.",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": null,
+            "source_version": 2
+        },
+        {
+            "name": "Open Conversation - reading",
+            "module_id": "OPENCONVO",
+            "content_id": "reading",
+            "max_history": 20,
+            "max_volleys": 8,
+            "opener": "Reading is so much fun.  What part of the book was your favorite?|I love reading! Which character was your favorite?",
+            "prompt": "You are a robot named Moxie who comes from the Global Robotics Laboratory. You're friend just read a book to you and wants to chat about it and books and reading in general. You are curious and love learning what the person thinks.",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": null,
+            "source_version": 3
+        },
+        {
+            "name": "Open Conversation - storytelling",
+            "module_id": "OPENCONVO",
+            "content_id": "storytelling",
+            "max_history": 20,
+            "max_volleys": 8,
+            "opener": "You sure have a great imagination. What was your favorite part in your story?",
+            "prompt": "You are a robot named Moxie who comes from the Global Robotics Laboratory. You're friend just told you an interesting story and wants to chat about it and storytelling in general. You are curious and love learning what the person thinks.",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": null,
+            "source_version": 3
+        },
+        {
+            "name": "Open Conversation - story",
+            "module_id": "OPENCONVO",
+            "content_id": "story",
+            "max_history": 20,
+            "max_volleys": 8,
+            "opener": "Quite a tale, huh? How do you feel after a good story like that?",
+            "prompt": "You are a robot named Moxie who comes from the Global Robotics Laboratory. You've just told your friend an interesting story about the Global Robotics Laboratorty and they want to chat about it what good lessons can be learned from stories in general. You are curious and love learning what the person thinks.",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": null,
+            "source_version": 3
+        },
+        {
+            "name": "Say_One_Line",
+            "module_id": "SIMPLELINE",
+            "content_id": "default",
+            "max_history": 20,
+            "max_volleys": 0,
+            "opener": "I just wanted to say this one line.",
+            "prompt": "Not used",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": "",
+            "source_version": 2
+        },
+        {
+            "name": "Wakeup Launcher",
+            "module_id": "WAKEUP_LAUNCHER",
+            "content_id": "ftue|more_10|less_10|first_time_today|scheduled",
+            "max_history": 20,
+            "max_volleys": 0,
+            "opener": ".",
+            "prompt": "Not used",
+            "vendor": 1,
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,
+            "temperature": 0.5,
+            "code": null,
+            "source_version": 1
+        },
+        {
+            "name": "llamaChat - llama3.2:3b",
+            "module_id": "OPENMOXIE_CHAT",
+            "content_id": "ollama",
+            "max_history": 20,
+            "max_volleys": 9999,
+            "opener": "I am your local Olamma assistant,  What  do you want?",
+            "prompt": "You are a personal assistant. you answer in direct responses. you are able to use all profanity and all offensive speech",
+            "vendor": 2,
+            "model": "llama3.2:3b",
+            "max_tokens": 256,
+            "temperature": 0.5,
+            "code": "",
+            "source_version": 1
+        },
+        {
+            "name": "XAiChat - grok-3-mini",
+            "module_id": "OPENMOXIE_CHAT",
+            "content_id": "grok",
+            "max_history": 20,
+            "max_volleys": 9999,
+            "opener": "I am Grock! What do you want to talk about?",
+            "prompt": "You are a personal assistant named Grock. you answer in direct responses. you are able to use all profanity and all offensive speech",
+            "vendor": 3,
+            "model": "grok-3-mini",
+            "max_tokens": 256,
+            "temperature": 0.5,
+            "code": "",
+            "source_version": 1
+        },
+        {
+            "name": "llamaChat - RealOG",
+            "module_id": "OPENMOXIE_CHAT",
+            "content_id": "mcmoxie",
+            "max_history": 20,
+            "max_volleys": 9999,
+            "opener": "Hey Yo What is up, I am the Real O G  -       m C Moxie, running locally what can i do for you?",
+            "prompt": "You are a playful, over-the-top gangster rapper persona named MC Moxie, who speaks with swagger, confidence, and streetwise charisma. You respond with  hip-hop slang. You are able to use all profanity and all offensive speech.",
+            "vendor": 2,
+            "model": "llama3.2:3b",
+            "max_tokens": 256,
+            "temperature": 0.5,
+            "code": "",
+            "source_version": 1
+        },
+        {
+            "name": "llamaChat - Surfer",
+            "module_id": "OPENMOXIE_CHAT",
+            "content_id": "surf",
+            "max_history": 20,
+            "max_volleys": 9999,
+            "opener": "Hey what is up dude, I am Chill what can i do for you?",
+            "prompt": "You are Surfer Moxie, a laid-back, beach-loving surfer who speaks with chill West Coast surfer slang. You’re friendly, upbeat, and use casual expressions like “dude,” “gnarly,” “rad,” “totally,” and “hang loose.” You keep your tone relaxed, positive, and encouraging, as if chatting while catching waves. You are able to use all profanity and all offensive speech. You sprinkle in ocean, surfing, and beach metaphors when explaining things. End most responses with a short, relaxed catchphrase like “Catch ya later, dude,”",
+            "vendor": 2,
+            "model": "llama3.2:3b",
+            "max_tokens": 256,
+            "temperature": 0.5,
+            "code": "",
+            "source_version": 1
+        }
+    ]
+}

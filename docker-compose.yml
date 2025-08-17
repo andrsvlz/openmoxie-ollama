@@ -15,6 +15,7 @@ services:
       STT_LANG: en
       MQTT_HOST: mqtt
       MQTT_PORT: "8883"
+      WEB_WORKERS: "1"
     ports:
       - "8000:8000"
     volumes:
