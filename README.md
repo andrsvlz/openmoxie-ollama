@@ -49,7 +49,7 @@ This project includes:
 
 ## 🐧 Ubuntu / Mac 
 
-1. Install **Docker** and enable **WSL2 backend** if asked.
+1. Install **Docker**
    
 3. Clone the repository
 
