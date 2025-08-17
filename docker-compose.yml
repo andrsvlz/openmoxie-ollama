@@ -17,48 +17,12 @@ services:
       - ./site/work:/app/site/work       # same DB/logs volume as web
       - ./site/static:/app/site/static   # optional, harmless
     restart: "no"
-  web:
-    build:
-      context: .
-      dockerfile: web.Dockerfile
-    env_file: .env
-    environment:
-      DJANGO_SETTINGS_MODULE: openmoxie.settings
-      STT_URL: http://stt:8001/stt
-      OLLAMA_HOST: http://ollama:11434
-      LLM_PROVIDER: ollama
-      OLLAMA_MODEL: llama3.2:3b
-      STT_BACKEND: local
-      STT_LANG: en
-      MQTT_HOST: mqtt
-      MQTT_PORT: "8883"
-      WEB_WORKERS: "1"
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./site/work:/app/site/work
-      - ./site/static:/app/site/static
-    #depends_on:
-    #  - mqtt
-    #  - stt
-    #  - ollama
 
-    depends_on:
-          model-init:
-            condition: service_completed_successfully   # if you use model-init
-          data-init:
-            condition: service_completed_successfully
-          stt:
-            condition: service_started
-          mqtt:
-            condition: service_started
-          ollama:
-            condition: service_started      
-    restart: unless-stopped
 
   # seeds /models with Faster-Whisper models, then exits
   model-init:
     image: curlimages/curl:8.10.1
+    user: "0:0" 
     volumes:
       - ./docker/seed-models.sh:/seed-models.sh:ro
       - ./site/services/stt/models:/models
@@ -110,6 +74,46 @@ services:
     restart: unless-stopped
     # GPU (optional):
     # gpus: all
+
+
+  web:
+    build:
+      context: .
+      dockerfile: web.Dockerfile
+    env_file: .env
+    environment:
+      DJANGO_SETTINGS_MODULE: openmoxie.settings
+      STT_URL: http://stt:8001/stt
+      OLLAMA_HOST: http://ollama:11434
+      LLM_PROVIDER: ollama
+      OLLAMA_MODEL: llama3.2:3b
+      STT_BACKEND: local
+      STT_LANG: en
+      MQTT_HOST: mqtt
+      MQTT_PORT: "8883"
+      WEB_WORKERS: "1"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./site/work:/app/site/work
+      - ./site/static:/app/site/static
+    #depends_on:
+    #  - mqtt
+    #  - stt
+    #  - ollama
+
+    depends_on:
+          model-init:
+            condition: service_completed_successfully   # if you use model-init
+          data-init:
+            condition: service_completed_successfully
+          stt:
+            condition: service_started
+          mqtt:
+            condition: service_started
+          ollama:
+            condition: service_started      
+    restart: unless-stopped
 
 volumes:
   ollama:
