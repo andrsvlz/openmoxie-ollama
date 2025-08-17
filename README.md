@@ -90,7 +90,7 @@ Download from Docker or run (if you have winget):
     winget install -e --id Docker.DockerDesktop
   ```
 
-Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
+##Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
 
 (If needed) Install a WSL distro
 
@@ -98,7 +98,7 @@ Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
     wsl --install -d Ubuntu
   ```
 
-# Reboot if prompted, then open a new PowerShell
+## Reboot if prompted, then open a new PowerShell
 
 
 Clone & start
@@ -109,7 +109,7 @@ Clone & start
     cd openmoxie-ollama
   ```
 
-# First run: seeds Faster-Whisper models + default data, then starts services
+## First run: seeds Faster-Whisper models + default data, then starts services
 
   ```powershell
     docker compose up -d model-init data-init stt mqtt ollama web
@@ -128,6 +128,8 @@ Go to http://localhost:8000
 Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
 
 
+
+---
 
 ## 💬 Using XAi Grok & OpenAi
 
