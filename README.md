@@ -81,21 +81,18 @@ This project includes:
 
 ## 🪟 Windows Quick Start (PowerShell)
 
-Requires Windows 10/11 with virtualization enabled.
+  Requires Windows 10/11 with virtualization enabled.
 
-Install Docker Desktop (WSL2 engine)
-
-Download from Docker or run (if you have winget):
+1. Install Docker Desktop (WSL2 engine) Download from Docker or run (if you have winget):
 
   ```powershell
     winget install -e --id Docker.DockerDesktop
     wsl --install -d Ubuntu
   ```
+  ### Reboot if prompted, then open a new PowerShell
 
-## Reboot if prompted, then open a new PowerShell
 
-
-Clone & start
+2. Clone & start
 
   ```powershell
     git clone https://github.com/vapors/openmoxie-ollama
@@ -103,17 +100,17 @@ Clone & start
     docker compose up -d model-init data-init stt mqtt ollama web
   ```
     
-Pull an Ollama model inside the container
+3. Pull an Ollama model inside the container
 
   ```powershell
     docker compose exec ollama ollama pull llama3.2:3b
   ```
 
-Open the app
+4. Open the app
 
-Go to http://localhost:8000
-
-Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
+  Go to http://localhost:8000
+  
+  Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
 
 
 
