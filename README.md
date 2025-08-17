@@ -45,8 +45,9 @@ This project includes:
 
 ---
 
-## 🪟 Easy Setup Linux / Mac / Windows 
+## 🚀 Easy Setup 
 
+## 🪟 Ubuntu / Mac 
 
 1. Install **Docker** and enable **WSL2 backend** if asked.
    
