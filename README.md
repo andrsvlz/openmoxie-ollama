@@ -51,21 +51,16 @@ This project includes:
 
 1. Install **Docker**
    
-3. Clone the repository
+3. Clone and build the repository
 
    ```bash
    git clone https://github.com/vapors/openmoxie-ollama
    cd openmoxie-ollama
-   ```
-   
-5. Start services
-
-   ```bash
    docker compose up -d model-init data-init stt mqtt ollama web
 
    ```
    
-6. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
+4. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
   
     ```bash
     # pull an Ollama model into the container 
@@ -75,7 +70,11 @@ This project includes:
     docker compose exec -T ollama sh -lc 'ollama pull llama3.2:3b'
 
     ```
-
+    
+5. Open the app
+   
+    Go to http://localhost:8000
+    Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
 
 ---
 
@@ -100,17 +99,16 @@ This project includes:
     docker compose up -d model-init data-init stt mqtt ollama web
   ```
     
-3. Pull an Ollama model inside the container
+3. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
 
   ```powershell
     docker compose exec ollama ollama pull llama3.2:3b
   ```
 
 4. Open the app
-
-  Go to http://localhost:8000
-  
-  Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
+   
+   Go to http://localhost:8000
+   Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
 
 
 
