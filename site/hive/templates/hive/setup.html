@@ -98,10 +98,17 @@
     </div>
 
     <div class="mb-3">
-      <label for="stt_url" class="form-label fw-bold">Local STT URL (Keep Default)</label>
+      <label for="stt_url" class="form-label fw-bold">Local STT URL (Keep Default for Docker)</label>
+        <!--
       <input type="text" class="form-control" name="stt_url" id="stt_url"
             placeholder="http://127.0.0.1:8001/stt"
             value="{{ object.stt_url|default:'http://127.0.0.1:8001/stt' }}">
+        -->
+        
+      <input type="text" class="form-control" name="stt_url" id="stt_url"
+            placeholder="http://stt:8001/stt"
+            value="{{ object.stt_url|default:'' }}">
+        
       <div class="form-text text-light">Only used when “Local” is selected.</div>
     </div>
 

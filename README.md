@@ -12,6 +12,7 @@ If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe g
 
 ## 📦 Based on the amazing work by [jbeghtol/openmoxie](https://github.com/jbeghtol/openmoxie)
 
+<a href="https://github.com/sponsors/vapors"> # Sponsor my work! and future development </a>
 ---
 ---
 
@@ -61,7 +62,38 @@ This project includes:
 
 ---
 
-## 🖥 Initial Setup
+## 🪟 Initial Setup WINDOWS (Docker Desktop or pure Python)
+
+
+
+
+
+### Option A — Docker Desktop (recommended)
+1. Install **Docker Desktop for Windows** and enable **WSL2 backend**.
+2. Open **PowerShell** and clone:
+   ```powershell
+   git clone https://github.com/vapors/openmoxie-ollama
+   cd openmoxie-ollama
+   ```
+3. (Optional) Download models locally so STT is fully offline:
+   ```powershell
+   # Download Models For STT
+   scripts\get_models.ps1 -Models faster-whisper-small.en,faster-whisper-base.en
+   ```
+4. Start services:
+   ```powershell
+   docker compose up -d stt mqtt ollama web
+   
+   # pull an Ollama model into the container 'ollama pull llama3.2:3b' you can change this for different models
+   docker compose exec ollama ollama pull llama3.2:3b
+   ```
+----
+
+If you already have ollama installed drop the container.
+
+docker compose up -d stt mqtt web
+
+## 🖥 Initial Setup UBUNTU
 
 1. Clone this repo to your home directory
 
@@ -85,11 +117,16 @@ Windows Powershell has not been tested
 
 * Follow Remaining Instructions In Order
 
-### 1️⃣ Install Docker
+### 1️⃣ Install Docker Desktop or CLI
+Download Docker
+https://docs.docker.com/desktop/setup/install/linux/ubuntu/
+
 ```bash
+#cd to downloads folder
 sudo apt-get install ./docker-desktop-amd64.deb
 ```
-If that doesn’t work, install the CLI manually:
+
+If that doesn’t work, Just install the CLI manually:
 ```bash
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -109,16 +146,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 ---
 
-### 2️⃣ Install Ollama
+### 2️⃣ Install Ollama and run a model
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
-Download and test a model (CPU-friendly model example used in sample content):
-
+Download and test a model (2GB CPU-friendly model example used in sample content):
+more models(gemma, deepseek, gpt-oss, etc...) can be found at https://ollama.com/search keep the size reasonable for your computers power
 ```bash
 ollama run llama3.2:3b
-ollama stop llama3.2:3b
-ollama list
+#test the model response and then you can exit by typing "/bye"
+
+# you can stop the model it will relaunch if activated
+ollama stop llama3.2:3b # stop model by name
+ollama list # show all available models
 ```
 
 ---
@@ -151,7 +191,7 @@ python3 site/manage.py init_data
 
 ### 4️⃣ Start MQTT Broker and STT service for Speech Transcription
 ```bash
-docker compose up -d mqtt stt
+sudo docker compose up -d mqtt stt
 ```
 *(Re-launches on reboot — check with `sudo docker ps`)*
 
@@ -164,7 +204,7 @@ docker compose up -d mqtt stt
   models can be selected in admin
 ---
 
-### 5️⃣ Start the OpenMoxie Server
+### 5️⃣ Start the OpenMoxie Server and do the usual Wifi and or Migration QR code
 ```bash
 python3 site/manage.py runserver --noreload
 ```

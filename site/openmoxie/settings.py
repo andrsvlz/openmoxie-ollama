@@ -14,6 +14,17 @@ from pathlib import Path
 import os
 from django.conf import settings
 
+
+MQTT_HOST = os.getenv("MQTT_HOST", "localhost")  # Docker overrides to "mqtt"
+MQTT_PORT = int(os.getenv("MQTT_PORT", "8883"))
+
+MQTT_ENDPOINT = {
+    "host": MQTT_HOST,
+    "port": MQTT_PORT,
+    "project": "openmoxie",
+    "cert_required": False,
+}
+
 # ---- Local LLM / Provider toggle ----
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama")   # "ollama" | "openai | xai"
 
@@ -121,12 +132,7 @@ DATABASES = {
 #    'project': 'openmoxie',
 #    'cert_required': False,
 #}
-MQTT_ENDPOINT = {
-    'host': 'localhost',
-    'port': 8883,
-    'project': 'openmoxie',
-    'cert_required': False,
-}
+
 BOOTSTRAP5 = {
     'css': {
         'url': '/static/bootstrap/css/bootstrap.min.css'
@@ -170,7 +176,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+#STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
