@@ -51,25 +51,14 @@ This project includes:
 
 1. Install **Docker**
    
-3. Clone and build the repository
+2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
 
    ```bash
    git clone https://github.com/vapors/openmoxie-ollama
    cd openmoxie-ollama
-   docker compose up -d model-init data-init stt mqtt ollama web
+   docker compose up -d model-init data-init stt mqtt ollama ollama-init
 
    ```
-   
-4. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
-  
-    ```bash
-    # pull an Ollama model into the container 
-    docker compose exec ollama ollama pull llama3.2:3b #Change models if you like
-
-    #or Mac zsh
-    docker compose exec -T ollama sh -lc 'ollama pull llama3.2:3b'
-
-    ```
     
 5. Open the app
    
@@ -88,24 +77,19 @@ This project includes:
     winget install -e --id Docker.DockerDesktop
     wsl --install -d Ubuntu
   ```
-  ### Reboot if prompted, then open a new PowerShell
+  >Reboot if prompted, then open a new PowerShell
 
 
-2. Clone & start
+2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
 
   ```powershell
     git clone https://github.com/vapors/openmoxie-ollama
     cd openmoxie-ollama
-    docker compose up -d model-init data-init stt mqtt ollama web
-  ```
-    
-3. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
+    docker compose up -d model-init data-init stt mqtt ollama ollama-init
 
-  ```powershell
-    docker compose exec ollama ollama pull llama3.2:3b
   ```
 
-4. Open the app
+3. Open the app
    
    Go to http://localhost:8000
   
