@@ -41,11 +41,11 @@ This project includes:
 ## 🛠 What You Need
 
 0. A Moxie robot with the firmware update — or flash it yourself.
-1. A computer (Ubuntu/Linux/possibly Windows) on the same wireless network.
+1. A computer (Ubuntu Linux / mac / Windows) on the same wireless network.
 
 ---
 
-## 🪟 Easy Setup Linux / MAC / WINDOWS (Docker)
+## 🪟 Easy Setup Linux / Mac / Windows 
 
 
 1. Install **Docker** and enable **WSL2 backend** if asked.
@@ -61,7 +61,8 @@ This project includes:
 
    ```powershell
    # Download Models For STT
-   scripts\get_models.ps1 -Models faster-whisper-small.en,faster-whisper-base.en
+   scripts\get_models.ps1 -Models faster-whisper-small.en,faster-whisper-base.en 
+   # models live in the /site/services/stt/models/ folder
    ```
    
 5. Start services
@@ -73,20 +74,19 @@ This project includes:
    
 6. Then Download llama model (for example llama3.2:3b) you can load as many as you like and change on the fly
   
-  ```powershell
-  # pull an Ollama model into the container 
-  docker compose exec ollama ollama pull llama3.2:3b #Change models if you like
-  ```
+    ```powershell
+    # pull an Ollama model into the container 
+    docker compose exec ollama ollama pull llama3.2:3b #Change models if you like
+    ```
 
 ## 💬 Using XAi Grok & OpenAi
 
 1. Get an **XAi API key** and deposit funds: [https://x.ai/api](https://x.ai/api)
 2. Get an **OpenAI API key**: [https://openai.com/index/openai-api/](https://openai.com/index/openai-api/)
 
-----
-----
-----
 
+
+----
 
 ## 🖥 More Complex Setup UBUNTU (.venv)
 
