@@ -3,5 +3,6 @@
 /site/services/stt/models/
 /local/work/mosquitto.log
 /site/work/db.sqlite3
+/site/work/debug.log
 __pycache__/
 /docker-compose copy.yml
