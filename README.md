@@ -52,38 +52,15 @@ This project includes:
    
 3. Clone the repository
 
-   ```powershell
+   ```bash
    git clone https://github.com/vapors/openmoxie-ollama
    cd openmoxie-ollama
    ```
    
-4. Download models locally so STT can work offline
-
-   ```powershell
-   # Download Models For STT
-
-   #mac
-   chmod +x ./scripts/get_models_zsh.sh
-   ./scripts/get_models_zsh.sh faster-whisper-small.en faster-whisper-base.en
-
-   # Linux / Ubuntu
-   ./scripts/get_models_linux.sh -Models "faster-whisper-small.en,faster-whisper-base.en"
-
-   # Windows cmd line
-   powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\get_models.ps1" -Models 'faster-whisper-small.en','faster-whisper-base.en'
-
-   #or powershell
-   .\scripts\get_models.ps1 -Models 'faster-whisper-small.en','faster-whisper-base.en'
-
-   
-
-   # models live in the /site/services/stt/models/ folder
-   ```
-   
 5. Start services
 
-   ```powershell
-   docker compose up -d stt mqtt ollama web
+   ```bash
+   docker compose up -d model-init data-init stt mqtt ollama web
 
    ```
    
