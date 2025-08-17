@@ -176,9 +176,9 @@ services:
 
     depends_on:
           model-init:
-            condition: service_completed_successfully   # if you use model-init
-          #data-init:
-          #  condition: service_completed_successfully
+            condition: service_completed_successfully   
+          data-init:
+            condition: service_completed_successfully
           stt:
             condition: service_started
           mqtt:
