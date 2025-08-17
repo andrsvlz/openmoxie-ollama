@@ -69,10 +69,10 @@ This project includes:
    # Linux / Ubuntu
    ./scripts/get_models_linux.sh -Models "faster-whisper-small.en,faster-whisper-base.en"
 
-   #Windows cmd line
+   # Windows cmd line
    powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\get_models.ps1" -Models 'faster-whisper-small.en','faster-whisper-base.en'
 
-   #or from powershell
+   #or powershell
    .\scripts\get_models.ps1 -Models 'faster-whisper-small.en','faster-whisper-base.en'
 
    
@@ -92,6 +92,10 @@ This project includes:
     ```powershell
     # pull an Ollama model into the container 
     docker compose exec ollama ollama pull llama3.2:3b #Change models if you like
+
+    #or Windows
+    docker compose exec -T ollama sh -lc 'ollama pull llama3.2:3b'
+
     ```
 
 ## 💬 Using XAi Grok & OpenAi
