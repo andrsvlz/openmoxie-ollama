@@ -1,0 +1,99 @@
+version: "3.9"
+
+services:
+  web:
+    image: pixelandpiece/openmoxie-web:${IMAGE_TAG:-latest}
+    env_file: .env
+    environment:
+      STT_URL: http://stt:8001/stt
+      OLLAMA_HOST: http://ollama:11434
+      WEB_WORKERS: "1"
+    depends_on:
+      model-init:
+        condition: service_completed_successfully
+      data-init:
+        condition: service_completed_successfully
+      stt:
+        condition: service_started
+      mqtt:
+        condition: service_started
+      ollama:
+        condition: service_started
+      ollama-init:
+        condition: service_completed_successfully
+    volumes:
+      - ./site/work:/app/site/work
+      - ./site/static:/app/site/static
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  stt:
+    image: pixelandpiece/openmoxie-stt:${IMAGE_TAG:-latest}
+    environment:
+      STT_MODEL: /models/faster-whisper-small.en
+      STT_DEVICE: auto
+      STT_COMPUTE: int8
+    depends_on:
+      model-init:
+        condition: service_completed_successfully
+    volumes:
+      - ./site/services/stt/models:/models:ro
+    restart: unless-stopped
+
+  mqtt:
+    image: pixelandpiece/openmoxie-mqtt:${IMAGE_TAG:-latest}
+    ports:
+      - "8883:8883"
+    restart: unless-stopped
+
+  # Seeds Faster-Whisper models (one-shot)
+  model-init:
+    image: curlimages/curl:8.10.1
+    volumes:
+      - ./docker/seed-models.sh:/seed-models.sh:ro
+      - ./site/services/stt/models:/models
+    environment:
+      MODEL_NAMES: "faster-whisper-small.en,faster-whisper-base.en"
+      MODELS_DIR: "/models"
+    entrypoint: ["/bin/sh","-c","/seed-models.sh"]
+    restart: "no"
+
+  # Seeds default data & runs migrations (one-shot)
+  data-init:
+    image: pixelandpiece/openmoxie-web:${IMAGE_TAG:-latest}
+    env_file: .env
+    command: >
+      bash -lc "
+        cd /app/site &&
+        python manage.py migrate --noinput &&
+        python manage.py init_data || echo 'init_data skipped (already seeded)'
+      "
+    volumes:
+      - ./site/work:/app/site/work
+      - ./site/static:/app/site/static
+    restart: "no"
+
+  # Ollama runtime
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+
+  # Pulls Ollama models (one-shot)
+  ollama-init:
+    image: curlimages/curl:8.10.1
+    depends_on:
+      ollama:
+        condition: service_started
+    volumes:
+      - ./docker/seed-ollama.sh:/seed-ollama.sh:ro
+    environment:
+      OLLAMA_HOST: "http://ollama:11434"
+      OLLAMA_MODELS: "llama3.2:3b"
+    entrypoint: ["/bin/sh","-c","/seed-ollama.sh"]
+    restart: "no"
+
+volumes:
+  ollama: {{}}
