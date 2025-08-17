@@ -66,7 +66,7 @@ This project includes:
    
 6. Then Download a model to run locally (for example llama3.2:3b or deepseek-r1:1.5b) 
   
-    ```powershell
+    ```bash
     # pull an Ollama model into the container 
     docker compose exec ollama ollama pull llama3.2:3b #Change models if you like
 
@@ -74,6 +74,67 @@ This project includes:
     docker compose exec -T ollama sh -lc 'ollama pull llama3.2:3b'
 
     ```
+
+
+---
+
+## 🪟 Windows Quick Start (PowerShell)
+
+Requires Windows 10/11 with virtualization enabled.
+
+Install Docker Desktop (WSL2 engine)
+
+Download from Docker or run (if you have winget):
+
+    ```powershell
+    winget install -e --id Docker.DockerDesktop
+    ```
+
+Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
+
+(If needed) Install a WSL distro
+
+    ```powershell
+    wsl --install -d Ubuntu
+    ```
+
+# Reboot if prompted, then open a new PowerShell
+
+
+Clone & start
+
+
+    ```powershell
+    git clone https://github.com/vapors/openmoxie-ollama
+    cd openmoxie-ollama
+    ```
+
+
+
+
+# First run: seeds Faster-Whisper models + default data, then starts services
+
+    ```powershell
+    docker compose up -d model-init data-init stt mqtt ollama web
+
+    ```
+    
+Pull an Ollama model inside the container
+
+    ```powershell
+    docker compose exec ollama ollama pull llama3.2:3b
+
+    ```
+
+
+
+Open the app
+
+Go to http://localhost:8000
+
+Open /hive/setup and confirm Local STT URL is http://stt:8001/stt
+
+
 
 ## 💬 Using XAi Grok & OpenAi
 
