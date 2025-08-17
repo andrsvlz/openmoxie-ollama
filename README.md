@@ -51,7 +51,7 @@ This project includes:
 
 1. Install **Docker**
    
-2. Clone and build the repository
+2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
 
    ```bash
    git clone https://github.com/vapors/openmoxie-ollama
@@ -80,7 +80,7 @@ This project includes:
   >Reboot if prompted, then open a new PowerShell
 
 
-2. Clone & start
+2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
 
   ```powershell
     git clone https://github.com/vapors/openmoxie-ollama
