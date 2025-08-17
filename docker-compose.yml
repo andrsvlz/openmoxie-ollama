@@ -1,5 +1,22 @@
 #version: "3.9"
 services:
+  data-init:
+    build:
+      context: .
+      dockerfile: web.Dockerfile         # reuse the web image so Django is available
+    env_file: .env
+    environment:
+      DJANGO_SETTINGS_MODULE: openmoxie.settings
+    command: >
+      bash -lc "
+        cd /app/site &&
+        python manage.py migrate --noinput &&
+        python manage.py init_data || echo 'init_data skipped (possibly already seeded)'
+      "
+    volumes:
+      - ./site/work:/app/site/work       # same DB/logs volume as web
+      - ./site/static:/app/site/static   # optional, harmless
+    restart: "no"
   web:
     build:
       context: .
@@ -21,11 +38,35 @@ services:
     volumes:
       - ./site/work:/app/site/work
       - ./site/static:/app/site/static
+    #depends_on:
+    #  - mqtt
+    #  - stt
+    #  - ollama
+
     depends_on:
-      - mqtt
-      - stt
-      - ollama
+          model-init:
+            condition: service_completed_successfully   # if you use model-init
+          data-init:
+            condition: service_completed_successfully
+          stt:
+            condition: service_started
+          mqtt:
+            condition: service_started
+          ollama:
+            condition: service_started      
     restart: unless-stopped
+
+  # seeds /models with Faster-Whisper models, then exits
+  model-init:
+    image: curlimages/curl:8.10.1
+    volumes:
+      - ./docker/seed-models.sh:/seed-models.sh:ro
+      - ./site/services/stt/models:/models
+    environment:
+      MODEL_NAMES: "faster-whisper-small.en,faster-whisper-base.en"  # comma-separated
+      MODELS_DIR: "/models"
+    entrypoint: ["/bin/sh","-c","/seed-models.sh"]
+    restart: "no"
 
   stt:
     build:
@@ -33,8 +74,8 @@ services:
       dockerfile: stt.Dockerfile
     ports:
       - "8001:8001"
-    volumes:
-      - ./site/services/stt/models:/models:ro
+    #volumes:
+    #  - ./site/services/stt/models:/models:ro
     environment:
       STT_MODEL: /models/faster-whisper-small.en
       STT_DEVICE: "auto"
@@ -43,6 +84,11 @@ services:
     restart: unless-stopped
     # GPU (optional):
     # gpus: all
+    depends_on:
+      model-init:
+        condition: service_completed_successfully
+    volumes:
+      - ./site/services/stt/models:/models:ro   # stt reads the seeded models
 
   mqtt:
     build:

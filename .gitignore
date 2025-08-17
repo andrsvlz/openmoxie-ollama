@@ -6,4 +6,5 @@
 /site/work/debug.log
 __pycache__/
 /docker-compose copy.yml
+/docker-compose copy 2.yml
 /site/work/debug.log

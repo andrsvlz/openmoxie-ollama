@@ -31788,3 +31788,99 @@
 2025-08-16 14:01:55,882 INFO [moxie_server] connecting to: localhost
 2025-08-16 14:01:55,931 INFO [moxie_server] Connected with result code 0
 >>>>>>> f2fc66b2b6a6b9c2e1f61a7cdb9977d030d5da39
+2025-08-17 01:19:03,901 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-17 01:19:03,902 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-17 01:19:03,914 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-17 01:19:03,915 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-17 01:19:03,916 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-17 01:19:03,917 INFO [moxie_server] connecting to: mqtt
+2025-08-17 01:19:03,923 INFO [apps] Moxie server singleton created in AppConfig.ready().
+2025-08-17 01:19:03,963 INFO [moxie_server] Connected with result code 0
+2025-08-17 01:19:06,162 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-17 01:19:06,162 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-17 01:19:06,174 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-17 01:19:06,175 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-17 01:19:06,176 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-17 01:19:06,176 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-17 01:19:06,177 INFO [moxie_server] connecting to: mqtt
+2025-08-17 01:19:06,181 INFO [apps] Moxie server singleton created in AppConfig.ready().
+2025-08-17 01:19:06,222 INFO [moxie_server] Connected with result code 0
+2025-08-17 01:19:09,042 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-17 01:19:09,042 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-17 01:19:09,055 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-17 01:19:09,055 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-17 01:19:09,055 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-17 01:19:09,055 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-17 01:19:09,055 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/mcmoxie
+2025-08-17 01:19:09,056 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/surf
+2025-08-17 01:19:09,058 INFO [moxie_server] connecting to: mqtt
+2025-08-17 01:19:09,062 INFO [apps] Moxie server singleton created in AppConfig.ready().
+2025-08-17 01:19:09,102 INFO [moxie_server] Connected with result code 0
+2025-08-17 01:19:11,120 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-17 01:19:11,120 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-17 01:19:11,132 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/mcmoxie
+2025-08-17 01:19:11,133 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/surf
+2025-08-17 01:19:11,133 INFO [moxie_server] connecting to: mqtt
+2025-08-17 01:19:11,137 INFO [apps] Moxie server singleton created in AppConfig.ready().
+2025-08-17 01:19:11,178 INFO [moxie_server] Connected with result code 0
+2025-08-17 01:19:13,876 INFO [robot_data] Using 'default' schedule from database as schedule fallback
+2025-08-17 01:19:13,876 INFO [moxie_server] Creating client with id: d_supervisor
+2025-08-17 01:19:13,888 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/default
+2025-08-17 01:19:13,888 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/short
+2025-08-17 01:19:13,888 DEBUG [moxie_remote_chat] Registering OPENCONVO/reading
+2025-08-17 01:19:13,888 DEBUG [moxie_remote_chat] Registering OPENCONVO/storytelling
+2025-08-17 01:19:13,888 DEBUG [moxie_remote_chat] Registering OPENCONVO/story
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering SIMPLELINE/default
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/ftue
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/more_10
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/less_10
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/first_time_today
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering WAKEUP_LAUNCHER/scheduled
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/ollama
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/grok
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/mcmoxie
+2025-08-17 01:19:13,889 DEBUG [moxie_remote_chat] Registering OPENMOXIE_CHAT/surf
+2025-08-17 01:19:13,891 INFO [moxie_server] connecting to: mqtt
+2025-08-17 01:19:13,894 INFO [apps] Moxie server singleton created in AppConfig.ready().
+2025-08-17 01:19:13,934 INFO [moxie_server] Connected with result code 0

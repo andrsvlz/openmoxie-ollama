@@ -150,22 +150,6 @@
           }
       },
       "source_version": 1
-  },
-  {
-      "name": "llamaChat_local-Surfer",
-      "schedule": {
-          "provided_schedule": [
-              {
-                  "module_id": "OPENMOXIE_CHAT",
-                  "content_id": "surf"
-              }
-          ],
-          "chat_request": {
-              "module_id": "OPENMOXIE_CHAT",
-              "content_id": "surf"
-          }
-      },
-      "source_version": 1
   }
 
 ]
