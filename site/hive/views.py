@@ -16,7 +16,7 @@ from io import BytesIO
 from .models import GlobalResponse, SinglePromptChat, MoxieDevice, MoxieSchedule, HiveConfiguration, MentorBehavior
 from .content.data import DM_MISSION_CONTENT_IDS, get_moxie_customization_groups
 from .data_import import update_import_status, import_content
-from .mqtt.moxie_server import get_instance
+from .mqtt.moxie_server import get_instance, create_service_instance
 from .mqtt.robot_data import DEFAULT_ROBOT_CONFIG, DEFAULT_ROBOT_SETTINGS
 from .mqtt.volley import Volley
 import json
@@ -26,6 +26,7 @@ import requests
 import logging
 
 logger = logging.getLogger(__name__)
+logger = logging.getLogger("hive")
 
 # --- STT helpers ---
 def _stt_base(url: str) -> str:
@@ -168,10 +169,24 @@ def hive_configure(request):
             logger.info(f"Created superuser '{admin}'")
         else:
             logger.warning(f"Couldn't create missing superuser")
-
-    logger.info("Updated default Hive Configuration")
     # reload any cached db objects
-    get_instance().update_from_database()
+    logger.info("Updated default Hive Configuration")
+    # Ensure the Moxie server is running before reloading config
+    srv = get_instance()
+    if srv is None:
+        ep = settings.MQTT_ENDPOINT
+        try:
+            srv = create_service_instance(
+                ep["project"], ep["host"], ep["port"], ep.get("cert_required", True)
+            )
+            logger.info("Started Moxie server singleton from setup.")
+        except Exception as e:
+            logger.warning(f"Could not initialize Moxie server: {e}")
+            srv = None
+    if srv:
+        srv.update_from_database()
+    else:
+        logger.warning("Moxie server not running; skipped live reload.")
     return HttpResponseRedirect(reverse("hive:dashboard"))
 
 # DASHBOARD - View and overview of the system
