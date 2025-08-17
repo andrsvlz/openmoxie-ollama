@@ -45,9 +45,9 @@ This project includes:
 
 ---
 
-## 🚀 Easy Setup 
+## 🔧 Easy Setup 
 
-## 🪟 Ubuntu / Mac 
+## 🐧 Ubuntu / Mac 
 
 1. Install **Docker** and enable **WSL2 backend** if asked.
    
@@ -89,13 +89,6 @@ Download from Docker or run (if you have winget):
 
   ```powershell
     winget install -e --id Docker.DockerDesktop
-  ```
-
-##Ensure “Use the WSL 2 based engine” is enabled in Docker Desktop Settings.
-
-(If needed) Install a WSL distro
-
-  ```powershell
     wsl --install -d Ubuntu
   ```
 
@@ -104,15 +97,9 @@ Download from Docker or run (if you have winget):
 
 Clone & start
 
-
   ```powershell
     git clone https://github.com/vapors/openmoxie-ollama
     cd openmoxie-ollama
-  ```
-
-## First run: seeds Faster-Whisper models + default data, then starts services
-
-  ```powershell
     docker compose up -d model-init data-init stt mqtt ollama web
   ```
     
