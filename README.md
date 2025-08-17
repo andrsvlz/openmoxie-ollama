@@ -56,7 +56,7 @@ This project includes:
    ```bash
    git clone https://github.com/vapors/openmoxie-ollama
    cd openmoxie-ollama
-   docker compose up -d model-init data-init stt mqtt ollama ollama-init
+   docker compose up -d model-init data-init stt mqtt ollama ollama-init web
 
    ```
     
@@ -85,7 +85,7 @@ This project includes:
   ```powershell
     git clone https://github.com/vapors/openmoxie-ollama
     cd openmoxie-ollama
-    docker compose up -d model-init data-init stt mqtt ollama ollama-init
+    docker compose up -d model-init data-init stt mqtt ollama ollama-init web
 
   ```
 
