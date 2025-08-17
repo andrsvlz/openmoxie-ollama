@@ -100,5 +100,72 @@
           "content_id": "default"
         }
     }
+  },
+
+
+  {
+      "name": "llamaChat_local-RudeAssistant",
+      "schedule": {
+          "provided_schedule": [
+              {
+                  "module_id": "OPENMOXIE_CHAT",
+                  "content_id": "ollama"
+              }
+          ],
+          "chat_request": {
+              "module_id": "OPENMOXIE_CHAT",
+              "content_id": "ollama"
+          }
+      },
+      "source_version": 1
+  },
+  {
+      "name": "XAI-Requires_API_Key-grok3",
+      "schedule": {
+          "provided_schedule": [
+              {
+                  "module_id": "OPENMOXIE_CHAT",
+                  "content_id": "grok"
+              }
+          ],
+          "chat_request": {
+              "module_id": "OPENMOXIE_CHAT",
+              "content_id": "grok"
+          }
+      },
+      "source_version": 1
+  },
+  {
+      "name": "llamaChat_local-RealOG",
+      "schedule": {
+          "provided_schedule": [
+              {
+                  "module_id": "OPENMOXIE_CHAT",
+                  "content_id": "mcmoxie"
+              }
+          ],
+          "chat_request": {
+              "module_id": "OPENMOXIE_CHAT",
+              "content_id": "mcmoxie"
+          }
+      },
+      "source_version": 1
+  },
+  {
+      "name": "llamaChat_local-Surfer",
+      "schedule": {
+          "provided_schedule": [
+              {
+                  "module_id": "OPENMOXIE_CHAT",
+                  "content_id": "surf"
+              }
+          ],
+          "chat_request": {
+              "module_id": "OPENMOXIE_CHAT",
+              "content_id": "surf"
+          }
+      },
+      "source_version": 1
   }
+
 ]

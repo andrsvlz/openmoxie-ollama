@@ -5,6 +5,8 @@ protobuf
 numpy
 soundfile
 openai
+jinja2
+typeguard
 django
 django-debug-toolbar
 django-jquery
