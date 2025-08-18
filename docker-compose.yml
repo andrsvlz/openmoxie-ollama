@@ -120,12 +120,31 @@ services:
     depends_on:
       ollama:
         condition: service_started
-    volumes:
-      - ./docker/seed-ollama.sh:/seed-ollama.sh:ro
+    #volumes:
+    #  - ./docker/seed-ollama.sh:/seed-ollama.sh:ro
     environment:
       OLLAMA_HOST: "http://ollama:11434"
-      OLLAMA_MODELS: "llama3.2:3b"
-    entrypoint: ["/bin/sh","-c","/seed-ollama.sh"]
+      OLLAMA_MODELS: "llama3.2:3b,deepseek-r1:1.5b"
+    entrypoint:
+      - /bin/sh
+      - -lc
+      - |
+        set -eu
+        echo "[ollama-init] Host: $$OLLAMA_HOST"
+        echo "[ollama-init] Models: $$OLLAMA_MODELS"
+        # wait for API to come up
+        i=0; until curl -fsS "$${OLLAMA_HOST%/}/api/tags" >/dev/null 2>&1 || [ "$$i" -ge 180 ]; do i=$$((i+1)); sleep 2; done
+        [ "$$i" -lt 180 ] || { echo "[ollama-init] Timeout waiting for $$OLLAMA_HOST" >&2; exit 1; }
+        models=$$(echo "$$OLLAMA_MODELS" | tr ',' ' ')
+        for m in $$models; do
+          echo "→ pulling $$m"
+          curl -fsS -N -X POST -H 'Content-Type: application/json' \
+            -d "{\"name\":\"$$m\"}" "$${OLLAMA_HOST%/}/api/pull" \
+            || { echo "pull failed for $$m" >&2; exit 1; }
+          echo "✓ $$m"
+        done
+        echo "[ollama-init] All models pulled."
+
     restart: "no"
 
 
