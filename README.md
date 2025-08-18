@@ -53,7 +53,7 @@ This project includes:
 
   Requires Windows with virtualization enabled.
 
-1. Install Docker Desktop (WSL2 engine) Download from Docker
+1. Install Docker Desktop (enable WSL2 engine) Download from Docker
    
     https://docs.docker.com/get-started/get-docker/
     
