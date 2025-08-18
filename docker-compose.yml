@@ -27,9 +27,8 @@ services:
       DJANGO_SETTINGS_MODULE: "openmoxie.settings"
       DEBUG: "False"
     volumes:
-      - ./:/app
-      - web-work:/app/site/work
-      - web-static:/app/site/static
+      - ./site/work:/app/site/work       # same DB/logs volume as web
+      - ./site/static:/app/site/static   # optional, harmless
     # IMPORTANT: no depends_on here
     restart: "no"
 
