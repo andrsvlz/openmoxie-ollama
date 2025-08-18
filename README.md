@@ -57,8 +57,10 @@ This project includes:
     https://docs.docker.com/get-started/get-docker/
     
 
-2. In PowerShell / bash  Clone and build the repository (Downloads llama3.2:3b - 2gb)
+2. In PowerShell or bash:  Clone or download and build the repository (Downloads llama3.2:3b - 2gb)
 
+
+    clone:
 
     ```powershell
   
@@ -67,7 +69,8 @@ This project includes:
   
     ```
   
-  
+    build:
+
     ```powershell
   
       docker compose up -d model-init data-init stt mqtt ollama ollama-init web
