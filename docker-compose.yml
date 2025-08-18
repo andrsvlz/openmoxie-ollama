@@ -1,6 +1,7 @@
 #version: "3.9"
 services:
 
+
   data-init:
     build:
       context: .
@@ -10,27 +11,39 @@ services:
       - /bin/sh
       - -lc
       - |
-        set -eu
+        set -euo pipefail
         cd /app/site
-        echo "[data-init] migrate..."
-        python manage.py migrate --noinput
-        if python manage.py help | grep -q init_data; then
-          echo "[data-init] init_data..."
-          python manage.py init_data || true
-        else
-          echo "[data-init] no init_data command, skipping"
-        fi
-        echo "[data-init] collectstatic..."
-        python manage.py collectstatic --noinput || true
-        echo "[data-init] done."
+
+        # Migrate quietly
+        python manage.py migrate --noinput --verbosity 0
+
+        # Seed defaults quietly (ignore duplicates on re-run)
+        python - <<'PY'
+        import os, sys, django, traceback
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'openmoxie.settings')
+        django.setup()
+        from django.core import management
+        try:
+            management.call_command('init_data', verbosity=0)
+        except Exception:
+            # Only print on error so CI/users see why it failed
+            traceback.print_exc()
+            sys.exit(1)
+        PY
+
+        # Collect static quietly
+        python manage.py collectstatic --noinput --verbosity 0 || true
     environment:
       DJANGO_SETTINGS_MODULE: "openmoxie.settings"
       DEBUG: "False"
+      # (Optional) hide that Django startup RuntimeWarning you were seeing:
+      # PYTHONWARNINGS: "ignore::RuntimeWarning"
     volumes:
+      - ./:/app
       - ./site/work:/app/site/work       # same DB/logs volume as web
       - ./site/static:/app/site/static   # optional, harmless
-    # IMPORTANT: no depends_on here
     restart: "no"
+
 
   model-init:
     image: curlimages/curl:8.10.1
