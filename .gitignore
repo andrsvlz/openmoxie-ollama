@@ -1,6 +1,6 @@
 /.venv
 /00gitignore.txt
-/site/services/stt/models/
+/site/services/
 /local/work/mosquitto.log
 /site/work/db.sqlite3
 /site/work/debug.log
