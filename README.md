@@ -58,17 +58,23 @@ This project includes:
   >Reboot if prompted, then open a new PowerShell
 
 
-2. Open PowerShell Clone and build the repository (Downloads llama3.2:3b - 2gb)
+2. In PowerShell Clone and build the repository (Downloads llama3.2:3b - 2gb)
+
 
   ```powershell
+
     git clone https://github.com/vapors/openmoxie-ollama
     cd openmoxie-ollama
-    docker compose up -d model-init data-init stt mqtt ollama ollama-init web
+
   ```
 
+
   ```powershell
+
     docker compose up -d model-init data-init stt mqtt ollama ollama-init web
+
   ```
+
 3. Open the app
    
    Go to http://localhost:8000
