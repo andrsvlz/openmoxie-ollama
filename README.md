@@ -47,26 +47,6 @@ This project includes:
 
 ## 🔧 Easy Setup 
 
-## 🐧 Ubuntu / Mac 
-
-1. Install **Docker**
-   
-2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
-
-   ```bash
-   git clone https://github.com/vapors/openmoxie-ollama
-   cd openmoxie-ollama
-   docker compose up -d model-init data-init stt mqtt ollama ollama-init web
-
-   ```
-    
-5. Open the app
-   
-    Go to http://localhost:8000
-    
-
----
-
 ## 🪟 Windows Quick Start (PowerShell)
 
   Requires Windows 10/11 with virtualization enabled.
@@ -92,7 +72,25 @@ This project includes:
 3. Open the app
    
    Go to http://localhost:8000
-  
+
+
+## 🐧 Ubuntu / Mac 
+
+1. Install **Docker**
+   
+2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
+
+   ```bash
+   git clone https://github.com/vapors/openmoxie-ollama
+   cd openmoxie-ollama
+   docker compose up -d model-init data-init stt mqtt ollama ollama-init web
+
+   ```
+    
+5. Open the app
+   
+    Go to http://localhost:8000
+   
 
 
 ---
