@@ -1,27 +1,26 @@
 # web.Dockerfile
-FROM python:3.12-slim
+FROM python:3.11-slim
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+# System deps for your entrypoint and runtime
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends bash curl \
+ && rm -rf /var/lib/apt/lists/*
 
+# Workdir and app
 WORKDIR /app
+COPY . /app
 
-# System deps for audio and runtime niceties
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libsndfile1 ffmpeg curl ca-certificates \
-  && rm -rf /var/lib/apt/lists/*
+# Python deps (make sure requirements.txt includes gunicorn & Django)
+# e.g. lines in requirements.txt:
+#   Django>=5.1
+#   gunicorn>=21.2
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Python deps
-COPY requirements.txt /app/requirements.txt
-RUN pip install --no-cache-dir -r /app/requirements.txt && \
-    pip install --no-cache-dir gunicorn
-
-# Project files
-COPY site /app/site
-
-# Entrypoint
+# Copy entrypoint; strip CRLF if edited on Windows; make executable
+# adjust the source path to wherever your script lives in the repo
 COPY docker/web-entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
 
+ENV DJANGO_SETTINGS_MODULE=openmoxie.settings
 EXPOSE 8000
-CMD ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
