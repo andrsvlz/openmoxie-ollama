@@ -47,15 +47,17 @@ This project includes:
 
 ## 🔧 Easy Setup 
 
-## 🪟 Windows Quick Start (PowerShell)
+---
 
-  Requires Windows 10/11 with virtualization enabled.
+## 🪟 Windows / Mac / Ubuntu - Quick Start
+
+  Requires Windows with virtualization enabled.
 
 1. Install Docker Desktop (WSL2 engine) Download from Docker or run (if you have winget):
-    https://docs.docker.com/desktop/setup/install/windows-install/
+    https://docs.docker.com/get-started/get-docker/
     
 
-2. In PowerShell Clone and build the repository (Downloads llama3.2:3b - 2gb)
+2. In PowerShell / bash  Clone and build the repository (Downloads llama3.2:3b - 2gb)
 
 
     ```powershell
@@ -76,24 +78,6 @@ This project includes:
    
    Go to http://localhost:8000
 
-
-## 🐧 Ubuntu / Mac 
-
-1. Install **Docker**
-   
-2. Clone and build the repository (Downloads llama3.2:3b - 2gb)
-
-   ```bash
-   git clone https://github.com/vapors/openmoxie-ollama
-   cd openmoxie-ollama
-   docker compose up -d model-init data-init stt mqtt ollama ollama-init web
-
-   ```
-    
-5. Open the app
-   
-    Go to http://localhost:8000
-   
 
 
 ---
