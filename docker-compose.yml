@@ -17,7 +17,7 @@ services:
       - ./site/work:/app/site/work       # same DB/logs volume as web
       - ./site/static:/app/site/static   # optional, harmless
     restart: "no"
-
+    
   model-init:
     image: curlimages/curl:8.10.1
     user: "0:0"
@@ -31,14 +31,14 @@ services:
       - -lc
       - |
         set -eu
-        echo "[model-init] MODELS_DIR=$MODELS_DIR"
-        echo "[model-init] MODEL_NAMES=$MODEL_NAMES"
+        echo "[model-init] MODELS_DIR=$$MODELS_DIR"
+        echo "[model-init] MODEL_NAMES=$$MODEL_NAMES"
 
         # turn "a,b" into "a b"
-        models=$(echo "$MODEL_NAMES" | tr ',' ' ')
+        models=$(echo "$$MODEL_NAMES" | tr ',' ' ')
 
         url() {
-          case "$1" in
+          case "$$1" in
             faster-whisper-small.en) echo "https://huggingface.co/Systran/faster-whisper-small.en/resolve/main" ;;
             faster-whisper-base.en)  echo "https://huggingface.co/Systran/faster-whisper-base.en/resolve/main" ;;
             *) echo "" ;;
@@ -46,37 +46,36 @@ services:
         }
 
         fetch() {
-          name="$1"
-          base="$2"
-          out="$MODELS_DIR/$name"
-          mkdir -p "$out"
+          name="$$1"
+          base="$$2"
+          out="$$MODELS_DIR/$$name"
+          mkdir -p "$$out"
 
           need=0
           for f in model.bin config.json tokenizer.json vocabulary.txt; do
-            [ -f "$out/$f" ] || need=1
+            [ -f "$$out/$$f" ] || need=1
           done
-          if [ "$need" -eq 0 ]; then
-            echo "✓ $name already present"
+          if [ "$$need" -eq 0 ]; then
+            echo "✓ $$name already present"
             return 0
           fi
 
-          echo "→ downloading $name to $out"
-          curl -fSL "$base/model.bin"      -o "$out/model.bin"
-          curl -fSL "$base/config.json"    -o "$out/config.json"
-          curl -fSL "$base/tokenizer.json" -o "$out/tokenizer.json"
-          curl -fSL "$base/vocabulary.txt" -o "$out/vocabulary.txt"
-          echo "✓ $name done"
+          echo "→ downloading $$name to $$out"
+          curl -fSL "$$base/model.bin"      -o "$$out/model.bin"
+          curl -fSL "$$base/config.json"    -o "$$out/config.json"
+          curl -fSL "$$base/tokenizer.json" -o "$$out/tokenizer.json"
+          curl -fSL "$$base/vocabulary.txt" -o "$$out/vocabulary.txt"
+          echo "✓ $$name done"
         }
 
-        for m in $models; do
-          base="$(url "$m")"
-          [ -n "$base" ] || { echo "Unknown model $m"; exit 1; }
-          fetch "$m" "$base"
+        for m in $$models; do
+          base="$(url "$$m")"
+          [ -n "$$base" ] || { echo "Unknown model $$m"; exit 1; }
+          fetch "$$m" "$$base"
         done
 
         echo "[model-init] Seeding complete."
     restart: "no"
-
 
 
   stt:
