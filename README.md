@@ -53,11 +53,12 @@ This project includes:
 
   Requires Windows with virtualization enabled.
 
-1. Install Docker Desktop (WSL2 engine) Download from Docker or run (if you have winget):
+1. Install Docker Desktop (WSL2 engine) Download from Docker
+   
     https://docs.docker.com/get-started/get-docker/
     
 
-2. In PowerShell or bash:  Clone or download and build the repository (Downloads llama3.2:3b - 2gb)
+3. In PowerShell or bash:  Clone or download and build the repository (Downloads llama3.2:3b - 2gb)
 
 
     clone:
@@ -77,7 +78,7 @@ This project includes:
   
     ```
 
-3. Open the app
+4. Open the app
    
    Go to http://localhost:8000
 
