@@ -52,8 +52,7 @@ This project includes:
   Requires Windows 10/11 with virtualization enabled.
 
 1. Install Docker Desktop (WSL2 engine) Download from Docker or run (if you have winget):
-
-  https://docs.docker.com/desktop/setup/install/windows-install/
+    https://docs.docker.com/desktop/setup/install/windows-install/
     
   >Reboot if prompted, then open a new PowerShell
 
