@@ -54,25 +54,23 @@ This project includes:
 1. Install Docker Desktop (WSL2 engine) Download from Docker or run (if you have winget):
     https://docs.docker.com/desktop/setup/install/windows-install/
     
-  >Reboot if prompted, then open a new PowerShell
-
 
 2. In PowerShell Clone and build the repository (Downloads llama3.2:3b - 2gb)
 
 
-  ```powershell
-
-    git clone https://github.com/vapors/openmoxie-ollama
-    cd openmoxie-ollama
-
-  ```
-
-
-  ```powershell
-
-    docker compose up -d model-init data-init stt mqtt ollama ollama-init web
-
-  ```
+    ```powershell
+  
+      git clone https://github.com/vapors/openmoxie-ollama
+      cd openmoxie-ollama
+  
+    ```
+  
+  
+    ```powershell
+  
+      docker compose up -d model-init data-init stt mqtt ollama ollama-init web
+  
+    ```
 
 3. Open the app
    
