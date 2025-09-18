@@ -238,7 +238,7 @@ def interact_update(request):
 # RELOAD - Reload any records initialized from the database
 def reload_database(request):
     get_instance().update_from_database()
-    return redirect('hive:dashboard_alert', alert_message='Updated from database.')
+    return redirect('hive:dashboard_alert', alert_message='Actualizado desde la base de datos.')
 
 # ENDPOINT - Render QR code to migrate Moxie
 def endpoint_qr(request):
@@ -339,10 +339,10 @@ def face_edit(request, pk):
 
         device.save()
         get_instance().handle_config_updated(device)
-        return redirect('hive:dashboard_alert', alert_message=f'Updated face for {device}{suffix}')
+        return redirect('hive:dashboard_alert', alert_message=f'Rostro actualizado para {device}{suffix}')
     except MoxieDevice.DoesNotExist as e:
         logger.warning("Moxie update for unfound pk {pk}")
-        return redirect('hive:dashboard_alert', alert_message='No such Moxie')
+        return redirect('hive:dashboard_alert', alert_message='No existe ese Moxie')
 
 # MOXIE - Puppeteer Moxie
 class MoxiePuppetView(generic.DetailView):
@@ -406,7 +406,7 @@ def mission_edit(request, pk):
         if mission_action == "reset":
             # Delete all MBH to start fresh
             MentorBehavior.objects.filter(device=device).delete()
-            msg = f'Reset ALL progress for {device}'
+            msg = f'Reinició TODO el progreso para {device}'
         else:
             # Handle mission set actions... get all the CIDs for the selected sets
             mission_sets = request.POST.getlist("mission_sets")
@@ -414,27 +414,27 @@ def mission_edit(request, pk):
             if mission_action == "forget":
                 # Delete any records with these module/content ID (completed, quit)
                 MentorBehavior.objects.filter(device=device, module_id='DM', content_id__in=dm_cid_list).delete()
-                msg = f'Forgot {len(mission_sets)} Daily Mission Sets ({len(dm_cid_list)} missions) for {device}'
+                msg = f'Olvidó {len(mission_sets)} conjuntos de misiones diarias ({len(dm_cid_list)} misiones) para {device}'
             else: # == "complete"
                 # Create new completions for all these mission content IDs
                 get_instance().robot_data().add_mbh_completion_bulk(device.device_id, module_id="DM", content_id_list=dm_cid_list)
-                msg = f'Completed {len(mission_sets)} Daily Mission Sets ({len(dm_cid_list)} missions) for {device}'
+                msg = f'Completó {len(mission_sets)} conjuntos de misiones diarias ({len(dm_cid_list)} misiones) para {device}'
 
         return redirect('hive:dashboard_alert', alert_message=msg)
     except MoxieDevice.DoesNotExist as e:
         logger.warning("Moxie update for unfound pk {pk}")
-        return redirect('hive:dashboard_alert', alert_message='No such Moxie')
+        return redirect('hive:dashboard_alert', alert_message='No existe ese Moxie')
 
 # WAKE UP A MOXIE THAT IS USING WAKE BUTTON
 def moxie_wake(request, pk):
     try:
         device = MoxieDevice.objects.get(pk=pk)
         logger.info(f'Waking up {device}')
-        alert_msg = "Wake message sent!" if get_instance().send_wakeup_to_bot(device.device_id) else 'Moxie was offline.'
+        alert_msg = "¡Mensaje de despertar enviado!" if get_instance().send_wakeup_to_bot(device.device_id) else 'Moxie estaba desconectado.'
         return redirect('hive:dashboard_alert', alert_message=alert_msg)
     except MoxieDevice.DoesNotExist as e:
         logger.warning("Moxie wake for unfound pk {pk}")
-        return redirect('hive:dashboard_alert', alert_message='No such Moxie')
+        return redirect('hive:dashboard_alert', alert_message='No existe ese Moxie')
 
 # MOXIE - Export Moxie Content Data - Selection View
 class ExportDataView(generic.TemplateView):
@@ -456,7 +456,7 @@ def export_data(request):
     schedules = request.POST.getlist("schedules")
     conversations = request.POST.getlist("conversations")
     if not content_name:
-        content_name = 'moxie_content'
+        content_name = 'contenido_moxie'
     output = { "name": content_name, "details": content_details }
     for pk in globals:
         r = GlobalResponse.objects.get(pk=pk)
@@ -480,12 +480,12 @@ def export_data(request):
 def upload_import_data(request):
     json_file = request.FILES.get('json_file')
     if not json_file:
-        return JsonResponse({'error': 'No file uploaded'}, status=400)
+        return JsonResponse({'error': 'No se subió ningún archivo'}, status=400)
 
     try:
         json_data = json.loads(json_file.read().decode('utf-8'))
     except json.JSONDecodeError:
-        return JsonResponse({'error': 'Invalid JSON file'}, status=400)
+        return JsonResponse({'error': 'Archivo JSON no válido'}, status=400)
 
     # Preprocess the JSON data to build the context for the template
     update_import_status(json_data)

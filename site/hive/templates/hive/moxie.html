@@ -8,16 +8,16 @@
   <form id="moxie_edit" action="{% url 'hive:moxie_edit' object.pk %}" method="post">
   {% csrf_token %}
   <table class="table">
-    <tr><th>Name</th><td><input type="text" class="form-control" name="moxie_name" value="{{object.name}}"></td></tr>
-    <tr><th>Device ID</th><td>{{object.device_id}}</td></tr>
-    <tr><th>Device Pairing</th><td>
+    <tr><th>Nombre</th><td><input type="text" class="form-control" name="moxie_name" value="{{object.name}}"></td></tr>
+    <tr><th>ID del dispositivo</th><td>{{object.device_id}}</td></tr>
+    <tr><th>Emparejamiento del dispositivo</th><td>
       <select name="pairing_status">
-          <option value="paired" {% if object.is_paired %}selected{% endif %}>Paired/Allowed</option>
-          <option value="unpairing" {% if not object.is_paired %}selected{% endif %}>Unpaired/Blocked</option>
+          <option value="paired" {% if object.is_paired %}selected{% endif %}>Emparejado/Permitido</option>
+          <option value="unpairing" {% if not object.is_paired %}selected{% endif %}>No emparejado/Bloqueado</option>
       </select>
     </td></tr>
-    <tr><th>Mentor Name</th><td><input type="text" class="form-control" name="nickname" value="{{active_config.child_pii.nickname}}"></td></tr>
-    <tr><th>Schedule</th><td>
+    <tr><th>Nombre del mentor</th><td><input type="text" class="form-control" name="nickname" value="{{active_config.child_pii.nickname}}"></td></tr>
+    <tr><th>Horario</th><td>
         <select name="schedule">
             {% for schedule in schedules %}
               <option value="{{ schedule.id }}" {% if object.schedule_id == schedule.id %}selected{% endif %}>
@@ -26,15 +26,15 @@
             {% endfor %}
           </select>
     </td></tr>
-    <tr><th>OTA Version</th><td>{{object.state.robot_firmware_version}}</td></tr>
-    <tr><th>Last Connect</th><td>{{object.last_connect}}</td></tr>
-    <tr><th>Last Disconnect</th><td>{{object.last_disconnect}}</td></tr>
-    <tr><th>Battery</th><td>{{object.state.battery_level}}</td></tr>
-    <tr><th>Screen Brightness</th><td><input type="range" min="0.1" max="1.0" step="0.1" name="screen_brightness" value="{{active_config.screen_brightness}}"></td></tr>
-    <tr><th>Audio Volume</th><td><input type="range" min="0.1" max="1.0" step="0.1" name="audio_volume" value="{{active_config.audio_volume}}"></td></tr>
-    <tr><th>Mode</th><td>{{object.state.mode}}</td></tr>
+    <tr><th>Versión OTA</th><td>{{object.state.robot_firmware_version}}</td></tr>
+    <tr><th>Última conexión</th><td>{{object.last_connect}}</td></tr>
+    <tr><th>Última desconexión</th><td>{{object.last_disconnect}}</td></tr>
+    <tr><th>Batería</th><td>{{object.state.battery_level}}</td></tr>
+    <tr><th>Brillo de pantalla</th><td><input type="range" min="0.1" max="1.0" step="0.1" name="screen_brightness" value="{{active_config.screen_brightness}}"></td></tr>
+    <tr><th>Volumen de audio</th><td><input type="range" min="0.1" max="1.0" step="0.1" name="audio_volume" value="{{active_config.audio_volume}}"></td></tr>
+    <tr><th>Modo</th><td>{{object.state.mode}}</td></tr>
   </table>
-  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
 </div>
 </div>

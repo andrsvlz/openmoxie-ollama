@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>My test page</title>
+    <title>Página de prueba</title>
   </head>
 <body>
 
@@ -10,10 +10,10 @@
 
 <ul>
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} voto{{ choice.votes|pluralize:"s" }}</li>
 {% endfor %}
 </ul>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a href="{% url 'polls:detail' question.id %}">¿Votar de nuevo?</a>
 </body>
 </html>
