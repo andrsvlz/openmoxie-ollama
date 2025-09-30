@@ -52,7 +52,7 @@ services:
       - ./site/services/stt/models:/models
     environment:
       MODELS_DIR: "/models"
-      MODEL_NAMES: "faster-whisper-small.en,faster-whisper-base.en"
+      MODEL_NAMES: "faster-whisper-small,faster-whisper-base.en"
     entrypoint:
       - /bin/sh
       - -lc
@@ -66,6 +66,7 @@ services:
 
         url() {
           case "$$1" in
+            faster-whisper-small) echo "https://huggingface.co/Systran/faster-whisper-small/resolve/main" ;;
             faster-whisper-small.en) echo "https://huggingface.co/Systran/faster-whisper-small.en/resolve/main" ;;
             faster-whisper-base.en)  echo "https://huggingface.co/Systran/faster-whisper-base.en/resolve/main" ;;
             *) echo "" ;;
@@ -112,7 +113,7 @@ services:
     #ports:
     #  - "8001:8001"
     environment:
-      STT_MODEL: /models/faster-whisper-small.en
+      STT_MODEL: /models/faster-whisper-small
       STT_DEVICE: "auto"
       STT_COMPUTE: "int8"
       STT_VAD: "1"
@@ -187,7 +188,7 @@ services:
       LLM_PROVIDER: ollama
       OLLAMA_MODEL: llama3.2:3b
       STT_BACKEND: local
-      STT_LANG: en
+      STT_LANG: es
       MQTT_HOST: mqtt
       MQTT_PORT: "8883"
       WEB_WORKERS: "1"
