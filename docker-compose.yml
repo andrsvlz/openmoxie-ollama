@@ -6,8 +6,14 @@ services:
     build:
       context: .
       dockerfile: web.Dockerfile
-    user: "0:0"
-    entrypoint:
+    user: "0:    environment:
+      STT_MODEL: /models/faster-whisper-medium
+      STT_DEVICE: "cuda"
+      STT_COMPUTE: "float16"
+      STT_VAD: "0"
+    restart: unless-stopped
+    # GPU (optional):
+    gpus: allntrypoint:
       - /bin/sh
       - -lc
       - |
@@ -52,7 +58,7 @@ services:
       - ./site/services/stt/models:/models
     environment:
       MODELS_DIR: "/models"
-      MODEL_NAMES: "faster-whisper-small,faster-whisper-base.en"
+      MODEL_NAMES: "faster-whisper-medium,faster-whisper-base.en"
     entrypoint:
       - /bin/sh
       - -lc
@@ -66,6 +72,7 @@ services:
 
         url() {
           case "$$1" in
+            faster-whisper-medium) echo "https://huggingface.co/Systran/faster-whisper-medium/resolve/main" ;;
             faster-whisper-small) echo "https://huggingface.co/Systran/faster-whisper-small/resolve/main" ;;
             faster-whisper-small.en) echo "https://huggingface.co/Systran/faster-whisper-small.en/resolve/main" ;;
             faster-whisper-base.en)  echo "https://huggingface.co/Systran/faster-whisper-base.en/resolve/main" ;;
@@ -113,13 +120,13 @@ services:
     #ports:
     #  - "8001:8001"
     environment:
-      STT_MODEL: /models/faster-whisper-small
-      STT_DEVICE: "auto"
-      STT_COMPUTE: "int8"
+      STT_MODEL: /models/faster-whisper-medium
+      STT_DEVICE: "cuda"
+      STT_COMPUTE: "float16"
       STT_VAD: "0"
     restart: unless-stopped
     # GPU (optional):
-    # gpus: all
+    gpus: all
     depends_on:
       model-init:
         condition: service_completed_successfully
@@ -142,6 +149,7 @@ services:
     #ports: ["11434:11434"] 
     volumes: [ "ollama:/root/.ollama" ]
     restart: unless-stopped
+    gpus: all
     
   ollama-init:
     image: curlimages/curl:8.10.1
