@@ -114,10 +114,10 @@ services:
     #ports:
     #  - "8001:8001"
     environment:
-      STT_MODEL: /models/faster-whisper-small
-      STT_DEVICE: "cpu"
+      STT_MODEL: /models/faster-whisper-small.en
+      STT_DEVICE: "auto"
       STT_COMPUTE: "int8"
-      STT_VAD: "1"
+      STT_VAD: "0"
     restart: unless-stopped
     # GPU (optional):
     # gpus: all
@@ -189,7 +189,7 @@ services:
       LLM_PROVIDER: ollama
       OLLAMA_MODEL: llama3.2:3b
       STT_BACKEND: local
-      STT_LANG: es
+      STT_LANG: en
       MQTT_HOST: mqtt
       MQTT_PORT: "8883"
       WEB_WORKERS: "1"
