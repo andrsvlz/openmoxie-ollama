@@ -6,14 +6,8 @@ services:
     build:
       context: .
       dockerfile: web.Dockerfile
-    user: "0:    environment:
-      STT_MODEL: /models/faster-whisper-medium
-      STT_DEVICE: "cuda"
-      STT_COMPUTE: "float16"
-      STT_VAD: "0"
-    restart: unless-stopped
-    # GPU (optional):
-    gpus: allntrypoint:
+    user: "0:0"
+    entrypoint:
       - /bin/sh
       - -lc
       - |
@@ -126,7 +120,7 @@ services:
       STT_VAD: "0"
     restart: unless-stopped
     # GPU (optional):
-    gpus: all
+    # gpus: all
     depends_on:
       model-init:
         condition: service_completed_successfully
@@ -149,7 +143,6 @@ services:
     #ports: ["11434:11434"] 
     volumes: [ "ollama:/root/.ollama" ]
     restart: unless-stopped
-    gpus: all
     
   ollama-init:
     image: curlimages/curl:8.10.1
