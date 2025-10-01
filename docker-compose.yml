@@ -117,7 +117,7 @@ services:
       STT_MODEL: /models/faster-whisper-small.en
       STT_DEVICE: "auto"
       STT_COMPUTE: "int8"
-      STT_VAD: "0"
+      STT_VAD: "1"
     restart: unless-stopped
     # GPU (optional):
     # gpus: all
