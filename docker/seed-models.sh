@@ -11,6 +11,9 @@ url() {
   case "$1" in
     faster-whisper-small.en) echo "https://huggingface.co/Systran/faster-whisper-small.en/resolve/main" ;;
     faster-whisper-base.en)  echo "https://huggingface.co/Systran/faster-whisper-base.en/resolve/main" ;;
+    faster-whisper-medium)   echo "https://huggingface.co/Systran/faster-whisper-medium/resolve/main" ;;
+    faster-whisper-large)    echo "https://huggingface.co/Systran/faster-whisper-large-v3/resolve/main" ;;
+    faster-whisper-large-v3) echo "https://huggingface.co/Systran/faster-whisper-large-v3/resolve/main" ;;
     *) echo "" ;;
   esac
 }
@@ -19,7 +22,8 @@ fetch() {
   name="$1"; base="$2"; out="${MODELS_DIR}/${name}"
   mkdir -p "$out"
   if [ -f "$out/model.bin" ] && [ -f "$out/config.json" ] && \
-     [ -f "$out/tokenizer.json" ] && [ -f "$out/vocabulary.txt" ]; then
+     [ -f "$out/tokenizer.json" ] && \
+     { [ -f "$out/vocabulary.txt" ] || [ -f "$out/vocabulary.json" ]; }; then
     echo "✓ $name already present"
     return 0
   fi
@@ -27,7 +31,11 @@ fetch() {
   curl -fSL "$base/model.bin"      -o "$out/model.bin"
   curl -fSL "$base/config.json"    -o "$out/config.json"
   curl -fSL "$base/tokenizer.json" -o "$out/tokenizer.json"
-  curl -fSL "$base/vocabulary.txt" -o "$out/vocabulary.txt"
+  if curl -fSL "$base/vocabulary.json" -o "$out/vocabulary.json"; then
+    :
+  else
+    curl -fSL "$base/vocabulary.txt" -o "$out/vocabulary.txt"
+  fi
   echo "✓ $name done"
 }
 

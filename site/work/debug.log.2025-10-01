@@ -1,0 +1,773 @@
+2025-10-01 18:52:25,880 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33482
+2025-10-01 18:52:25,887 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 18:52:25,888 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 18:52:26,630 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 18:52:26,946 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 18:52:26,946 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 18:52:30,319 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 18:52:45,826 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 18:52:45,887 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:15:09,260 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33494
+2025-10-01 19:15:09,260 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 19:15:09,262 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:15:10,045 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:15:10,328 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:15:10,328 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 19:15:13,447 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:15:30,651 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:15:30,718 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:32,763 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33506
+2025-10-01 19:30:32,763 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 19:30:32,765 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:33,558 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:33,840 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:33,841 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 19:30:36,025 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:37,565 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:52,893 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:30:52,948 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:51:40,552 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33522
+2025-10-01 19:51:40,552 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 19:51:40,554 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:51:40,989 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:51:41,625 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:51:41,625 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 19:51:43,706 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:52:00,692 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 19:52:00,757 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:03,635 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33534
+2025-10-01 20:07:03,635 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 20:07:03,637 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:04,325 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:04,704 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:04,704 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 20:07:06,561 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:07,770 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:24,206 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:07:24,269 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:22:26,536 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33546
+2025-10-01 20:22:26,536 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 20:22:26,538 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:22:26,848 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:22:27,598 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:22:27,599 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 20:22:31,832 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:22:47,882 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:22:47,939 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:37:49,526 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33558
+2025-10-01 20:37:49,526 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 20:37:49,528 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:37:50,236 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:37:50,594 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:37:50,595 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 20:37:52,141 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:38:10,788 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:38:10,859 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:53:12,525 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33570
+2025-10-01 20:53:12,526 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 20:53:12,527 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:53:13,350 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:53:13,598 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:53:13,598 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 20:53:14,883 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:53:33,758 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 20:53:33,813 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:08:35,549 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33582
+2025-10-01 21:08:35,549 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 21:08:35,551 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:08:36,362 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:08:36,627 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:08:36,627 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 21:08:38,983 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:08:56,717 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:08:56,775 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:23:58,493 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33594
+2025-10-01 21:23:58,493 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 21:23:58,495 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:23:59,257 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:23:59,558 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:23:59,558 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 21:24:03,026 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:24:18,985 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:24:19,039 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:39:21,460 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33612
+2025-10-01 21:39:21,460 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 21:39:21,462 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:39:22,074 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:39:22,529 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:39:22,529 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 21:39:41,545 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:39:41,603 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:54:44,665 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33624
+2025-10-01 21:54:44,665 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 21:54:44,667 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:54:45,357 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:54:45,742 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:54:45,742 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 21:54:48,510 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:55:05,232 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 21:55:05,291 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:10:07,888 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33636
+2025-10-01 22:10:07,888 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 22:10:07,890 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:10:08,631 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:10:08,963 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:10:08,964 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 22:10:10,186 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:10:27,965 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:10:28,021 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:25:30,564 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33648
+2025-10-01 22:25:30,564 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 22:25:30,566 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:25:31,341 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:25:31,644 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:25:31,644 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 22:25:34,276 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:25:50,563 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:25:50,618 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:51:40,543 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33660
+2025-10-01 22:51:40,543 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 22:51:40,545 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:51:41,150 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:51:41,604 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:51:41,605 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 22:52:00,622 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 22:52:00,678 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:07:03,386 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33666
+2025-10-01 23:07:03,387 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 23:07:03,388 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:07:04,160 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:07:04,455 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:07:04,456 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 23:07:05,286 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:07:23,356 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:07:23,404 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:31:14,431 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33678
+2025-10-01 23:31:14,431 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 23:31:14,433 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:31:15,277 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:31:15,486 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:31:15,486 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 23:31:18,890 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:31:34,345 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:31:34,401 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:51:40,594 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33690
+2025-10-01 23:51:40,594 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-01 23:51:40,596 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:51:40,910 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:51:41,648 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:51:41,648 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-01 23:52:00,507 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-01 23:52:00,572 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:07:03,586 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33708
+2025-10-02 00:07:03,586 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 00:07:03,588 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:07:04,354 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:07:04,652 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:07:04,652 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 00:07:23,829 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:07:23,884 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:22:27,342 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33720
+2025-10-02 00:22:27,342 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 00:22:27,344 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:22:28,128 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:22:28,414 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:22:28,414 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 00:22:48,006 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:22:48,063 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:37:50,358 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33726
+2025-10-02 00:37:50,358 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 00:37:50,360 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:37:51,044 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:37:51,418 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:37:51,418 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 00:37:52,591 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:38:10,432 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:38:10,500 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:53:12,903 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33738
+2025-10-02 00:53:12,903 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 00:53:12,905 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:53:13,664 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:53:13,964 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:53:13,964 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 00:53:16,629 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:53:46,186 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 00:53:46,245 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:08:48,284 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33756
+2025-10-02 01:08:48,284 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 01:08:48,286 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:08:49,061 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:08:49,350 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:08:49,351 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 01:08:51,501 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:09:08,185 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:09:08,249 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:24:11,481 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33768
+2025-10-02 01:24:11,481 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 01:24:11,483 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:24:12,207 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:24:12,547 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:24:12,547 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 01:24:15,579 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:24:31,745 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:24:31,812 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:39:34,408 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33780
+2025-10-02 01:39:34,408 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 01:39:34,410 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:39:34,563 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:39:35,468 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:39:35,468 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 01:39:53,295 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:39:53,350 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:54:56,180 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33786
+2025-10-02 01:54:56,180 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 01:54:56,182 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:54:57,005 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:54:57,255 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:54:57,256 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 01:54:58,606 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:55:01,204 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:55:17,593 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 01:55:17,654 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:17:40,736 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33798
+2025-10-02 02:17:40,736 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 02:17:40,738 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:17:41,488 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:17:41,809 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:17:41,809 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 02:17:43,041 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:18:01,871 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:18:01,924 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:33:04,122 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33810
+2025-10-02 02:33:04,122 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 02:33:04,124 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:33:04,842 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:33:05,188 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:33:05,188 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 02:33:08,563 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:33:24,047 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:33:24,103 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:51:39,429 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33828
+2025-10-02 02:51:39,430 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 02:51:39,431 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:51:40,167 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:51:40,498 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:51:40,498 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 02:51:59,625 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 02:51:59,680 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:11:32,114 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33840
+2025-10-02 03:11:32,115 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 03:11:32,116 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:11:32,874 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:11:33,178 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:11:33,178 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 03:11:35,647 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:11:52,117 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:11:52,185 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:26:55,161 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33846
+2025-10-02 03:26:55,161 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 03:26:55,163 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:26:55,889 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:26:56,223 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:26:56,224 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 03:26:57,518 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:27:15,057 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:27:15,122 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:51:40,044 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33858
+2025-10-02 03:51:40,044 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 03:51:40,046 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:51:40,794 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:51:41,112 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:51:41,112 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 03:51:43,185 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:51:59,919 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 03:51:59,994 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:07:03,064 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33876
+2025-10-02 04:07:03,064 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 04:07:03,066 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:07:03,779 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:07:04,132 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:07:04,133 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 04:07:07,301 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:07:24,136 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:07:24,198 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:31:19,946 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33882
+2025-10-02 04:31:19,946 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 04:31:19,948 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:31:20,673 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:31:21,013 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:31:21,014 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 04:31:22,259 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:31:39,764 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:31:39,829 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:51:39,073 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33900
+2025-10-02 04:51:39,074 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 04:51:39,075 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:51:39,775 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:51:40,133 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:51:40,134 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 04:51:42,487 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:51:59,383 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 04:51:59,449 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:07:02,036 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33912
+2025-10-02 05:07:02,036 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 05:07:02,038 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:07:02,770 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:07:03,104 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:07:03,105 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 05:07:21,971 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:07:22,020 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:22:24,866 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33918
+2025-10-02 05:22:24,866 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 05:22:24,868 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:22:25,514 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:22:25,942 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:22:25,942 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 05:22:28,926 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:22:44,876 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:22:44,941 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:37:48,192 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33936
+2025-10-02 05:37:48,192 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 05:37:48,194 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:37:48,923 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:37:49,255 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:37:49,255 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 05:38:07,909 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:38:07,962 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:53:11,015 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33948
+2025-10-02 05:53:11,015 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 05:53:11,017 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:53:12,075 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:53:12,076 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 05:53:12,198 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:53:13,906 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:53:31,347 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 05:53:31,416 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:08:33,954 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33960
+2025-10-02 06:08:33,954 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 06:08:33,956 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:08:34,768 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:08:35,013 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:08:35,013 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 06:08:37,306 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:08:53,930 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:08:53,995 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:23:57,879 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33972
+2025-10-02 06:23:57,879 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 06:23:57,881 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:23:58,663 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:23:58,950 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:23:58,950 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 06:24:01,904 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:24:17,844 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:24:17,916 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:39:20,768 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33978
+2025-10-02 06:39:20,769 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 06:39:20,771 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:39:21,501 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:39:21,829 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:39:21,829 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 06:39:25,972 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:39:41,249 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:39:41,311 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:54:44,471 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:33990
+2025-10-02 06:54:44,471 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 06:54:44,473 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:54:44,863 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:54:45,541 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:54:45,542 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 06:54:48,782 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:55:04,291 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 06:55:04,340 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:10:07,042 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34010
+2025-10-02 07:10:07,042 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 07:10:07,044 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:10:07,668 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:10:08,121 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:10:08,121 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 07:10:09,008 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:10:27,201 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:10:27,261 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:25:29,861 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34024
+2025-10-02 07:25:29,861 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 07:25:29,863 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:25:30,630 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:25:30,925 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:25:30,925 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 07:25:33,029 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:25:50,672 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:25:50,732 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:51:39,602 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34036
+2025-10-02 07:51:39,602 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 07:51:39,605 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:51:40,332 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:51:40,666 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:51:40,667 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 07:51:43,976 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:51:59,650 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 07:51:59,715 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:07:02,792 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34048
+2025-10-02 08:07:02,792 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 08:07:02,793 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:07:03,545 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:07:03,862 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:07:03,863 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 08:07:23,094 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:07:23,153 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:22:25,687 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34060
+2025-10-02 08:22:25,687 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 08:22:25,689 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:22:26,429 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:22:26,759 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:22:26,759 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 08:22:28,214 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:22:45,672 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:22:45,741 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:37:48,743 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34072
+2025-10-02 08:37:48,743 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 08:37:48,744 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:37:49,634 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:37:49,796 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:37:49,796 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 08:37:52,580 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:38:09,635 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:38:09,703 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:53:11,650 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34078
+2025-10-02 08:53:11,650 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 08:53:11,652 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:53:12,447 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:53:12,717 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:53:12,717 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 08:53:16,680 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:53:31,530 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 08:53:31,583 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:08:34,643 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34096
+2025-10-02 09:08:34,643 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 09:08:34,645 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:08:35,383 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:08:35,713 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:08:35,713 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 09:08:38,213 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:08:54,626 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:08:54,687 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:31:25,524 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34102
+2025-10-02 09:31:25,524 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 09:31:25,526 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:31:26,247 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:31:26,589 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:31:26,590 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 09:31:28,976 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:31:45,428 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:31:45,488 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:51:39,223 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34114
+2025-10-02 09:51:39,223 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 09:51:39,225 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:51:39,962 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:51:40,284 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:51:40,285 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 09:51:42,480 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:51:44,080 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:52:00,079 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 09:52:00,150 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:07:02,139 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34126
+2025-10-02 10:07:02,140 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 10:07:02,141 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:07:02,852 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:07:03,197 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:07:03,197 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 10:07:23,349 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:07:23,412 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:22:25,834 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34138
+2025-10-02 10:22:25,834 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 10:22:25,836 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:22:26,535 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:22:26,901 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:22:26,902 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 10:22:29,944 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:22:46,906 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:22:46,959 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:37:49,321 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34150
+2025-10-02 10:37:49,321 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 10:37:49,323 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:37:50,080 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:37:50,382 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:37:50,382 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 10:37:51,209 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:38:10,401 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:38:10,464 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:53:13,310 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34162
+2025-10-02 10:53:13,310 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 10:53:13,313 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:53:14,027 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:53:14,370 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:53:14,370 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 10:53:15,321 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:53:33,595 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 10:53:33,660 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:06,019 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34174
+2025-10-02 11:13:06,019 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 11:13:06,021 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:06,908 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:07,083 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:07,083 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 11:13:08,327 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:09,918 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:27,144 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:13:27,215 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:29,683 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34186
+2025-10-02 11:28:29,683 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 11:28:29,685 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:30,413 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:30,737 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:30,737 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 11:28:32,296 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:34,043 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:49,753 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:28:49,827 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:51:39,393 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34198
+2025-10-02 11:51:39,393 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 11:51:39,395 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:51:40,158 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:51:40,447 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:51:40,448 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 11:51:42,677 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:51:59,319 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 11:51:59,380 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:07:01,710 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34216
+2025-10-02 12:07:01,710 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 12:07:01,712 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:07:02,419 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:07:02,777 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:07:02,778 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 12:07:05,851 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:07:22,128 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:07:22,193 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:22:25,397 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34228
+2025-10-02 12:22:25,398 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 12:22:25,399 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:22:25,792 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:22:26,457 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:22:26,457 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 12:22:46,382 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:22:46,439 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:37:47,951 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34234
+2025-10-02 12:37:47,951 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 12:37:47,953 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:37:48,756 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:37:49,011 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:37:49,011 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 12:37:51,336 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:38:09,162 INFO [robot_data] Releasing device data for d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:38:09,226 INFO [moxie_server] Moxie DISCONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:03,275 INFO [moxie_server] Moxie CONNECTED d_cd024925-fc70-4bc8-b1d5-56af764e83bc from 192.168.1.23:34260
+2025-10-02 12:40:03,275 INFO [robot_data] Device d_cd024925-fc70-4bc8-b1d5-56af764e83bc is LOADING.
+2025-10-02 12:40:03,277 INFO [robot_data] Existing model for this device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:04,336 DEBUG [robot_data] Providing config {'pairing_status': 'paired', 'audio_volume': '0.6', 'screen_brightness': '1.0', 'audio_wake_set': 'off', 'timezone_id': 'America/Los_Angeles', 'child_pii': {'nickname': 'Pat', 'input_speed': 0.0}, 'settings': {'props': {'touch_wake': '1', 'wake_alarms': '1', 'wake_button': '1', 'doa_range': '80', 'target_all': '1', 'gcp_upload_disable': '1', 'local_stt': 'on', 'max_enroll': '2', 'audio_wake': '1', 'cloud_schedule_reset_threshold': '5', 'debug_whiteboard': '0', 'brain_entrances_available': '1', 'mqtt_files': '0', 'file_sync_wait': '0', 'default_loglevel': 'warning'}}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:04,337 DEBUG [moxie_server] Subscribed to ZMQ STT
+2025-10-02 12:40:04,517 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:04,519 DEBUG [moxie_server] Rx MBH request.
+2025-10-02 12:40:04,520 DEBUG [moxie_server] Rx Schedule request.
+2025-10-02 12:40:04,521 DEBUG [robot_data] Providing schedule {'provided_schedule': [{'module_id': 'OPENMOXIE_CHAT', 'content_id': 'ollama'}], 'chat_request': {'module_id': 'OPENMOXIE_CHAT', 'content_id': 'ollama'}} to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:04,522 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[Unity   ] - [POWER_STATE_CHANGE] [LizardInfoEvent] Setting robot power state to: POWER_STATE_SLEEPING
+2025-10-02 12:40:04,522 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[Unity   ] - [WAKEUP_ANDROID_EVENT] [LizardErrorEvent] eventID: PICKUP_WAKEUP
+2025-10-02 12:40:04,523 INFO [moxie_server] Providing 28 MBH records to d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:04,524 DEBUG [moxie_server] Tx modules to: remote_chat: {'modules': [{'info': {'id': 'OPENMOXIE_CHAT'}, 'rules': 'RANDOM', 'source': 'REMOTE_CHAT', 'content_infos': [{'info': {'id': 'default'}}, {'info': {'id': 'short'}}, {'info': {'id': 'ollama'}}, {'info': {'id': 'grok'}}, {'info': {'id': 'mcmoxie'}}, {'info': {'id': 'surf'}}]}, {'info': {'id': 'OPENCONVO'}, 'rules': 'RANDOM', 'source': 'REMOTE_CHAT', 'content_infos': [{'info': {'id': 'reading'}}, {'info': {'id': 'storytelling'}}, {'info': {'id': 'story'}}]}, {'info': {'id': 'SIMPLELINE'}, 'rules': 'RANDOM', 'source': 'REMOTE_CHAT', 'content_infos': [{'info': {'id': 'default'}}]}, {'info': {'id': 'WAKEUP_LAUNCHER'}, 'rules': 'RANDOM', 'source': 'REMOTE_CHAT', 'content_infos': [{'info': {'id': 'ftue'}}, {'info': {'id': 'more_10'}}, {'info': {'id': 'less_10'}}, {'info': {'id': 'first_time_today'}}, {'info': {'id': 'scheduled'}}]}], 'version': 'openmoxie_v1'}
+2025-10-02 12:40:09,585 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:09,597 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 46080
+2025-10-02 12:40:09,604 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 92160
+2025-10-02 12:40:09,604 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:09,605 INFO [zmq_stt_handler] Processing session_id ecb1eb09-d7f0-4866-a78d-7189a55ce4ac with 92160 bytes
+2025-10-02 12:40:09,621 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:11,603 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:11,620 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 65280
+2025-10-02 12:40:11,629 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 130560
+2025-10-02 12:40:11,629 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:11,629 INFO [zmq_stt_handler] Processing session_id 6a6d0062-7e0f-4f44-8d54-6e8640de1b52 with 130560 bytes
+2025-10-02 12:40:11,631 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:17,607 INFO [zmq_stt_handler] STT-FINAL: A la, a la pobre perritanza, a la, a la pobre perritanza
+2025-10-02 12:40:17,688 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[SpeechFuser] - STTFinal was delayed from EOS by 6523 ms. UUID: bc3a9943-5746-496d-b72e-008548dfbd45
+2025-10-02 12:40:17,688 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[SpeechModule] - STTFinal was delayed from EOS by 6526 ms. UUID: bc3a9943-5746-496d-b72e-008548dfbd45
+2025-10-02 12:40:17,746 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[SpeechFuser] - STTFinal was delayed from EOS by 8612 ms. UUID: bc3a9943-5746-496d-b72e-008548dfbd45
+2025-10-02 12:40:17,749 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[SpeechModule] - STTFinal was delayed from EOS by 8616 ms. UUID: bc3a9943-5746-496d-b72e-008548dfbd45
+2025-10-02 12:40:20,592 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:20,605 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 88320
+2025-10-02 12:40:20,619 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 176640
+2025-10-02 12:40:20,619 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:20,619 INFO [zmq_stt_handler] Processing session_id 7eb09dba-b6fd-45a3-8dcc-8f994626d79b with 176640 bytes
+2025-10-02 12:40:20,620 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:24,172 INFO [zmq_stt_handler] STT-FINAL: Puzzles, are you still a little baffled?  Puzzles, are you still a little baffled?
+2025-10-02 12:40:24,348 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[SpeechFuser] - STTFinal was delayed from EOS by 4197 ms. UUID: 6097c192-59b4-4ec5-a415-010f27891493
+2025-10-02 12:40:24,484 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[SpeechModule] - STTFinal was delayed from EOS by 4200 ms. UUID: 6097c192-59b4-4ec5-a415-010f27891493
+2025-10-02 12:40:24,661 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[EngagementModule] - Reengaged with user after 87258207 ms with only visible speech.
+2025-10-02 12:40:29,973 INFO [zmq_stt_handler] STT-FINAL: Uh, say again.  Say again.  Say again.
+2025-10-02 12:40:39,828 DEBUG [moxie_server] Rx STATE topic for device d_cd024925-fc70-4bc8-b1d5-56af764e83bc
+2025-10-02 12:40:40,111 INFO [moxie_remote_chat] -- USER: moxie wake up
+2025-10-02 12:40:40,111 INFO [moxie_remote_chat] Chat Session Complete: OPENMOXIE_CHAT/ollama False
+2025-10-02 12:40:40,371 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[Unity   ] - [POWER_STATE_CHANGE] [LizardInfoEvent] Setting robot power state to: POWER_STATE_ACTIVE
+2025-10-02 12:40:42,503 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:42,506 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:40:42,507 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:40:42,509 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:40:42,512 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:40:42,635 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:40:42,760 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:40:42,797 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[Unity   ] - [MOTOR_FAIL_BOOT] [LizardErrorEvent] Fixed 
+2025-10-02 12:40:42,942 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:40:42,990 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:40:43,109 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:40:43,111 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 34560
+2025-10-02 12:40:43,111 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:43,111 INFO [zmq_stt_handler] Processing session_id 014d602f-0d76-4b5f-9954-33edd48af751 with 34560 bytes
+2025-10-02 12:40:43,113 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:43,226 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:43,226 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:40:43,228 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:40:43,231 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:40:43,233 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:40:43,344 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:40:43,461 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:40:43,579 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:40:43,698 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:40:43,822 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:40:43,824 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 34560
+2025-10-02 12:40:43,824 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:43,824 INFO [zmq_stt_handler] Processing session_id 0fcec9ea-438b-4707-81d2-8bce762e90e6 with 34560 bytes
+2025-10-02 12:40:43,826 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:43,845 INFO [moxie_remote_chat] -- MOXIE: Thanks for waking me up! Should we dive back into more fun? [WAKEUP/None]
+2025-10-02 12:40:45,305 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:45,307 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:40:45,310 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:40:45,313 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:40:45,316 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:40:45,381 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:40:45,500 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:40:45,621 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:40:45,736 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:40:45,857 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:40:45,972 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[zmqSTT  ] - UUID has gone too long without a response. Elapsed ms: 3136. UUID: 014d602f-0d76-4b5f-9954-33edd48af751
+2025-10-02 12:40:45,976 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 38400
+2025-10-02 12:40:46,098 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 42240
+2025-10-02 12:40:46,215 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 46080
+2025-10-02 12:40:46,338 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 49920
+2025-10-02 12:40:46,456 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 53760
+2025-10-02 12:40:46,581 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 57600
+2025-10-02 12:40:46,690 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[zmqSTT  ] - UUID has gone too long without a response. Elapsed ms: 3136. UUID: 0fcec9ea-438b-4707-81d2-8bce762e90e6
+2025-10-02 12:40:46,699 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 61440
+2025-10-02 12:40:46,831 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 65280
+2025-10-02 12:40:46,833 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 65280
+2025-10-02 12:40:46,834 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:46,834 INFO [zmq_stt_handler] Processing session_id 7d9f84ce-6877-43ce-9bf1-89754c8e88e6 with 65280 bytes
+2025-10-02 12:40:46,835 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:48,226 INFO [zmq_stt_handler] STT-FINAL: Oh.
+2025-10-02 12:40:50,333 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:50,334 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:40:50,334 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:40:50,334 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:40:50,336 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:40:50,413 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:40:50,526 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[zmqSTT  ] - UUID has gone too long without a response. Elapsed ms: 3972. UUID: 7d9f84ce-6877-43ce-9bf1-89754c8e88e6
+2025-10-02 12:40:50,529 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:40:50,656 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:40:50,770 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:40:50,904 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:40:51,009 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 38400
+2025-10-02 12:40:51,146 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 42240
+2025-10-02 12:40:51,268 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 46080
+2025-10-02 12:40:51,382 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 49920
+2025-10-02 12:40:51,503 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 53760
+2025-10-02 12:40:51,613 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 57600
+2025-10-02 12:40:51,740 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 61440
+2025-10-02 12:40:51,852 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 65280
+2025-10-02 12:40:51,973 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 69120
+2025-10-02 12:40:51,976 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 69120
+2025-10-02 12:40:51,976 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:51,976 INFO [zmq_stt_handler] Processing session_id 0385bb61-96bb-48c1-9c19-cf034006bc01 with 69120 bytes
+2025-10-02 12:40:51,978 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:52,462 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:40:52,465 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:40:52,465 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:40:52,467 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:40:52,467 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:40:52,580 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:40:52,699 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:40:52,811 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:40:52,936 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:40:53,063 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:40:53,115 INFO [moxie_remote_chat] -- MOXIE: Oh no, I think my processors are having trouble right now so I can't understand if you're talking to me! The GRL is trying to fix it. If my ear warning symbols don't go away in a little while, ask your parents to call the GRL. [WAKEUP/None]
+2025-10-02 12:40:53,190 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 38400
+2025-10-02 12:40:53,323 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 42240
+2025-10-02 12:40:53,410 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 46080
+2025-10-02 12:40:53,550 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 49920
+2025-10-02 12:40:53,680 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 53760
+2025-10-02 12:40:53,683 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 53760
+2025-10-02 12:40:53,683 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:40:53,684 INFO [zmq_stt_handler] Processing session_id 920a8b7f-bd4b-411b-b80b-54dd08dec5a8 with 53760 bytes
+2025-10-02 12:40:53,686 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:40:54,846 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[zmqSTT  ] - UUID has gone too long without a response. Elapsed ms: 3132. UUID: 0385bb61-96bb-48c1-9c19-cf034006bc01
+2025-10-02 12:41:04,170 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:41:04,171 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:41:04,171 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:41:04,171 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:41:04,173 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:41:04,173 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[zmqSTT  ] - UUID has gone too long without a response. Elapsed ms: 10769. UUID: 920a8b7f-bd4b-411b-b80b-54dd08dec5a8
+2025-10-02 12:41:04,214 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:41:04,351 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:41:04,529 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:41:04,709 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:41:04,710 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:41:04,887 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 38400
+2025-10-02 12:41:05,065 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 42240
+2025-10-02 12:41:05,067 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 46080
+2025-10-02 12:41:05,196 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 49920
+2025-10-02 12:41:05,329 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 53760
+2025-10-02 12:41:05,421 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 57600
+2025-10-02 12:41:05,858 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 61440
+2025-10-02 12:41:05,859 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 65280
+2025-10-02 12:41:05,859 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 65280
+2025-10-02 12:41:05,859 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:41:05,859 INFO [zmq_stt_handler] Processing session_id 4b75d192-fee7-4108-b9a6-c1b41e5975ab with 65280 bytes
+2025-10-02 12:41:05,861 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:41:11,604 INFO [zmq_stt_handler] STT-FINAL: You
+2025-10-02 12:41:12,516 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 1 TotalBytes: 0
+2025-10-02 12:41:12,516 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 3840
+2025-10-02 12:41:12,516 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 7680
+2025-10-02 12:41:12,516 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 11520
+2025-10-02 12:41:12,519 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 15360
+2025-10-02 12:41:12,529 DEBUG [moxie_server] d_cd024925-fc70-4bc8-b1d5-56af764e83bc[zmqSTT  ] - UUID has gone too long without a response. Elapsed ms: 7139. UUID: 4b75d192-fee7-4108-b9a6-c1b41e5975ab
+2025-10-02 12:41:12,619 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 19200
+2025-10-02 12:41:12,745 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 23040
+2025-10-02 12:41:12,864 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 26880
+2025-10-02 12:41:12,978 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 30720
+2025-10-02 12:41:13,105 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 34560
+2025-10-02 12:41:13,217 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 38400
+2025-10-02 12:41:13,329 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 42240
+2025-10-02 12:41:13,466 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 46080
+2025-10-02 12:41:13,575 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 49920
+2025-10-02 12:41:13,702 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 53760
+2025-10-02 12:41:13,810 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 57600
+2025-10-02 12:41:13,936 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 61440
+2025-10-02 12:41:14,071 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 65280
+2025-10-02 12:41:14,185 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 69120
+2025-10-02 12:41:14,295 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 72960
+2025-10-02 12:41:14,415 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 76800
+2025-10-02 12:41:14,530 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 80640
+2025-10-02 12:41:14,652 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 84480
+2025-10-02 12:41:14,773 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 88320
+2025-10-02 12:41:14,890 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 92160
+2025-10-02 12:41:15,028 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 96000
+2025-10-02 12:41:15,135 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 99840
+2025-10-02 12:41:15,272 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 103680
+2025-10-02 12:41:15,373 INFO [moxie_remote_chat] -- MOXIE: When you're ready to start the day, say, Moxie, let's go! [WAKEUP/None]
+2025-10-02 12:41:15,376 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 107520
+2025-10-02 12:41:15,500 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 111360
+2025-10-02 12:41:15,619 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 115200
+2025-10-02 12:41:15,739 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 2 TotalBytes: 119040
+2025-10-02 12:41:15,740 DEBUG [zmq_stt_handler] ZMQ Speech VAD: 3 TotalBytes: 119040
+2025-10-02 12:41:15,740 INFO [zmq_stt_handler] Session reached END OF SPEECH
+2025-10-02 12:41:15,740 INFO [zmq_stt_handler] Processing session_id 478f099d-cc77-4f47-a7f1-6d7516215d56 with 119040 bytes
+2025-10-02 12:41:15,741 INFO [zmq_stt_handler] STT backend=local url=http://stt:8001/stt lang=es
+2025-10-02 12:41:17,043 INFO [zmq_stt_handler] STT-FINAL: What did you just see?
+2025-10-02 12:41:22,460 INFO [zmq_stt_handler] STT-FINAL: Well, if it's so nice
+2025-10-02 12:41:27,813 INFO [zmq_stt_handler] STT-FINAL: Take care, almost.
+2025-10-02 12:41:33,248 INFO [zmq_stt_handler] STT-FINAL: 
+2025-10-02 12:41:39,066 INFO [zmq_stt_handler] STT-FINAL: If you think this is a stupid system, tell me what's wrong.

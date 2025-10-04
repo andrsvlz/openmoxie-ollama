@@ -5,22 +5,90 @@ from pydantic import BaseModel
 from faster_whisper import WhisperModel
 import tempfile, os, logging
 from threading import Lock
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Tuple
+
+try:
+    import ctranslate2  # type: ignore
+except ImportError:  # pragma: no cover - faster-whisper bundles this in production
+    ctranslate2 = None
 
 # --- Config via env ---
 MODEL_NAME = os.getenv("STT_MODEL", "small.en")
-DEVICE     = os.getenv("STT_DEVICE", "auto")
-COMPUTE    = os.getenv("STT_COMPUTE", "int8")
+REQUESTED_DEVICE = os.getenv("STT_DEVICE", "auto")
+REQUESTED_COMPUTE = os.getenv("STT_COMPUTE", "auto")
 USE_VAD    = os.getenv("STT_VAD", "1") == "1"
 WORDS      = os.getenv("STT_WORDS", "0") == "1"
 
 logger = logging.getLogger("stt")
 logger.setLevel(logging.INFO)
 
+VALID_COMPUTE_TYPES = {"int8", "int8_float16", "float16", "float32", "auto"}
+
+
+def _resolve_device(preferred: str) -> str:
+    pref = (preferred or "auto").strip().lower()
+    if pref == "auto":
+        if ctranslate2 is not None:
+            try:
+                if ctranslate2.get_device_count("cuda") > 0:
+                    logger.info("Auto device selection detected CUDA; using 'cuda'.")
+                    return "cuda"
+            except Exception as exc:
+                logger.warning("Unable to query CUDA device count (%s); defaulting to CPU.", exc)
+        return "cpu"
+    if pref not in {"cpu", "cuda"}:
+        logger.warning("Unknown device '%s'; defaulting to CPU.", pref)
+        return "cpu"
+    return pref
+
+
+def _resolve_compute(device: str, preferred: str) -> str:
+    pref = (preferred or "auto").strip().lower()
+    if pref == "auto" or pref not in VALID_COMPUTE_TYPES:
+        fallback = "float16" if device == "cuda" else "int8"
+        if pref not in {"", "auto"}:
+            logger.warning("Unsupported compute type '%s'; using '%s'.", pref, fallback)
+        return fallback
+    if device == "cuda" and pref == "int8":
+        logger.info("Adjusting compute type 'int8' to 'int8_float16' for CUDA.")
+        return "int8_float16"
+    if device == "cpu" and pref in {"float16"}:
+        logger.info("Compute type '%s' is inefficient on CPU; switching to 'int8'.", pref)
+        return "int8"
+    return pref
+
+
+def _load_model(model_name: str, device_pref: str, compute_pref: str) -> Tuple[WhisperModel, str, str]:
+    resolved_device = _resolve_device(device_pref)
+    resolved_compute = _resolve_compute(resolved_device, compute_pref)
+    logger.info(
+        "Loading model '%s' (requested device=%s, compute=%s → using device=%s, compute=%s)",
+        model_name,
+        (device_pref or "auto"),
+        (compute_pref or "auto"),
+        resolved_device,
+        resolved_compute,
+    )
+    try:
+        instance = WhisperModel(model_name, device=resolved_device, compute_type=resolved_compute)
+        return instance, resolved_device, resolved_compute
+    except Exception as exc:
+        if resolved_device == "cuda":
+            logger.warning("Failed to initialize model on CUDA (%s); retrying on CPU fallback.", exc)
+            fallback_device = "cpu"
+            fallback_compute = _resolve_compute(fallback_device, compute_pref)
+            try:
+                instance = WhisperModel(model_name, device=fallback_device, compute_type=fallback_compute)
+                return instance, fallback_device, fallback_compute
+            except Exception:
+                logger.exception("CPU fallback initialization failed as well.")
+                raise
+        raise
+
+
 app = FastAPI()
-logger.info(f"Loading model: {MODEL_NAME} (device={DEVICE}, compute={COMPUTE})")
 model_lock = Lock()
-model = WhisperModel(MODEL_NAME, device=DEVICE, compute_type=COMPUTE)
+model, DEVICE, COMPUTE = _load_model(MODEL_NAME, REQUESTED_DEVICE, REQUESTED_COMPUTE)
 
 class STTSegment(BaseModel):
     start: float
@@ -35,7 +103,7 @@ class STTResponse(BaseModel):
 class ReloadConfig(BaseModel):
     model: Optional[str] = None          # e.g. "/models/faster-whisper-small.en"
     device: Optional[str] = None         # "auto"|"cpu"|"cuda"
-    compute: Optional[str] = None        # "int8"|"int8_float16"|"float16"|"float32"
+    compute: Optional[str] = None        # "int8"|"int8_float16"|"float16"|"float32"|"auto"
 
 @app.post("/stt", response_model=STTResponse)
 async def stt(
@@ -53,14 +121,16 @@ async def stt(
 
         logger.info(f"STT request: {file.filename=} size={len(data)} lang={language} vad={USE_VAD}")
 
-        segments, info = model.transcribe(
-            tmp_path,
-            language=language,
-            task="translate" if translate else "transcribe",
-            vad_filter=USE_VAD,
-            word_timestamps=WORDS,
-            initial_prompt=initial_prompt,
-        )
+        translate = False  # Forzar modo transcripción; ignorar traducción
+        with model_lock:
+            segments, info = model.transcribe(
+                tmp_path,
+                language=language,
+                task="transcribe",
+                vad_filter=USE_VAD,
+                word_timestamps=WORDS,
+                initial_prompt=initial_prompt,
+            )
 
         out_text, out_segments = [], []
         for s in segments:
@@ -79,7 +149,14 @@ async def stt(
 
 @app.get("/health")
 def health():
-    return {"ok": True, "model": MODEL_NAME, "device": DEVICE, "compute": COMPUTE}
+    return {
+        "ok": True,
+        "model": MODEL_NAME,
+        "device": DEVICE,
+        "compute": COMPUTE,
+        "requested_device": REQUESTED_DEVICE,
+        "requested_compute": REQUESTED_COMPUTE,
+    }
 
 # ---------- Control API ----------
 def _scan_models(roots: List[str]) -> List[Dict[str, str]]:
@@ -128,18 +205,30 @@ def list_models(root: Optional[str] = None):
 
 @app.post("/control/reload")
 def reload_model(cfg: ReloadConfig):
-    global model, MODEL_NAME, DEVICE, COMPUTE
-    new_model = cfg.model or MODEL_NAME
-    new_dev   = cfg.device or DEVICE
-    new_comp  = cfg.compute or COMPUTE
+    global model, MODEL_NAME, DEVICE, COMPUTE, REQUESTED_DEVICE, REQUESTED_COMPUTE
 
-    logger.info(f"Reload request: model={new_model} device={new_dev} compute={new_comp}")
+    new_model = cfg.model or MODEL_NAME
+    new_dev_pref = cfg.device or REQUESTED_DEVICE
+    new_comp_pref = cfg.compute or REQUESTED_COMPUTE
+
+    logger.info(
+        "Reload request received: model=%s device=%s compute=%s",
+        new_model,
+        new_dev_pref,
+        new_comp_pref,
+    )
+
     with model_lock:
         try:
-            m = WhisperModel(new_model, device=new_dev, compute_type=new_comp)
-            model = m
-            MODEL_NAME, DEVICE, COMPUTE = new_model, new_dev, new_comp
+            loaded_model, actual_device, actual_compute = _load_model(new_model, new_dev_pref, new_comp_pref)
+            model = loaded_model
+            MODEL_NAME = new_model
+            DEVICE = actual_device
+            COMPUTE = actual_compute
+            REQUESTED_DEVICE = new_dev_pref
+            REQUESTED_COMPUTE = new_comp_pref
         except Exception as e:
             logger.exception("Reload failed")
             return JSONResponse(status_code=500, content={"ok": False, "error": str(e)})
+
     return {"ok": True, "model": MODEL_NAME, "device": DEVICE, "compute": COMPUTE}

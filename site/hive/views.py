@@ -94,7 +94,7 @@ def _reload_local_stt(cfg):
     payload = {
         "model": getattr(cfg, "stt_model", None),
         "device": getattr(cfg, "stt_device", None) or "auto",
-        "compute": getattr(cfg, "stt_compute", None) or "int8",
+        "compute": getattr(cfg, "stt_compute", None) or "auto",
     }
     try:
         requests.post(f"{base}/control/reload", json=payload, timeout=6)
@@ -140,7 +140,7 @@ def hive_configure(request):
 
     if stt_device in ("auto", "cpu", "cuda"):
         cfg.stt_device = stt_device
-    if stt_compute in ("int8", "int8_float16", "float16", "float32"):
+    if stt_compute in ("auto", "int8", "int8_float16", "float16", "float32"):
         cfg.stt_compute = stt_compute
 
     cfg.allow_unverified_bots = request.POST.get('allowall') == "on"

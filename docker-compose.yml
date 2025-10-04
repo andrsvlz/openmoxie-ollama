@@ -52,7 +52,7 @@ services:
       - ./site/services/stt/models:/models
     environment:
       MODELS_DIR: "/models"
-      MODEL_NAMES: "faster-whisper-medium,faster-whisper-base.en"
+      MODEL_NAMES: "faster-whisper-medium"
     entrypoint:
       - /bin/sh
       - -lc
@@ -66,6 +66,8 @@ services:
 
         url() {
           case "$$1" in
+            faster-whisper-large) echo "https://huggingface.co/Systran/faster-whisper-large/resolve/main" ;;
+            faster-whisper-large-v3) echo "https://huggingface.co/Systran/faster-whisper-large-v3/resolve/main" ;;
             faster-whisper-medium) echo "https://huggingface.co/Systran/faster-whisper-medium/resolve/main" ;;
             faster-whisper-small) echo "https://huggingface.co/Systran/faster-whisper-small/resolve/main" ;;
             faster-whisper-small.en) echo "https://huggingface.co/Systran/faster-whisper-small.en/resolve/main" ;;
@@ -80,8 +82,11 @@ services:
           out="$$MODELS_DIR/$$name"
           mkdir -p "$$out"
 
+          required="model.bin config.json tokenizer.json"
+          optional="vocabulary.json"
+
           need=0
-          for f in model.bin config.json tokenizer.json vocabulary.txt; do
+          for f in $$required; do
             [ -f "$$out/$$f" ] || need=1
           done
           if [ "$$need" -eq 0 ]; then
@@ -90,10 +95,18 @@ services:
           fi
 
           echo "→ downloading $$name to $$out"
-          curl -fSL "$$base/model.bin"      -o "$$out/model.bin"
-          curl -fSL "$$base/config.json"    -o "$$out/config.json"
-          curl -fSL "$$base/tokenizer.json" -o "$$out/tokenizer.json"
-          curl -fSL "$$base/vocabulary.txt" -o "$$out/vocabulary.txt"
+          for f in $$required; do
+            curl -fSL "$$base/$$f" -o "$$out/$$f"
+          done
+
+          for f in $$optional; do
+            if curl -fSL "$$base/$$f" -o "$$out/$$f"; then
+              echo "  + $$f"
+            else
+              echo "  ! optional $$f not available, skipping"
+            fi
+          done
+
           echo "✓ $$name done"
         }
 
@@ -111,16 +124,18 @@ services:
     build:
       context: .
       dockerfile: stt.Dockerfile
-    #ports:
-    #  - "8001:8001"
+    ports:
+      - "8001:8001"
     environment:
-      STT_MODEL: /models/faster-whisper-small.en
-      STT_DEVICE: "auto"
-      STT_COMPUTE: "int8"
+      STT_MODEL: /models/faster-whisper-medium
+      STT_DEVICE: "cuda"
+      STT_COMPUTE: "float16"
       STT_VAD: "1"
+      NVIDIA_VISIBLE_DEVICES: "all"
+      NVIDIA_DRIVER_CAPABILITIES: "compute,utility"
     restart: unless-stopped
-    # GPU (optional):
-    # gpus: all
+    gpus: all
+    runtime: nvidia
     depends_on:
       model-init:
         condition: service_completed_successfully
@@ -143,6 +158,8 @@ services:
     #ports: ["11434:11434"] 
     volumes: [ "ollama:/root/.ollama" ]
     restart: unless-stopped
+    runtime: nvidia
+    gpus: all
     
   ollama-init:
     image: curlimages/curl:8.10.1
@@ -189,7 +206,7 @@ services:
       LLM_PROVIDER: ollama
       OLLAMA_MODEL: llama3.2:3b
       STT_BACKEND: local
-      STT_LANG: en
+      STT_LANG: es
       MQTT_HOST: mqtt
       MQTT_PORT: "8883"
       WEB_WORKERS: "1"

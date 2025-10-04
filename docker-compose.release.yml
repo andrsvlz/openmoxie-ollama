@@ -31,9 +31,9 @@ services:
   stt:
     image: pixelandpiece/openmoxie-stt:${IMAGE_TAG:-latest}
     environment:
-      STT_MODEL: /models/faster-whisper-small.en
+      STT_MODEL: /models/faster-whisper-medium
       STT_DEVICE: auto
-      STT_COMPUTE: int8
+      STT_COMPUTE: auto
     depends_on:
       model-init:
         condition: service_completed_successfully
@@ -54,7 +54,7 @@ services:
       - ./docker/seed-models.sh:/seed-models.sh:ro
       - ./site/services/stt/models:/models
     environment:
-      MODEL_NAMES: "faster-whisper-small.en,faster-whisper-base.en"
+      MODEL_NAMES: "faster-whisper-medium"
       MODELS_DIR: "/models"
     entrypoint: ["/bin/sh","-c","/seed-models.sh"]
     restart: "no"
@@ -80,6 +80,8 @@ services:
     volumes:
       - ollama:/root/.ollama
     restart: unless-stopped
+    runtime: nvidia
+    gpus: all
 
   # Pulls Ollama models (one-shot)
   ollama-init:

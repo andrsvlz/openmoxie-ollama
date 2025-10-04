@@ -8,6 +8,19 @@ Welcome!
 
 If you're looking for a solution to run your **Embodied Moxie Robot** ...Maybe give it a different personality or run some unfiltered LLM models, Your in the right place!
 
+Si tienes una GPU NVIDIA y quieres que Docker la utilice (Faster-Whisper,
+Ollama), instala también el runtime de NVIDIA:
+
+```bash
+sudo apt-get install -y nvidia-driver-535 nvidia-container-toolkit
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+```
+
+Reinicia si el instalador lo solicita. Los servicios `stt` y `ollama` en
+`docker-compose.yml` ya declaran soporte CUDA; sin este runtime Docker no los
+arrancará.
+
 ---
 
 ## 📦 Based on the amazing work by [jbeghtol/openmoxie](https://github.com/jbeghtol/openmoxie)
@@ -110,7 +123,7 @@ git clone https://github.com/vapors/openmoxie-ollama.git
 
 cd openmoxie-ollama
 chmod +x scripts/get_models_linux.sh
-./scripts/get_models_linux.sh faster-whisper-small.en faster-whisper-base.en
+./scripts/get_models_linux.sh faster-whisper-large
 
 ```
 Model files should download to **~/openmoxie-ollama/site/services/stt/models** 
@@ -202,6 +215,25 @@ sudo docker compose up -d mqtt stt
   # should output {"ok": true, "model": "...", "device": "cpu|cuda", "compute": "int8|float16"}
   ```
   models can be selected in admin
+
+> **Nota:** `faster-whisper-medium` ofrece buen balance tamaño/precisión (~0.6 GB, ≈3 GB VRAM). Si tu hardware es más potente puedes cambiar a `faster-whisper-large-v3` manualmente desde la configuración.
+> para ejecutarse en `float16`. Si tu hardware no lo soporta cambia a un modelo
+> más pequeño desde **Setup → Speech-to-Text** o redefiniendo `STT_MODEL` antes
+> de iniciar el servicio.
+
+Arranca también el runtime de Ollama (con soporte CUDA por defecto) y precarga
+los modelos definidos en el compose:
+
+```bash
+sudo docker compose up -d ollama ollama-init
+```
+
+Comprueba que Ollama detectó tu GPU:
+
+```bash
+sudo docker exec -it $(sudo docker compose ps -q ollama) ollama info | \
+  grep -E 'device|Backend'
+```
 ---
 
 ### 5️⃣ Start the OpenMoxie Server and do the usual Wifi and or Migration QR code
@@ -330,11 +362,16 @@ If you don’t want Docker, you can run the service directly:
 sudo apt-get update && sudo apt-get install -y ffmpeg
 
 # from repo root
-export STT_MODEL="$(pwd)/site/services/stt/models/faster-whisper-small.en"
-export STT_DEVICE=auto            # auto|cpu|cuda
-export STT_COMPUTE=int8           # CPU: int8, GPU: float16
+export STT_MODEL="$(pwd)/site/services/stt/models/faster-whisper-medium"
+export STT_DEVICE=auto            # auto prefers CUDA when available
+export STT_COMPUTE=auto           # auto → float16 on CUDA, int8 on CPU
 uvicorn --app-dir site services.stt.stt_service:app --host 0.0.0.0 --port 8001
 ```
+
+Tip: the helper script `scripts/run_stt_local.sh` auto-installs the CUDA-enabled
+CTranslate2 wheel whenever `nvidia-smi` is available. Override `CUDA_INDEX_URL`
+if you need a different CUDA build (defaults to the cu121 artifacts published on
+the PyTorch wheel index).
 
 ---
 
@@ -363,9 +400,9 @@ When you click **Save**, the server requests a **hot reload** on the STT service
 - `STT_LANG=en`
 
 **Local STT service (Docker or venv)**
-- `STT_MODEL=/models/faster-whisper-small.en` *(Docker path; venv can use `site/services/stt/models/...`)*
+- `STT_MODEL=/models/faster-whisper-medium` *(Docker path; venv can use `site/services/stt/models/...`)*
 - `STT_DEVICE=auto|cpu|cuda`
-- `STT_COMPUTE=int8|int8_float16|float16|float32`
+- `STT_COMPUTE=auto|int8|int8_float16|float16|float32`
 - `STT_VAD=1|0` (silence filtering)
 
 ---

@@ -114,12 +114,13 @@ class HiveConfiguration(models.Model):
     stt_compute = models.CharField(
         max_length=16,
         choices=[
+            ("auto", "Auto"),
             ("int8", "int8 (CPU best)"),
             ("int8_float16", "int8/FP16 (mixed)"),
             ("float16", "float16 (GPU best)"),
             ("float32", "float32"),
         ],
-        default="int8",
+        default="auto",
     )
 
     def __str__(self):

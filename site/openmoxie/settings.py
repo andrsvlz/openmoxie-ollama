@@ -45,7 +45,7 @@ STT_BACKEND = os.getenv("STT_BACKEND", "openai")   # "local" | "openai"
 STT_URL     = os.getenv("STT_URL", "http://127.0.0.1:8001/stt")
 STT_LANG    = os.getenv("STT_LANG", "en")
 STT_DEVICE  = os.getenv("STT_DEVICE", "auto")
-STT_COMPUTE = os.getenv("STT_COMPUTE", "int8")
+STT_COMPUTE = os.getenv("STT_COMPUTE", "auto")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/

@@ -131,6 +131,7 @@
       <div class="col-md-6">
         <label for="stt_compute" class="form-label fw-bold">Compute Type</label>
         <select class="form-select" id="stt_compute" name="stt_compute">
+          <option value="auto"         {% if object.stt_compute == "auto" %}selected{% endif %}>Auto (detect)</option>
           <option value="int8"          {% if object.stt_compute == "int8" %}selected{% endif %}>int8 (CPU best)</option>
           <option value="int8_float16"  {% if object.stt_compute == "int8_float16" %}selected{% endif %}>int8/FP16 (mixed)</option>
           <option value="float16"       {% if object.stt_compute == "float16" %}selected{% endif %}>float16 (GPU best)</option>

@@ -126,7 +126,7 @@ class STTSession:
                     logger.warning(f"STT local health check error: {e}")
                 _STT_HEALTH_LOGGED = True
 
-            text, rel_start, rel_end = transcribe_wav_bytes(wav_bytes, language="en")
+            text, rel_start, rel_end = transcribe_wav_bytes(wav_bytes)
             resp.speech = text
             resp.start_timestamp = self._start_ts + int(rel_start * 1000)
             resp.end_timestamp = self._start_ts + int(rel_end * 1000)

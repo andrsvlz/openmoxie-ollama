@@ -1,0 +1,7 @@
+#!/media/steve/38cefca9-369f-4c4a-87c9-99569cca98c9/openmoxie_es/.venv_stt_local/bin/python3
+import sys
+from fastapi.cli import main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())
