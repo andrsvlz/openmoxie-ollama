@@ -3,30 +3,30 @@
 {% block content %}
 <div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
 <div class="p-3">
-<h2>Modify Missions and Completed Content</h2>
+<h2>Modificar misiones y contenido completado</h2>
 <p>
-Update progress data for Missions and other content here.  These actions cannot be undone.
+Actualiza el progreso de las misiones y de otros contenidos aquí. Estas acciones no se pueden deshacer.
 <ul>
-  <li>Using <b>Set Mission Complete</b> will mark all these missions as complete so they will not be offered again.</li>
-  <li>Using <b>Clear Missions Complete</b> will forgot that these mission sets were completed so they can be offered again.</li>
-  <li>Using <b>Reset ALL Progress</b> will forget all completion data for all modules and begin all content over again.</li>
+  <li>Usar <b>Marcar misiones como completadas</b> marcará todas estas misiones como completadas para que no se ofrezcan de nuevo.</li>
+  <li>Usar <b>Olvidar misiones completadas</b> eliminará el registro de que estos conjuntos se completaron para que puedan ofrecerse otra vez.</li>
+  <li>Usar <b>Reiniciar TODO el progreso</b> borrará los datos de finalización de todos los módulos y comenzará el contenido desde cero.</li>
 </ul>
 </p>
 <div class="moxie-window">
   <form id="moxie_edit" action="{% url 'hive:mission_edit' object.pk %}" method="post">
   {% csrf_token %}
   <table class="table">
-    <tr><th>Name</th><td>{{object.name}}</td></tr>
-    <tr><th>Device ID</th><td>{{object.device_id}}</td></tr>
-    <tr><th>Action</th><td>
+    <tr><th>Nombre</th><td>{{object.name}}</td></tr>
+    <tr><th>ID del dispositivo</th><td>{{object.device_id}}</td></tr>
+    <tr><th>Acción</th><td>
       <input type="radio" id="option1" name="mission_action" value="complete" checked>
-      <label for="option1">Set Missions Complete</label><br>
+      <label for="option1">Marcar misiones como completadas</label><br>
       <input type="radio" id="option2" name="mission_action" value="forget">
-      <label for="option2">Clear Missions Complete</label><br>
+      <label for="option2">Olvidar misiones completadas</label><br>
       <input type="radio" id="option3" name="mission_action" value="reset">
-      <label for="option3">Reset ALL Progress</label>
+      <label for="option3">Reiniciar TODO el progreso</label>
     </td></tr>
-    <tr><th>Mission Sets to Change</th><td>
+    <tr><th>Conjuntos de misiones a modificar</th><td>
         {% for option in mission_sets %}
         <input type="checkbox" name="mission_sets" value="{{ option.0 }}" id="mission_set_{{ option.0 }}">
         <label for="mission_set_{{ option.0 }}">{{ option.1 }}</label>
@@ -34,7 +34,7 @@ Update progress data for Missions and other content here.  These actions cannot 
         {% endfor %}
      </td></tr>
   </table>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 </div>
 </div>

@@ -3,87 +3,84 @@
 {% block content %}
 <div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
 <div class="text-bg-secondary p-3">
-<h1>Welcome to OpenMoxie!</h1>
+<h1>¡Bienvenido a OpenMoxie!</h1>
 <p>
-    The OpenMoxie service allows this computer to act as a replacement for Moxie's cloud infrastructure.
+    El servicio de OpenMoxie permite que este equipo actúe como reemplazo de la infraestructura en la nube de Moxie.
 </p>
 <div class="half text-bg-danger p-3">
   <p>
-    <strong>Please read carefully!</strong> This implementation has minimal security and should always be operated on a LAN behind a firewall that protects
-  ports <strong>8883</strong> and <strong>8001</strong> from the Internet.  API keys and service accounts are stored
-  unencrypted in the host file system.
+    <strong>¡Lee con atención!</strong> Esta implementación tiene seguridad mínima y siempre debe operar en una red local protegida por un firewall que bloquee los puertos <strong>8883</strong> y <strong>8001</strong> desde Internet. Las claves API y las cuentas de servicio se almacenan sin cifrar en el sistema de archivos del equipo anfitrión.
   </p>
   <ul>
-    <li>Once you add API keys, devices connecting to port <strong>8001</strong> will
-  be able to perform chat inferences to OpenAI that will incur charges.</li>
-    <li>Devices connected on port <strong>8883</strong> will be able to perform chat inferences and use Speech-to-Text services that will incur charges.</li>
-    <li>If you connect a Google Service Account Key, the key itself will be shared with devices connecting on port <strong>8883</strong>.</li>
+    <li>Una vez que agregues claves API, los dispositivos que se conecten al puerto <strong>8001</strong> podrán hacer inferencias de chat con OpenAI y generarán cargos.</li>
+    <li>Los dispositivos conectados al puerto <strong>8883</strong> podrán realizar inferencias de chat y usar servicios de voz a texto que también generarán cargos.</li>
+    <li>Si conectas una clave de cuenta de servicio de Google, la clave se compartirá con los dispositivos que se conecten al puerto <strong>8883</strong>.</li>
   </ul>
 </div>
 <p></p>
-<h3>Getting Your Own OpenAI API Key</h3>
+<h3>Obtener tu propia clave API de OpenAI</h3>
 <p>
-  There are a few requirements to setup before you can use this with your Moxie.  The primary requirement
-  is your own personal API key from OpenAI to use for Moxie Chat and the default Speech-to-Text processing.
-  These services are not free and you will be responsible for managing your OpenAI account to ensure
-  it has sufficient credits, however Whisper is very inexpensive and the default conversational model
-  (3.5 turbo) is a very economical model.
+  Hay algunos requisitos previos antes de usar esto con tu Moxie. El requisito principal
+  es contar con tu propia clave API de OpenAI para utilizar en el chat de Moxie y en el procesamiento de voz a texto predeterminado.
+  Estos servicios no son gratuitos y serás responsable de administrar tu cuenta de OpenAI para asegurarte
+  de que tenga créditos suficientes; sin embargo, Whisper es muy económico y el modelo conversacional predeterminado
+  (3.5 turbo) también es muy accesible.
 </p>
 <p>
-    You will need to visit <a class="link-light" target="_blank" href="https://platform.openai.com/settings/organization/billing/overview">OpenAI Billing</a> page, 
-    create an account, add your credit card, and purchase some credits.  We recommend
-    starting with a small amount such as $10 and keeping an eye on your usage until you understand the costs, though they are typically modest.
+    Deberás visitar la página de <a class="link-light" target="_blank" href="https://platform.openai.com/settings/organization/billing/overview">facturación de OpenAI</a>,
+    crear una cuenta, añadir tu tarjeta de crédito y comprar algunos créditos. Recomendamos
+    comenzar con un monto pequeño, como 10 USD, y vigilar tu uso hasta entender los costos, que suelen ser moderados.
 </p>
 <p>
-    Next, visit the <a class="link-light" target="_blank" href="https://platform.openai.com/settings/organization/api-keys">OpenAI API Keys</a> to create a unique
-    API key (secret key) for use with OpenMoxie.  Give it a nice name like "Moxie Services" and save the API key to paste into the form below.
+    Luego, visita la sección de <a class="link-light" target="_blank" href="https://platform.openai.com/settings/organization/api-keys">claves API de OpenAI</a> para crear una
+    clave API (clave secreta) única para usar con OpenMoxie. Ponle un nombre descriptivo como "Moxie Services" y guarda la clave para pegarla en el formulario de abajo.
 </p>
-<h3>Using Google Speech Instead</h3>
+<h3>Usar Google Speech en su lugar</h3>
 <p>
-  OpenMoxie is configured to use OpenAI Whisper for Speech-to-Text by default for simplicity and lower cost, but Google Speech is more
-  responsive and generally works better with Moxie's internal speech processing.  Google also offers free credits when you sign-up.
-  If you would rather use Google for Speech-to-Text services
-  you can include a service account key with permissions to use Google Speech in the form below.  This key will be provided to Moxie and used if you
-  set <kbd>"stt": "0"</kbd> in the robot settings.  Visit <a class="link-light" target="_blank" href="https://cloud.google.com/">Google Cloud Platform</a> for details
-  on Google's offering.
+  OpenMoxie está configurado para usar OpenAI Whisper como servicio predeterminado de voz a texto por su simplicidad y bajo costo, pero Google Speech es más
+  ágil y, en general, funciona mejor con el procesamiento de voz interno de Moxie. Google también ofrece créditos gratuitos al registrarte.
+  Si prefieres usar Google para los servicios de voz a texto
+  puedes incluir una clave de cuenta de servicio con permisos para Google Speech en el formulario de abajo. Esta clave se entregará a Moxie y se utilizará si
+  estableces <kbd>"stt": "0"</kbd> en la configuración del robot. Visita <a class="link-light" target="_blank" href="https://cloud.google.com/">Google Cloud Platform</a> para obtener más detalles
+  sobre la oferta de Google.
 </p>
 <hr>
-<h1>Configuration</h1>
+<h1>Configuración</h1>
 <form id="hive_edit" action="{% url 'hive:hive_configure' %}" method="post">
     {% csrf_token %}
     <div class="mb-3">
-      <!-- XAI key field -->
-      <label for="xaikey" class="form-label fw-bold fs-5">XAi (Grok) API Key</label>
-      <input type="text" class="form-control" name="xaikey" id="xaikey" aria-describedby="apiHelp" placeholder="{% if object.xai_api_key %}[Key exists and will be kept unless overridden.]{% else %}Paste XAi API key.{% endif %}">
-      <div id="apiHelp" class="form-text text-light">This be be stored in your local database and used locally for xAI and Speech services.</div>
+      <!-- Campo para clave XAI -->
+      <label for="xaikey" class="form-label fw-bold fs-5">Clave API de XAi (Grok)</label>
+      <input type="text" class="form-control" name="xaikey" id="xaikey" aria-describedby="apiHelp" placeholder="{% if object.xai_api_key %}[La clave existe y se conservará a menos que la reemplaces.]{% else %}Pega la clave API de XAi.{% endif %}">
+      <div id="apiHelp" class="form-text text-light">Se guardará en tu base de datos local y se utilizará de manera local para los servicios de xAI y voz.</div>
   </div>
     <div class="mb-3">
-      <label for="apikey" class="form-label fw-bold fs-5">OpenAI API Key</label>
-      <input type="text" class="form-control" name="apikey" id="apikey" aria-describedby="apiHelp" placeholder="{% if object.openai_api_key %}[Key exists and will be kept unless overridden.]{% else %}Paste OpenAI API key.{% endif %}">
-      <div id="apiHelp" class="form-text text-light">This be be stored in your local database and used locally for openAI and Speech services.</div>
+      <label for="apikey" class="form-label fw-bold fs-5">Clave API de OpenAI</label>
+      <input type="text" class="form-control" name="apikey" id="apikey" aria-describedby="apiHelp" placeholder="{% if object.openai_api_key %}[La clave existe y se conservará a menos que la reemplaces.]{% else %}Pega la clave API de OpenAI.{% endif %}">
+      <div id="apiHelp" class="form-text text-light">Se guardará en tu base de datos local y se utilizará localmente para los servicios de OpenAI y voz.</div>
     </div>
     <div class="mb-3">
-      <label for="googleapikey" class="form-label fw-bold fs-5">(OPTIONAL) Google Service Account Key</label>
-      <input type="text" class="form-control" name="googleapikey" id="googleapikey" aria-describedby="googleapiHelp" placeholder="{% if object.google_api_key %}[Key exists and will be kept unless overridden.]{% else %}Paste Google Service Account key.{% endif %}">
+      <label for="googleapikey" class="form-label fw-bold fs-5">(OPCIONAL) Clave de cuenta de servicio de Google</label>
+      <input type="text" class="form-control" name="googleapikey" id="googleapikey" aria-describedby="googleapiHelp" placeholder="{% if object.google_api_key %}[La clave existe y se conservará a menos que la reemplaces.]{% else %}Pega la clave de la cuenta de servicio de Google.{% endif %}">
       <div id="googleapiHelp" class="form-text text-light">
-        This be be stored in your local database and provided to connecting Moxie.
+        Se almacenará en tu base de datos local y se proporcionará a los dispositivos Moxie que se conecten.
       </div>
     </div>
     <div class="mb-3">
-      <label for="hostname" class="form-label fw-bold fs-5">Hostname</label>
+      <label for="hostname" class="form-label fw-bold fs-5">Nombre de host</label>
       <div class="half text-bg-warning p-3" style="margin-bottom: 5px;">
-        <strong>Important! </strong>Hostname is the address Moxie will use to talk to your PC.  It is best to use your computer name, 
-        but if your router does not provide LAN DNS services, you may need to use your LAN IP address here.
+        <strong>¡Importante! </strong>El nombre de host es la dirección que Moxie usará para comunicarse con tu PC. Lo ideal es usar el nombre de tu computadora,
+        pero si tu router no proporciona servicios DNS en la LAN, quizá debas usar la dirección IP local aquí.
       </div>
-      <input type="text" class="form-control" name="hostname" id="hostname" aria-describedby="hostnameHelp" placeholder="Enter computer name" value="{{object.external_host}}">
-      <div id="hostnameHelp" class="form-text text-light">The local network name of this computer, either your computer name or LAN network address.</div>
+      <input type="text" class="form-control" name="hostname" id="hostname" aria-describedby="hostnameHelp" placeholder="Ingresa el nombre del equipo" value="{{object.external_host}}">
+      <div id="hostnameHelp" class="form-text text-light">El nombre de red local de este equipo, ya sea el nombre del ordenador o la dirección de la red LAN.</div>
     </div>
 
 
-    <h1>Speech-to-Text</h1>
+    <h1>Voz a texto</h1>
     <div class="row mb-3">
       <div class="col">
-        <label class="form-label fw-bold">Backend</label>
+        <label class="form-label fw-bold">Motor</label>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="stt_backend" id="stt_backend_local" value="local"
                 {% if object.stt_backend == "local" %}checked{% endif %}>
@@ -92,13 +89,13 @@
         <div class="form-check">
           <input class="form-check-input" type="radio" name="stt_backend" id="stt_backend_openai" value="openai"
                 {% if object.stt_backend != "local" %}checked{% endif %}>
-          <label class="form-check-label" for="stt_backend_openai">OpenAI Whisper (remote)</label>
+          <label class="form-check-label" for="stt_backend_openai">OpenAI Whisper (remoto)</label>
         </div>
       </div>
     </div>
 
     <div class="mb-3">
-      <label for="stt_url" class="form-label fw-bold">Local STT URL (Keep Default for Docker)</label>
+      <label for="stt_url" class="form-label fw-bold">URL local de STT (mantén el valor predeterminado para Docker)</label>
         <!--
       <input type="text" class="form-control" name="stt_url" id="stt_url"
             placeholder="http://127.0.0.1:8001/stt"
@@ -109,41 +106,41 @@
             placeholder="http://stt:8001/stt"
             value="{{ object.stt_url|default:'' }}">
         
-      <div class="form-text text-light">Only used when “Local” is selected.</div>
+      <div class="form-text text-light">Solo se usa cuando se selecciona “Local”.</div>
     </div>
 
     <div class="mb-3">
-      <label for="stt_lang" class="form-label fw-bold">Default STT Language </label>
+      <label for="stt_lang" class="form-label fw-bold">Idioma predeterminado de STT </label>
       <input type="text" class="form-control" name="stt_lang" id="stt_lang"
-            placeholder="en" value="{{ object.stt_lang|default:'en' }}">
+            placeholder="es" value="{{ object.stt_lang|default:'es' }}">
     </div>
 
     <div class="row mb-3">
       <div class="col-md-6">
-        <label for="stt_device" class="form-label fw-bold">Device *experimental</label>
+        <label for="stt_device" class="form-label fw-bold">Dispositivo *experimental</label>
         <select class="form-select" id="stt_device" name="stt_device">
           <option value="auto" {% if object.stt_device == "auto" %}selected{% endif %}>Auto</option>
           <option value="cpu"  {% if object.stt_device == "cpu"  %}selected{% endif %}>CPU</option>
           <option value="cuda" {% if object.stt_device == "cuda" %}selected{% endif %}>CUDA (GPU)</option>
         </select>
-        <div class="form-text text-light">Auto prefers GPU if available; otherwise CPU.</div>
+        <div class="form-text text-light">Auto prefiere GPU si está disponible; de lo contrario CPU.</div>
       </div>
       <div class="col-md-6">
-        <label for="stt_compute" class="form-label fw-bold">Compute Type</label>
+        <label for="stt_compute" class="form-label fw-bold">Tipo de cómputo</label>
         <select class="form-select" id="stt_compute" name="stt_compute">
-          <option value="int8"          {% if object.stt_compute == "int8" %}selected{% endif %}>int8 (CPU best)</option>
-          <option value="int8_float16"  {% if object.stt_compute == "int8_float16" %}selected{% endif %}>int8/FP16 (mixed)</option>
-          <option value="float16"       {% if object.stt_compute == "float16" %}selected{% endif %}>float16 (GPU best)</option>
+          <option value="int8"          {% if object.stt_compute == "int8" %}selected{% endif %}>int8 (mejor en CPU)</option>
+          <option value="int8_float16"  {% if object.stt_compute == "int8_float16" %}selected{% endif %}>int8/FP16 (mixto)</option>
+          <option value="float16"       {% if object.stt_compute == "float16" %}selected{% endif %}>float16 (mejor en GPU)</option>
           <option value="float32"       {% if object.stt_compute == "float32" %}selected{% endif %}>float32</option>
         </select>
-        <div class="form-text text-light">GPU: prefer float16. CPU: prefer int8.</div>
+        <div class="form-text text-light">GPU: prefiere float16. CPU: prefiere int8.</div>
       </div>
     </div>
 
 
 
 <div class="mb-3">
-  <label for="stt_model" class="form-label fw-bold">Local STT Model</label>
+  <label for="stt_model" class="form-label fw-bold">Modelo local de STT</label>
 
   {% if stt_models and stt_models|length %}
     <select class="form-select" id="stt_model" name="stt_model">
@@ -154,14 +151,14 @@
       {% endfor %}
     </select>
     <div class="form-text text-light">
-      Auto Detected by the STT service. Add Models to the /site/services/stt/models/ directory.
+      Detectado automáticamente por el servicio de STT. Agrega modelos al directorio /site/services/stt/models/.
     </div>
   {% else %}
     <input type="text" class="form-control" id="stt_model" name="stt_model"
            placeholder="/models/faster-whisper-small.en"
            value="{{ object.stt_model|default:'' }}">
     <div class="form-text text-light">
-      Enter the model directory visible to the STT service.
+      Indica el directorio del modelo visible para el servicio de STT.
     </div>
   {% endif %}
 </div>
@@ -173,19 +170,19 @@
 
 
     {% if needs_admin %}
-    <h3>Database Administrator</h3>
-    <p>Setup the local database administrator password.  This is the superuser password for your local SQLite database and is used when accessing the Admin page for this project.</p>
+    <h3>Administrador de base de datos</h3>
+    <p>Configura la contraseña del administrador de la base de datos local. Esta es la contraseña del superusuario para tu base de datos SQLite local y se utiliza cuando accedes a la página de Administración de este proyecto.</p>
     <div class="half text-bg-warning p-3" style="margin-bottom: 5px;">
-      <strong>Important! </strong>You will need this password to access the Admin section later!
+      <strong>¡Importante! </strong>¡Necesitarás esta contraseña para acceder a la sección de Administración más adelante!
     </div>
     <div class="row mb-3">
-      <label for="adminUser" class="col-sm-2 col-form-label">Admin User</label>
+      <label for="adminUser" class="col-sm-2 col-form-label">Usuario administrador</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="adminUser" name="adminUser" value="admin">
       </div>
     </div>
     <div class="row mb-3">
-      <label for="adminPassword" class="col-sm-2 col-form-label">Admin Password</label>
+      <label for="adminPassword" class="col-sm-2 col-form-label">Contraseña de administrador</label>
       <div class="col-sm-10">
         <input type="password" class="form-control" id="adminPassword" name="adminPassword">
       </div>
@@ -194,18 +191,18 @@
 <!--
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" name="allowall" id="allowall" aria-describedby="allowHelp">
-      <label class="form-check-label" for="allowall">Allow Services to Any Moxie</label>
-      <div id="hostnameHelp" class="form-text text-light">Check this to allow use by any Moxie on your network, otherwise each will need to be authorized explicity.</div>
+      <label class="form-check-label" for="allowall">Permitir servicios para cualquier Moxie</label>
+      <div id="hostnameHelp" class="form-text text-light">Marca esta opción para permitir el uso por cualquier Moxie de tu red; de lo contrario, cada uno deberá autorizarse explícitamente.</div>
     </div>
  -->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Guardar configuración</button>
   </form>
 </div>
 <script>
 $(document).ready(function() {
   $('#hive_edit').submit(function(event) {
     var validated = true;
-    var err_msg = "Setup Cannot Complete:";
+    var err_msg = "No se puede completar la configuración:";
 
     var hostname = $('#hostname').val().trim();
     var googleApiKey = $('#googleapikey').val().trim();
@@ -213,20 +210,20 @@ $(document).ready(function() {
     var adminUser = $('#adminUser').val().trim();
     var adminPassword = $('#adminPassword').val().trim();
     if (adminUser === '') {
-      err_msg += '\n-Admin User cannot be empty';
+      err_msg += '\n-El usuario administrador no puede estar vacío';
       validated = false;
     }
     if (adminPassword === '') {
-      err_msg += '\n-Admin Password cannot be empty';
+      err_msg += '\n-La contraseña de administrador no puede estar vacía';
       validated = false;
     }
     {% endif %}
     if (hostname === '') {
-      err_msg += '\n-Hostname cannot be empty';
+      err_msg += '\n-El nombre de host no puede estar vacío';
       validated = false;
     }
     if (googleApiKey !== '' && !isValidJSON(googleApiKey)) {
-      err_msg += '\n-Google API Key must be a valid JSON string';
+      err_msg += '\n-La clave de la API de Google debe ser una cadena JSON válida';
       validated = false;
     }
 
@@ -247,3 +244,4 @@ function isValidJSON(jsonString) {
 }
 </script>
 {% endblock %}
+

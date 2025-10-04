@@ -43,7 +43,7 @@ DATA_STORE_DIR = BASE_DIR / 'work'
 # ---- STT config (Django-side defaults; UI/DB can override) ----
 STT_BACKEND = os.getenv("STT_BACKEND", "openai")   # "local" | "openai"
 STT_URL     = os.getenv("STT_URL", "http://127.0.0.1:8001/stt")
-STT_LANG    = os.getenv("STT_LANG", "en")
+STT_LANG    = os.getenv("STT_LANG", "es")
 STT_DEVICE  = os.getenv("STT_DEVICE", "auto")
 STT_COMPUTE = os.getenv("STT_COMPUTE", "int8")
 
@@ -164,7 +164,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Los_Angeles'
 

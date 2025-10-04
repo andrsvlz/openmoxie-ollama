@@ -3,19 +3,19 @@
 {% block content %}
 <div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
 <div class="p-3">
-<h2>Puppet Moxie</h2>
+<h2>Control remoto de Moxie</h2>
 <p>
-  When Puppet Mode is activated, Moxie will automatically wake into a mode where it only produces outputs from this page.
-  It will remain in this mode until you stop Puppet Mode.
+  Cuando el modo marioneta está activo, Moxie se despertará automáticamente y solo mostrará las respuestas enviadas desde esta página.
+  Permanecerá en este modo hasta que lo detengas.
 </p>
-<button id="puppet_button" type="button" class="btn btn-success">Start Puppet Mode</button>
+<button id="puppet_button" type="button" class="btn btn-success">Iniciar modo marioneta</button>
 <table class="table">
-  <tr><th>Name</th><td>{{object.name}}</td></tr>
-  <tr><th>Device ID</th><td>{{object.device_id}}</td></tr>
-  <tr><th>Moxie State</th><td><span class="badge text-bg-success" id="moxie_state">Online</span></td></tr>
-  <tr><th>Puppet State</th><td><span class="badge text-bg-success" id="puppet_state">READY</span></td></tr>
+  <tr><th>Nombre</th><td>{{object.name}}</td></tr>
+  <tr><th>ID del dispositivo</th><td>{{object.device_id}}</td></tr>
+  <tr><th>Estado de Moxie</th><td><span class="badge text-bg-success" id="moxie_state">En línea</span></td></tr>
+  <tr><th>Estado de marioneta</th><td><span class="badge text-bg-success" id="puppet_state">LISTO</span></td></tr>
 </table>
-<h3 class="chat-title">History</h3>
+<h3 class="chat-title">Historial</h3>
 <div id="chat_window" class="chat-window">
   <ul id="chat_history" class="list-group">
     <!-- Populated by AJAX -->
@@ -24,27 +24,27 @@
 <div id="chat_input" class="chat-window">
   <form id="chat_form">
     <div class="mb-3">
-      Mood <select id="mood" name="mood">
+      Estado de ánimo <select id="mood" name="mood">
         <option value="neutral">Neutral</option>
-        <option value="happy">Happy</option>
-        <option value="positive">Positive</option>
-        <option value="angry">Angry</option>
-        <option value="sad">Sad</option>
-        <option value="negative">Negative</option>
-        <option value="shy">Shy</option>
-        <option value="afraid">Afraid</option>
-        <option value="concerned">Concerned</option>
-        <option value="confused">Confused</option>
-        <option value="curious">Curious</option>
-        <option value="embarrassed">Embarrassed</option>
+        <option value="happy">Feliz</option>
+        <option value="positive">Positivo</option>
+        <option value="angry">Enojado</option>
+        <option value="sad">Triste</option>
+        <option value="negative">Negativo</option>
+        <option value="shy">Tímido</option>
+        <option value="afraid">Asustado</option>
+        <option value="concerned">Preocupado</option>
+        <option value="confused">Confundido</option>
+        <option value="curious">Curioso</option>
+        <option value="embarrassed">Avergonzado</option>
       </select>
-      Intensity<input type="range" min="0.0" max="1.0" step="0.1" id="intensity" name="intensity" value="0.5"></td>
+      Intensidad<input type="range" min="0.0" max="1.0" step="0.1" id="intensity" name="intensity" value="0.5"></td>
     </div>
     <div class="mb-3">
-      <input id="user_input" name="user_input" class="form-control" placeholder="Say something..."></input>
+      <input id="user_input" name="user_input" class="form-control" placeholder="Di algo..."></input>
     </div>
     <div class="mb-3">
-      <button title="Stop Moxie's current speech" id="interrupt_button" type="button" class="btn btn-secondary">Interrupt</button>
+      <button title="Detener el discurso actual de Moxie" id="interrupt_button" type="button" class="btn btn-secondary">Interrumpir</button>
     </div>
   </form>
 </div>
@@ -82,7 +82,7 @@
         add_to_history('list-group-item list-group-item-primary chat-line', 'bg-primary', 'Moxie (' + mood + ')', speech)
       })
       .fail(function(jqXHR, textStatus, errorThrown) {
-        console.log("Failed speech: " + errorThrown);
+        console.log("Fallo al enviar el discurso: " + errorThrown);
       })
       .always(function() {
         $('#user_input').val('');
@@ -90,7 +90,7 @@
   }
 
   function puppet_interrupt() {
-    console.log("Interrupting Moxie");
+    console.log("Interrumpiendo a Moxie");
     $.ajax({
         type: 'POST',
         url: "{% url 'hive:puppet_api' object.pk %}", 
@@ -98,10 +98,10 @@
         dataType: 'json'
       })
       .done(function(data, textStatus, jqXHR) {
-        add_to_history('list-group-item list-group-item-primary chat-line', 'bg-primary', 'System', '--Interrupt--')
+        add_to_history('list-group-item list-group-item-primary chat-line', 'bg-primary', 'Sistema', '--Interrupción--')
       })
       .fail(function(jqXHR, textStatus, errorThrown) {
-        console.log("Failed interrupt: " + errorThrown);
+        console.log("Fallo al interrumpir: " + errorThrown);
       })
   }
 
@@ -116,12 +116,12 @@
           $("#moxie_state")
             .removeClass("text-bg-danger")
             .addClass("text-bg-success")
-            .text("Online");
+            .text("En línea");
         } else {
           $("#moxie_state")
             .removeClass("text-bg-success")
             .addClass("text-bg-danger")
-            .text("Offline");
+            .text("Fuera de línea");
         }
 
         if (data["puppet_state"] != null) {
@@ -133,20 +133,20 @@
           $("#puppet_state")
             .removeClass("text-bg-success")
             .addClass("text-bg-warning")
-            .text("PENDING");
+            .text("PENDIENTE");
         }
 
         if (data["puppet_enabled"]) {
           $("#puppet_button")
             .removeClass("btn-success")
             .addClass("btn-danger")
-            .text("Stop Puppet Mode")
+            .text("Detener modo marioneta")
             .off("click").on("click", function() { set_puppet_state(false); });
         } else {
           $("#puppet_button")
             .removeClass("btn-danger")
             .addClass("btn-success")
-            .text("Start Puppet Mode")
+            .text("Iniciar modo marioneta")
             .off("click").on("click", function() { set_puppet_state(true); });
         }
     }).always(function() {
@@ -156,7 +156,7 @@
 
   $(document).ready(function() {
     $('#chat_form').submit(function(e) {
-      e.preventDefault(); // Prevent form submission
+      e.preventDefault(); // Evita enviar el formulario
       puppet_speak($('#user_input').val(), $('#mood').val(), $('#intensity').val());
       });
 

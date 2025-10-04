@@ -2,14 +2,14 @@
 {% load static %}
 {% block content %}
 <div class="moxheader"><a href="{% url 'hive:dashboard' %}"><img class="moximage" src="{% static 'hive/openmoxie_logo.svg' %}"></a>OpenMoxie<span class="moxversion">{{moxie_version}}</span></div>
-<h3 class="chat-title">Chat Interaction</h3>
+<h3 class="chat-title">Interacción de chat</h3>
 <div class="chat-window">
   <table class="table">
-    <tr><th>Module ID</th><td>{{object.module_id}}</td></tr>
-    <tr><th>Content ID</th><td>{{object.content_id}}</td></tr>
+    <tr><th>ID de módulo</th><td>{{object.module_id}}</td></tr>
+    <tr><th>ID de contenido</th><td>{{object.content_id}}</td></tr>
   </table>
 </div>
-<h3 class="chat-title">History</h3>
+<h3 class="chat-title">Historial</h3>
 <div id="chat_window" class="chat-window">
   <ul id="chat_history" class="list-group">
     <!-- Populated by AJAX -->
@@ -17,7 +17,7 @@
 </div>
 <div id="chat_input" class="chat-window">
   <form id="chat_form">
-    <input id="user_input" name="user_input" class="form-control" placeholder="Say something..."></input>
+    <input id="user_input" name="user_input" class="form-control" placeholder="Di algo..."></input>
   </form>
 </div>
 <script>
@@ -28,7 +28,7 @@
 
   $(document).ready(function() {
     $('#chat_form').submit(function(e) {
-      e.preventDefault(); // Prevent form submission
+      e.preventDefault(); // Evita enviar el formulario
       var speech = $('#user_input').val()
       var formData = {
         'speech': speech,
@@ -38,7 +38,7 @@
       };
       
       if (speech != '')
-        add_to_history('list-group-item list-group-item-success chat-line', 'bg-success', 'User', speech)
+        add_to_history('list-group-item list-group-item-success chat-line', 'bg-success', 'Usuario', speech)
 
       $.ajax({
         type: 'POST',

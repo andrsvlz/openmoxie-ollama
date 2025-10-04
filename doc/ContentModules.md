@@ -21,13 +21,13 @@ The default content currently lives in site/data/default_conversations.json.  Th
 
 |Name|Module ID|Content ID|Function|
 |----|---------|----------|--------|
-|OpenMoxie Chat - Long|OPENMOXIE_CHAT|default|Default when asking to chat, can go very long.|
-|OpenMoxie Chat - Short|OPENMOXIE_CHAT|short|Default between modules in the schedule, short chats.|
-|Open Conversation - reading|OPENCONVO|reading|After READING module, if user wants to chat.|
-|Open Conversation - storytelling|OPENCONVO|storytelling|After STORYTELLING module, if user wants to chat.|
-|Open Conversation - story|OPENCONVO|story|After STORY module, if user wants to chat.|
-|One Line Example|SIMPLELINE|default|An example showing a one line, then exiting to the next scheduled.|
-|Wakeup Launcher|WAKEUP_LAUNCHER|ftue,more_10,less_10,first_time_today,scheduled|A wakeup that goes directly into first scheduled item.|
+|Chat OpenMoxie - Largo|OPENMOXIE_CHAT|default|Default when asking to chat, can go very long.|
+|Chat OpenMoxie - Corto|OPENMOXIE_CHAT|short|Default between modules in the schedule, short chats.|
+|Conversación abierta - lectura|OPENCONVO|reading|After READING module, if user wants to chat.|
+|Conversación abierta - narración|OPENCONVO|storytelling|After STORYTELLING module, if user wants to chat.|
+|Conversación abierta - historia|OPENCONVO|story|After STORY module, if user wants to chat.|
+|Decir una línea|SIMPLELINE|default|An example showing a one line, then exiting to the next scheduled.|
+|Lanzador de activación|WAKEUP_LAUNCHER|ftue,more_10,less_10,first_time_today,scheduled|A wakeup that goes directly into first scheduled item.|
 
 ## Creating Custom Content
 
