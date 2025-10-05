@@ -11,6 +11,7 @@
 
 import concurrent.futures
 import logging
+import os
 from ..models import SinglePromptChat
 from ..automarkup import process as automarkup_process
 from ..automarkup import initialize_rules as automarkup_initialize_rules
@@ -216,7 +217,22 @@ class RemoteChat:
                 if cand and cand in self._modules:
                     rerouted_id = cand
 
-            # 2) if no session, pick the first registered SinglePromptChat
+            # 2) fall back to preferred content IDs (env + sensible defaults)
+            if not rerouted_id:
+                preferred = []
+                env_choice = os.getenv("ROUTER_DEFAULT_CHAT", "").strip()
+                if env_choice:
+                    preferred.append(env_choice)
+                preferred.extend([
+                    "OPENMOXIE_CHAT/ollama",
+                    "OPENMOXIE_CHAT/default",
+                ])
+                for candidate_id in preferred:
+                    if candidate_id and candidate_id in self._modules:
+                        rerouted_id = candidate_id
+                        break
+
+            # 3) if still nothing, pick the most recent SinglePromptChat
             if not rerouted_id:
                 for chat in SinglePromptChat.objects.all().order_by("-pk"):
                     cid = _first_content_id(getattr(chat, "content_id", ""))
