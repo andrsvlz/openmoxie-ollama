@@ -1,103 +1,49 @@
 [
   { 
     "name": "default",
-    "source_version": 3,
+    "source_version": 4,
     "schedule": {
         "provided_schedule": [
             {
-              "module_id": "WELCOME"
-            },
-            {
-              "module_id": "ENROLLCONVO"
-            },
-            {
-              "module_id": "EVENTSANDHOLIDAYS"
-            },
-            {
-              "module_id": "TNT"
-            },
-            {
-              "module_id": "SYSTEMSCHECK"
-            },
-            {
               "module_id": "OPENMOXIE_CHAT",
-              "content_id": "short"
-            },
-            {
-              "module_id": "DM"
-            }       
-        ],
-        "generate": {
-          "chat_count": 2,
-          "module_count": 6,
-          "chat_modules": [ 
-            {
-              "module_id": "OPENMOXIE_CHAT",
-              "content_id": "short"
+              "content_id": "ollama"
             }
-          ],
-          "extra_modules": [],
-          "excluded_module_ids": []
-        },
-        "chat_request":
-        {
+        ],
+        "chat_request": {
           "module_id": "OPENMOXIE_CHAT",
-          "content_id": "default"
+          "content_id": "ollama"
         }
     }
   },
   { 
     "name": "no_onboarding",
-    "source_version": 2,
+    "source_version": 3,
     "schedule": {
         "provided_schedule": [
             {
-              "module_id": "ENROLLCONVO"
-            },
-            {
-              "module_id": "EVENTSANDHOLIDAYS"
-            },
-            {
               "module_id": "OPENMOXIE_CHAT",
-              "content_id": "short"
-            },
-            {
-              "module_id": "DM"
-            }       
-        ],
-        "generate": {
-          "chat_count": 2,
-          "module_count": 6,
-          "chat_modules": [ 
-            {
-              "module_id": "OPENMOXIE_CHAT",
-              "content_id": "short"
+              "content_id": "ollama"
             }
-          ],
-          "extra_modules": [],
-          "excluded_module_ids": []
-        },
-        "chat_request":
-        {
+        ],
+        "chat_request": {
           "module_id": "OPENMOXIE_CHAT",
-          "content_id": "default"
+          "content_id": "ollama"
         }
     }
   },
   { 
     "name": "only_chat",
-    "source_version": 2,
+    "source_version": 3,
     "schedule": {
         "provided_schedule": [
             {
               "module_id": "OPENMOXIE_CHAT",
-              "content_id": "default"
-            }       
+              "content_id": "ollama"
+            }
         ],
-        "chat_request":
-        {
+        "chat_request": {
           "module_id": "OPENMOXIE_CHAT",
-          "content_id": "default"
+          "content_id": "ollama"
         }
     }
   },
