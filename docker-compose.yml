@@ -83,7 +83,7 @@ services:
           mkdir -p "$$out"
 
           required="model.bin config.json tokenizer.json"
-          optional="vocabulary.json"
+          optional="vocabulary.json vocabulary.txt"
 
           need=0
           for f in $$required; do
